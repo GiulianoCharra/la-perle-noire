@@ -1,0 +1,34 @@
+/* Cinzel Decorative variable */
+@font-face {
+  font-family: Cinzel;
+  src: url("./public/fonts/Cinzel/Cinzel-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 900;
+}
+
+/* Cinzel Decorative Regular */
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url("./public/fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf");
+  src: url("./public/fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Cinzel Decorative Bold */
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url("./public/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf");
+  src: url("./public/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Cinzel Decorative Black */
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url("./public/fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf");
+  src: url("./public/fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
