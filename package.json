@@ -1,0 +1,22 @@
+{
+  "name": "la-perle-noire",
+  "version": "1.0.0",
+  "description": "Pagina web del restaurante La Perle Noire, la cual tendra como principales funciones la recerva y  realizacion de pedidos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiulianoCharra/cac-python-grupo3.git"
+  },
+  "author": "GiulianoCharra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GiulianoCharra/cac-python-grupo3/issues"
+  },
+  "homepage": "https://github.com/GiulianoCharra/cac-python-grupo3#readme",
+  "dependencies": {
+    "node": "^20.7.0"
+  }
+}

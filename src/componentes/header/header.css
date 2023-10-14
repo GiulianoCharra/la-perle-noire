@@ -1,0 +1,35 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem;
+}
+.menu_opciones {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex: 1 0 0;
+}
+.menu_opcion {
+  color: #fff;
+  text-align: center;
+  font-family: Cinzel Decorative;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.logo {
+  width: 13.3125rem;
+  height: 14.375rem;
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carrito {
+  width: 41px;
+  height: 41px;
+  position: absolute;
+  right: 1.25rem;
+  top: 2.3125rem;
+}

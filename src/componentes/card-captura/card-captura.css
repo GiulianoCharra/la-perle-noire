@@ -1,0 +1,40 @@
+.card-captura {
+  display: inline-flex;
+  padding: 0.625rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.captura__imagen {
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 50%;
+}
+
+.captura__descripcion {
+  color: #fff;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .card-captura {
+    display: inline-flex;
+    padding: 0.6rem 0.3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .captura__imagen {
+    width: 4.6875rem;
+    height: 4.6875rem;
+  }
+  .captura__descripcion {
+    font-size: 1rem;
+  }
+}
