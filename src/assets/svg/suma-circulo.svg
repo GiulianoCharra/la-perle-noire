@@ -1,0 +1,6 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icono btn-agregar-plato">
+<path id="circulo" d="M18 9.5C18 5.35938 14.6406 2 10.5 2C6.35938 2 3 5.35938 3 9.5C3 13.6406 6.35938 17 10.5 17C14.6406 17 18 13.6406 18 9.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+<path id="suma" d="M10.5 6.375V12.625M13.625 9.5H7.375" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

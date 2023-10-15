@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  padding: 1.25rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.menu-opciones {
+}
+
+.menu-opcion {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: Cinzel Decorative;
+  outline: none;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.menu-opcion:hover,
+.menu-opcion:focus-within {
+  color: rgb(var(--color-tercero));
+}
+
+.logo {
+  width: clamp(100px, 30vw, 300px);
+  aspect-ratio: 1;
+}
+
+.carrito {
+  width: 41px;
+  height: 41px;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}

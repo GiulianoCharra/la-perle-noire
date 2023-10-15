@@ -1,0 +1,47 @@
+.card-cliente {
+  display: flex;
+  width: 125px;
+  height: 200px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--card-border);
+  background: rgba(var(--color-cuarto), 0.3);
+
+  color: #000;
+  text-align: center;
+  position: relative;
+}
+
+.cliente__imagen {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.cliente__opinion {
+  visibility: hidden;
+  opacity: 0;
+  translate: 0 -100px;
+}
+
+.card-cliente:hover .cliente__opinion {
+  transition-property: opacity, translate;
+  transition-duration: var(--card-hover-duration);
+  transition-timing-function: ease-in-out;
+}
+
+.card-cliente:hover .cliente__imagen {
+  transition: scale var(--card-hover-duration) ease-in-out;
+}
+
+.card-cliente:hover .cliente__imagen {
+  scale: 0.8;
+}
+
+.card-cliente:hover .cliente__opinion {
+  visibility: visible;
+  translate: 0;
+  opacity: 1;
+}

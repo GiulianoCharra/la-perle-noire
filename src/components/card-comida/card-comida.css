@@ -1,0 +1,61 @@
+@import url("../btn-principal/btn-principal.css");
+
+.card-comida {
+  width: 125px;
+  height: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px;
+  background: var(--color-segundo);
+  color: #fff;
+}
+
+.comida__imagen {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: lightgray 50% / cover no-repeat;
+}
+
+.comida__nombre {
+  color: var(--color-segundo);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.container .agregar_pedido {
+  visibility: hidden;
+  opacity: 0;
+  left: -100px;
+  bottom: 0;
+}
+
+.container .comida__precio {
+}
+
+.comida__precio {
+  text-align: center;
+  font-size: 10px;
+}
+
+.comida__descripcion {
+  font-size: 0.5rem;
+  position: absolute;
+  bottom: -0.625rem;
+}
+
+.card-comida:hover .agregar_pedido {
+  position: static;
+  opacity: 1;
+}
+
+.card-comida:hover .comida__descripcion {
+  position: static;
+  bottom: 0;
+  opacity: 1;
+}

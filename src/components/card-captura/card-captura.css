@@ -1,0 +1,14 @@
+.card-captura {
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+.captura__imagen {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+.captura__descripcion {
+  font-size: 20px;
+}

@@ -1,0 +1,59 @@
+.footer {
+  padding: 20px 30px;
+  background: rgba(var(--color-segundo), 0.5);
+  gap: 30px;
+}
+
+.redes-sociales {
+  padding: 10px 20px;
+  justify-content: center;
+  gap: 20px 40px;
+}
+
+.red-social {
+  width: 30px;
+  height: 30px;
+  aspect-ratio: 1;
+  fill: rgba(var(--color-tercero), 1);
+}
+
+.seccion-intermedia {
+  justify-content: space-between;
+  position: relative;
+}
+
+.seccion-intermedia .menu-opciones {
+  width: fit-content;
+  padding: 15px 0px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.seccion-intermedia .logo {
+  position: absolute;
+  left: calc(50% - 100px);
+}
+
+.seccion-intermedia .contacto {
+  width: fit-content;
+  font-size: 1rem;
+  align-items: flex-end;
+}
+
+.contacto__imagen {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1;
+  fill: #fff;
+  border-radius: 50%;
+  background-image: linear-gradient(rgba(var(--color-cuarto), 0.8), rgba(var(--color-segundo), 1));
+}
+
+.direccion .container {
+  align-items: flex-start;
+}
+
+.ciudad {
+  font-weight: 700;
+}
