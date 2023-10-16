@@ -45,17 +45,14 @@
 
 .comida__descripcion {
   font-size: 0.5rem;
-  position: absolute;
   bottom: -0.625rem;
 }
 
 .card-comida:hover .agregar_pedido {
-  position: static;
   opacity: 1;
 }
 
 .card-comida:hover .comida__descripcion {
-  position: static;
   bottom: 0;
   opacity: 1;
 }

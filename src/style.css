@@ -1,5 +1,7 @@
 @import url(./styles/fonts.css);
+@import url(./styles/globales.css);
 @import url(./styles/components/header.css);
+@import url(./styles/components/inicio.css);
 @import url(./styles/components/footer.css);
 @import url(./styles/components/btn-principal.css);
 @import url(./styles/components/card-captura.css);
@@ -13,79 +15,4 @@
 
   --card-border: 10px;
   --card-hover-duration: 0.5s;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  color: #fff;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
-body {
-  max-width: 100svw;
-  min-height: 100svh;
-  background-image: linear-gradient(rgba(var(--color-primero), 1), rgba(var(--color-cuarto), 1));
-  color: #fff;
-  justify-content: space-between;
-}
-
-.container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.f-col {
-  flex-direction: column;
-}
-
-.f-wrap {
-  flex-wrap: wrap;
-}
-
-.g-center {
-  display: grid;
-  place-items: center;
-}
-
-main {
-  width: 100%;
-  padding: 20px;
-  gap: 50px;
-}
-
-section {
-  text-align: center;
-  color: #fff;
-}
-
-.seccion_bienvenida {
-}
-
-.seccion__titulo {
-  padding: 1.5rem;
-  font-family: Cinzel Decorative;
-  font-size: 3rem;
-  font-weight: 400;
-}
-
-.seccion__descripcion {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-  max-width: 75ch;
-}
-
-.imagen_principal {
-  width: clamp(200px, calc(20vw + 200px), 800px);
-  aspect-ratio: 1;
-}
-.imagen_principal img {
-  width: 100%;
 }

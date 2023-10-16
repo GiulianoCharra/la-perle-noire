@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: #fff;
+  font-family: "Roboto Flex", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+
+body {
+  max-width: 100svw;
+  min-height: 100svh;
+  background-image: linear-gradient(rgba(var(--color-primero), 1), rgba(var(--color-cuarto), 1));
+  color: #fff;
+  justify-content: space-between;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.f-col {
+  flex-direction: column;
+}
+.f-wrap {
+  flex-wrap: wrap;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.jc-se {
+  justify-content: space-evenly;
+}
+.jc-sa {
+  justify-content: space-around;
+}
+.jc-fs {
+  justify-content: flex-start;
+}
+.jc-fe {
+  justify-content: flex-end;
+}
+.ai-fs {
+  align-items: flex-start;
+}
+
+.ai-fe {
+  align-items: flex-end;
+}
+.g-center {
+  display: grid;
+  place-items: center;
+}
+
+.titulo-1 {
+  font-family: Cinzel Decorative;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.titulo-2 {
+  font-family: Cinzel Decorative;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.descripcion {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  max-width: 75ch;
+}
+
+.seccion {
+  width: clamp(300px, 100%, 1200px);
+}

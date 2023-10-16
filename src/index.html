@@ -15,45 +15,48 @@
       rel="stylesheet"
       href="style.css"
     />
-    <script src="script.js"></script>
+    <script
+      async
+      src="script.js"
+    ></script>
   </head>
   <body class="container f-col">
-    <header class="container header">
-      <div class="container menu-opciones">
+    <header class="container ai-fs jc-sb header">
+      <div class="header__menu menu--izquierdo">
         <a
-          class="menu-opcion"
+          class="menu__opcion"
           href="http://"
           >Reservar</a
         >
         <a
-          class="menu-opcion"
+          class="menu__opcion"
           href="http://"
           >Menú</a
         >
         <a
-          class="menu-opcion"
+          class="menu__opcion"
           href="http://"
           >Eventos</a
         >
       </div>
       <img
-        class="logo"
+        class="header__logo"
         src="./assets/images/logo.png"
         alt=""
       />
-      <div class="container menu-opciones">
+      <div class="header__menu menu--derecho">
         <a
-          class="menu-opcion"
+          class="menu__opcion"
           href="http://"
           >Contacto</a
         >
         <a
-          class="menu-opcion"
+          class="menu__opcion"
           href="http://"
           >Nosotros</a
         >
         <a
-          class="menu-opcion"
+          class="menu__opcion"
           href="http://"
           >Ubicación</a
         >
@@ -66,13 +69,14 @@
       </div>
     </header>
 
-    <main class="container f-col">
-      <section class="container seccion-bienvenida">
-        <div class="container f-col">
-          <h1 class="seccion__titulo">Bienvenido</h1>
-          <p class="seccion__descripcion">
-            Lorem ipsum dolor sit amet consectetur. In malesuada ligula fermentum amet cras bibendum
-            consequat magna vulputate. Malesuada a amet sed.
+    <main class="container f-col main">
+      <section class="container seccion seccion-bienvenida">
+        <div class="container f-col seccion__descripcion">
+          <h1 class="titulo-1">Bienvenido</h1>
+          <p class="descripcion">
+            Nos gustaría llevarlos a un viaje culinario excepcional, donde cada plato es una obra
+            maestra de sabor y presentación. Nuestro objetivo es brindarles una experiencia
+            gastronómica que nunca olvidarán.
           </p>
           <button class="btn-principal reservar"><span class="btn__name">Reservar</span></button>
         </div>
@@ -83,18 +87,39 @@
           />
         </div>
       </section>
+      <section class="container f-col seccion seccion-opiniones">
+        <span class="titulo-2">Opiniones de nuestros clientes</span>
+        <div class="container opiniones-clientes"></div>
+      </section>
 
-      <section class="container f-col seccion-sobre-nosotros">
-        <h2 class="seccion__titulo">Sobre nosotros</h2>
-        <p class="seccion__descripcion">
+      <section class="container f-col seccion seccion-sobre-nosotros">
+        <h2 class="titulo-2">Sobre nosotros</h2>
+        <p class="descripcion">
           Lorem ipsum dolor sit amet consectetur. Placerat enim leo neque est. Nulla mauris non
           feugiat fringilla aenean suscipit vitae venenatis.
         </p>
       </section>
+
+      <section class="container f-col seccion seccion-capturas">
+        <h2 class="titulo-2">Capturas</h2>
+        <p class="descripcion">
+          Lorem ipsum dolor sit amet consectetur. Augue maecenas ultricies enim diam orci dolor
+          pellentesque cras dictum.
+        </p>
+        <div class="container capturas-categorias">
+          <span class="categoria__nombre categoria--seleccionada">Comidas</span>
+          <span class="categoria__nombre">Ambiente</span>
+          <span class="categoria__nombre">Restaurante</span>
+          <span class="categoria__nombre">Eventos</span>
+        </div>
+        <div class="container f-col capturas__listado">
+          <div class="container listado-cards listado-comidas"></div>
+        </div>
+      </section>
     </main>
 
     <footer class="container f-col footer">
-      <section class="container f-wrap redes-sociales">
+      <section class="container footer__redes-sociales">
         <svg
           class="red-social"
           xmlns="http://www.w3.org/2000/svg"
@@ -155,8 +180,8 @@
           />
         </svg>
       </section>
-      <section class="container seccion-intermedia">
-        <nav class="container f-col menu-opciones">
+      <section class="container jc-sb footer__intermedia">
+        <nav class="container f-col ai-fs menu-opciones">
           <a
             class="menu-opcion"
             href="http://"
@@ -179,11 +204,11 @@
           >
         </nav>
         <img
-          class="logo"
+          class="footer__logo"
           src="./assets/images/logo.png"
           alt=""
         />
-        <div class="container f-col contacto">
+        <div class="container f-col ai-fs footer__contacto">
           <div class="container telefono">
             <div class="contacto__imagen g-center">
               <svg
@@ -222,14 +247,14 @@
                 />
               </svg>
             </div>
-            <div class="container f-col">
+            <div class="container f-col ai-fs">
               <span class="calle">9 de Julio</span>
               <span class="ciudad">Córdoba, Córdoba</span>
             </div>
           </div>
         </div>
       </section>
-      <section class="legales">
+      <section class="container f-col footer__legales">
         <span>Copyright @ 2023 La Perle Noire. Todos los derechos reservados</span>
       </section>
     </footer>

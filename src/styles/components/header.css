@@ -1,38 +1,59 @@
 .header {
   width: 100%;
   padding: 1.25rem;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
+  top: 0;
+  position: fixed;
+  z-index: 100;
+  gap: 0;
+  background-image: linear-gradient(
+    rgba(var(--color-primero), 1),
+    rgba(var(--color-primero), 0.8),
+    rgba(var(--color-primero), 0)
+  );
 }
 
-.menu-opciones {
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
 
-.menu-opcion {
+.menu--izquierdo {
+  justify-content: flex-start;
+}
+
+.menu--derecho {
+  justify-content: flex-end;
+}
+
+.menu__opcion {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
-  font-family: Cinzel Decorative;
+  font-family: Cinzel;
   outline: none;
-  text-transform: capitalize;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
-.menu-opcion:hover,
-.menu-opcion:focus-within {
+
+.menu__opcion:hover,
+.menu__opcion:focus-within {
   color: rgb(var(--color-tercero));
 }
 
-.logo {
+.header__logo {
   width: clamp(100px, 30vw, 300px);
   aspect-ratio: 1;
+
+  background-image: linear-gradient(rgba(var(--color-primero), 0.7), rgba(var(--color-primero), 0));
+  border-radius: 50%;
 }
 
 .carrito {
   width: 41px;
   height: 41px;
   position: absolute;
-  right: 20px;
-  top: 40px;
+  right: 40px;
+  top: 80px;
 }

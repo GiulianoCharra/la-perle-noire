@@ -1,0 +1,44 @@
+.main {
+  width: 100%;
+  padding-inline: 20px;
+  padding-bottom: 50px;
+  gap: 50px;
+}
+
+.seccion {
+  width: clamp(300px, 100%, 1200px);
+}
+
+.seccion-bienvenida {
+  gap: 2rem;
+}
+
+.titulo-1 {
+  font-family: Cinzel Decorative;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.titulo-2 {
+  font-family: Cinzel Decorative;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.seccion__descripcion {
+  gap: 2rem;
+}
+
+.imagen_principal {
+  width: clamp(200px, calc(20vw + 200px), 800px);
+}
+.imagen_principal img {
+  width: 100%;
+}
+
+.descripcion {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  max-width: 75ch;
+}

@@ -1,0 +1,91 @@
+.main {
+  width: 100%;
+  padding-inline: 20px;
+  padding-bottom: 50px;
+  gap: 50px;
+  margin-top: clamp(100px, 35vw, 320px);
+}
+
+.seccion-bienvenida {
+  gap: 2rem;
+}
+
+.seccion__descripcion {
+  gap: 2rem;
+}
+
+.imagen_principal {
+  width: clamp(200px, calc(20vw + 200px), 800px);
+}
+
+.imagen_principal img {
+  filter: drop-shadow(0px 40px 10px rgba(0, 0, 0, 0.5));
+  width: 100%;
+}
+
+.seccion-opiniones {
+  width: clamp(200px, 100%, 1200px);
+  overflow-x: auto;
+  padding-block: 20px;
+}
+
+.opiniones-clientes {
+  gap: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .seccion-bienvenida {
+    flex-direction: column;
+  }
+}
+
+.seccion-capturas {
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.capturas-categorias {
+  font-family: "Cinzel Decorative";
+  font-weight: bold;
+  gap: 20px;
+}
+
+.categoria__nombre.categoria--seleccionada {
+  color: rgba(var(--color-tercero), 1);
+  position: relative;
+}
+
+.categoria__nombre.categoria--seleccionada::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  background-color: rgba(var(--color-tercero), 1);
+  width: 110%;
+  height: 4px;
+  bottom: -5px;
+  left: calc(50% - 55%);
+}
+
+.capturas__listado {
+  width: 100%;
+  overflow: hidden;
+  gap: 10px;
+}
+
+.capturas__listado :nth-child(even) {
+  flex-direction: column-reverse;
+}
+
+
+.listado-cards {
+  display: flex;
+  width: 100%;
+  padding-block: 10px 50px;
+  padding-inline: 40px 500px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  overflow-x: auto;
+}

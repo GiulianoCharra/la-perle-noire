@@ -1,13 +1,17 @@
 .footer {
+  width: 100%;
   padding: 20px 30px;
   background: rgba(var(--color-segundo), 0.5);
+}
+
+.footer.container {
   gap: 30px;
 }
 
-.redes-sociales {
+.footer__redes-sociales {
   padding: 10px 20px;
   justify-content: center;
-  gap: 20px 40px;
+  gap: 40px 40px;
 }
 
 .red-social {
@@ -17,21 +21,34 @@
   fill: rgba(var(--color-tercero), 1);
 }
 
-.seccion-intermedia {
-  justify-content: space-between;
+.footer__intermedia {
+  width: 100%;
   position: relative;
 }
 
-.seccion-intermedia .menu-opciones {
-  width: fit-content;
+.footer__menu-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 15px 0px;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.seccion-intermedia .logo {
+.menu-opcion {
+  font-size: 1.2rem;
+  font-family: Cinzel;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer__logo {
+  width: clamp(50px, 20vw, 300px);
+  aspect-ratio: 1;
   position: absolute;
-  left: calc(50% - 100px);
+  left: calc(50% - calc(clamp(50px, 20vw, 300px) / 2));
 }
 
 .seccion-intermedia .contacto {
@@ -50,10 +67,13 @@
   background-image: linear-gradient(rgba(var(--color-cuarto), 0.8), rgba(var(--color-segundo), 1));
 }
 
-.direccion .container {
+.direccion {
   align-items: flex-start;
 }
 
 .ciudad {
   font-weight: 700;
+}
+
+.seccion-legales {
 }

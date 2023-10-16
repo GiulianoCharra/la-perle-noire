@@ -1,7 +1,7 @@
 /* Cinzel Decorative variable */
 @font-face {
   font-family: Cinzel;
-  src: url("./fonts/Cinzel/Cinzel-VariableFont_wght.ttf") format("truetype");
+  src: url("../assets/fonts/Cinzel/Cinzel-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
   font-weight: 400 900;
 }
@@ -31,4 +31,12 @@
   src: url("../assets/fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
+}
+
+/* Cinzel Roboto Flex */
+@font-face {
+  font-family: "Roboto Flex";
+  src: url("../assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 1000;
 }
