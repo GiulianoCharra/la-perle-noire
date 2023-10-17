@@ -107,13 +107,32 @@
           pellentesque cras dictum.
         </p>
         <div class="container capturas-categorias">
-          <span class="categoria__nombre categoria--seleccionada">Comidas</span>
-          <span class="categoria__nombre">Ambiente</span>
-          <span class="categoria__nombre">Restaurante</span>
-          <span class="categoria__nombre">Eventos</span>
+          <span
+            class="categoria__nombre categoria--seleccionada"
+            data-categoria="comidas"
+            >Comidas</span
+          >
+          <span
+            class="categoria__nombre"
+            data-categoria="ambiente"
+            >Ambiente</span
+          >
+          <span
+            class="categoria__nombre"
+            data-categoria="restaurante"
+            >Restaurante</span
+          >
+          <span
+            class="categoria__nombre"
+            data-categoria="eventos"
+            >Eventos</span
+          >
         </div>
-        <div class="container f-col capturas__listado">
-          <div class="container listado-cards listado-comidas"></div>
+        <div class="container f-col contenedor-listados">
+          <div class="container jc-fs listado-cards listado-comidas mostrarListado"></div>
+          <div class="container jc-fs listado-cards listado-ambiente ocultarListado"></div>
+          <div class="container jc-fs listado-cards listado-restaurante ocultarListado"></div>
+          <div class="container jc-fs listado-cards listado-eventos ocultarListado"></div>
         </div>
       </section>
     </main>

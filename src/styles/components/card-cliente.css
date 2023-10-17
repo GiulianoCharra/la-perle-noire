@@ -14,6 +14,7 @@
   align-items: center;
   gap: 10px;
   text-align: center;
+  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .cliente__imagen {
@@ -55,6 +56,7 @@
 
 .cliente__opinion::-webkit-scrollbar-thumb {
   background-color: rgba(var(--color-tercero), 0.5);
+  border-radius: 5px;
 }
 
 .card-cliente:hover .cliente__imagen {

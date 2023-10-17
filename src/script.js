@@ -57,6 +57,98 @@ const capturasComidas = [
     descripcion: "Nuevo plato de la casa: ¡Filete de ternera con salsa de vino tinto!",
   },
 ];
+const capturasAmbiente = [
+  {
+    imagenURL: "./assets/images/ambiente/ambiente (1).jpg",
+    descripcion: "Perfecto para una cena romántica con tu pareja.",
+  },
+  {
+    imagenURL: "./assets/images/ambiente/ambiente (2).jpg",
+    descripcion: "Perfecto para una cena romántica con tu pareja.",
+  },
+  {
+    imagenURL: "./assets/images/ambiente/ambiente (3).jpg",
+    descripcion: "Perfecto para una cena romántica con tu pareja.",
+  },
+  {
+    imagenURL: "./assets/images/ambiente/ambiente (4).jpg",
+    descripcion: "Perfecto para una cena romántica con tu pareja.",
+  },
+  {
+    imagenURL: "./assets/images/ambiente/ambiente (5).jpg",
+    descripcion: "Perfecto para una cena romántica con tu pareja.",
+  },
+  {
+    imagenURL: "./assets/images/ambiente/ambiente (6).jpg",
+    descripcion: "Perfecto para una cena romántica con tu pareja.",
+  },
+];
+const capturasRestaurante = [
+  {
+    imagenURL: "./assets/images/restaurante/restaurante (1).jpg",
+    descripcion: "Una arquiectura única en el mundo.",
+  },
+  {
+    imagenURL: "./assets/images/restaurante/restaurante (2).jpg",
+    descripcion: "Una arquiectura única en el mundo.",
+  },
+  {
+    imagenURL: "./assets/images/restaurante/restaurante (3).jpg",
+    descripcion: "Una arquiectura única en el mundo.",
+  },
+  {
+    imagenURL: "./assets/images/restaurante/restaurante (4).jpg",
+    descripcion: "Una arquiectura única en el mundo.",
+  },
+  {
+    imagenURL: "./assets/images/restaurante/restaurante (5).jpg",
+    descripcion: "Una arquiectura única en el mundo.",
+  },
+  {
+    imagenURL: "./assets/images/restaurante/restaurante (6).jpg",
+    descripcion: "Una arquiectura única en el mundo.",
+  },
+];
+const capturasEventos = [
+  {
+    imagenURL: "./assets/images/eventos/evento (1).jpg",
+    descripcion: "Entretenimiento perfecto para disfrutar con amigos y familiares.",
+  },
+  {
+    imagenURL: "./assets/images/eventos/evento (2).jpg",
+    descripcion: "Entretenimiento perfecto para disfrutar con amigos y familiares.",
+  },
+  {
+    imagenURL: "./assets/images/eventos/evento (3).jpg",
+    descripcion: "Entretenimiento perfecto para disfrutar con amigos y familiares.",
+  },
+  {
+    imagenURL: "./assets/images/eventos/evento (4).jpg",
+    descripcion: "Entretenimiento perfecto para disfrutar con amigos y familiares.",
+  },
+  {
+    imagenURL: "./assets/images/eventos/evento (5).jpg",
+    descripcion: "Entretenimiento perfecto para disfrutar con amigos y familiares.",
+  },
+  {
+    imagenURL: "./assets/images/eventos/evento (6).jpg",
+    descripcion: "Entretenimiento perfecto para disfrutar con amigos y familiares.",
+  },
+];
+
+const cardCapturaTemplate = `
+    <img
+      class="captura__imagen"
+      src="{imagenURL}"
+      alt=""
+    />
+    <div class="g-center captura__descripcion">
+      <p class="captura__descripcion-texto">
+        {descripcion}
+      </p>
+    </div>
+  `;
+
 // Función para cargar las opiniones y las imágenes de los clientes
 // function cargarCards() {
 //   const contenedorOpiniones = document.querySelector(".opiniones-clientes");
@@ -128,7 +220,13 @@ window.addEventListener("scroll", (e) => {
   updateLogoSize();
 });
 
+window.addEventListener("beforeunload", (e) => {
+  window.scrollTo(0, 0);
+});
+
 window.addEventListener("DOMContentLoaded", () => {
+  window.scrollTo(0, 0);
+
   // Carga las opiniones y las imágenes de los clientes
   cargarCards(
     "card-cliente",
@@ -141,21 +239,44 @@ window.addEventListener("DOMContentLoaded", () => {
       </div>`
   );
   // Carga las capturas de las comidas
-  cargarCards(
-    "card-captura",
-    "listado-comidas",
-    capturasComidas,
-    `
-    <img
-      class="captura__imagen"
-      src="{imagenURL}"
-      alt=""
-    />
-    <div class="g-center captura__descripcion">
-      <p class="captura__descripcion-texto">
-        {descripcion}
-      </p>
-    </div>
-  `
-  );
+  cargarCards("card-captura", "listado-comidas", capturasComidas, cardCapturaTemplate);
+  // Carga las capturas del ambiente
+  cargarCards("card-captura", "listado-ambiente", capturasAmbiente, cardCapturaTemplate);
+  // Carga las capturas del restaurante
+  cargarCards("card-captura", "listado-restaurante", capturasRestaurante, cardCapturaTemplate);
+  // Carga las capturas de los eventos
+  cargarCards("card-captura", "listado-eventos", capturasEventos, cardCapturaTemplate);
 });
+
+window.addEventListener("click", (e) => {
+  cambiarCategoria(e);
+});
+
+function cambiarCategoria(e) {
+  let categoriaActual = e.target;
+  if (!categoriaActual || !categoriaActual.classList.contains("categoria__nombre")) {
+    return;
+  }
+
+  let categoriaAnterior = document.querySelector(".categoria--seleccionada");
+  cambiarClaseCategoria(categoriaActual);
+  cambiarClaseCategoria(categoriaAnterior);
+
+  let listadoCardsAnterior = document.querySelector(".mostrarListado");
+  let listadoCardsActual = document.querySelector(`.listado-${categoriaActual.dataset.categoria}`);
+
+  cambiarVisibilidadListado(listadoCardsAnterior);
+  cambiarVisibilidadListado(listadoCardsActual);
+}
+
+function cambiarClaseCategoria(categoria) {
+  categoria.classList.toggle("categoria--seleccionada");
+}
+
+async function cambiarVisibilidadListado(listado) {
+  if (!listado) {
+    return;
+  }
+  listado.classList.toggle("mostrarListado");
+  listado.classList.toggle("ocultarListado");
+}

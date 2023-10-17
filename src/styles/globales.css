@@ -5,19 +5,20 @@
 }
 
 html {
-  color: #fff;
+  color: rgb(234, 234, 234);
   font-family: "Roboto Flex", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 body {
   max-width: 100svw;
   min-height: 100svh;
   background-image: linear-gradient(rgba(var(--color-primero), 1), rgba(var(--color-cuarto), 1));
-  color: #fff;
   justify-content: space-between;
   position: relative;
+  overflow: overlay;
 }
 
 .container {
@@ -81,4 +82,17 @@ body {
 
 .seccion {
   width: clamp(300px, 100%, 1200px);
+}
+
+body::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--color-tercero), 0.7);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgba(var(--color-segundo), 1);
 }
