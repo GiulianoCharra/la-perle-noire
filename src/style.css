@@ -6,13 +6,40 @@
 @import url(./styles/components/btn-principal.css);
 @import url(./styles/components/card-captura.css);
 @import url(./styles/components/card-cliente.css);
+@import url(./styles/components/form-input.css);
 
 :root {
-  --color-primero: 34, 40, 50;
-  --color-segundo: 47, 56, 71;
   --color-tercero: 231, 161, 23;
   --color-cuarto: 197, 127, 30;
 
   --card-border: 10px;
   --card-hover-duration: 0.5s;
+  
+  --duracion-animacion-input: 0.5s;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-primero: 200, 200, 200;
+    --color-segundo: 227, 227, 227;
+
+    --f-w-titulo-1: 700;
+    --f-w-titulo-2: 550;
+    --f-w-texto: 450;
+
+    --color-texto-primario: 34, 40, 50;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primero: 34, 40, 50;
+    --color-segundo: 47, 56, 71;
+
+    --f-w-titulo-1: 400;
+    --f-w-titulo-2: 400;
+    --f-w-texto: 400;
+
+    --color-texto-primario: 234, 234, 234;
+  }
 }

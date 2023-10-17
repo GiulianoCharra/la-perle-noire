@@ -32,7 +32,8 @@
   font-size: 1rem;
   font-family: "Cinzel Decorative";
   text-align: center;
-  text-shadow: 0 0 5px rgba(var(--color-primero), 1);
+  font-weight: 400;
+  /* text-shadow: 0 0 5px rgba(var(--color-primero), 1); */
   translate: 0 calc(var(--card-width) * 0.4);
   transition-property: font-size, translate;
   transition-duration: var(--card-hover-duration);
@@ -71,4 +72,16 @@
 
 .card-cliente:hover .cliente__opinion {
   opacity: 1;
+}
+
+@media (prefers-color-scheme: light) {
+  .cliente__nombre {
+    font-weight: 900;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .cliente__nombre {
+    font-weight: 400;
+  }
 }

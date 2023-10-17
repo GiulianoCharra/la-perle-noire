@@ -1,0 +1,113 @@
+.form-input-select {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-input);
+  width: 100%;
+  height: 50px;
+  position: relative;
+  z-index: 10;
+  transition-property: z-index, box-shadow;
+  transition-duration: var(--duracion-animacion);
+  transition-timing-function: var(--animacion-rebote);
+}
+
+.form-input-select span {
+  font-size: 1.3rem;
+}
+
+.form-input-select:has(.mostrar-opciones) {
+  z-index: 100;
+  box-shadow: 0 0 50px 20px #5cddeb4f, 0 0 50px 20px #5cddeb4f, 0 50px 50px 20px #5cddeb4f,
+    0 50px 50px 20px #5cddeb4f, 0 100px 50px 20px #5cddeb4f, 0 100px 50px 20px #5cddeb4f,
+    0 150px 50px 20px #5cddeb4f, 0 150px 50px 20px #5cddeb4f, 0 200px 50px 20px #5cddeb4f,
+    0 200px 50px 20px #5cddeb4f, 0 250px 50px 20px #5cddeb4f, 0 250px 50px 20px #5cddeb4f;
+}
+
+.form-input-select:has(.mostrar-opciones):has(.calendario) {
+  z-index: 100;
+  box-shadow: 0 0 50px 20px #5cddeb4f, 0 0 50px 20px #5cddeb4f, 0 50px 50px 20px #5cddeb4f,
+    0 50px 50px 20px #5cddeb4f, 0 100px 50px 20px #5cddeb4f, 0 100px 50px 20px #5cddeb4f,
+    0 150px 50px 20px #5cddeb4f, 0 150px 50px 20px #5cddeb4f, 0 200px 50px 20px #5cddeb4f,
+    0 200px 50px 20px #5cddeb4f, 0 250px 50px 20px #5cddeb4f, 0 250px 50px 20px #5cddeb4f,
+    0 300px 50px 20px #5cddeb4f, 0 300px 50px 20px #5cddeb4f, 0 350px 50px 20px #5cddeb4f,
+    0 350px 50px 20px #5cddeb4f;
+}
+
+.desplegable_select {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  padding-inline: 20px;
+  justify-content: space-between;
+  background-color: var(--color-input);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.desplegable_select.mostrar-opciones ~ .contenedor-opciones {
+  opacity: 1;
+  max-height: 300px;
+  padding-bottom: 20px;
+  z-index: 100;
+}
+
+.desplegable_select.mostrar-opciones ~ .contenedor-opciones.contenedor--calendario {
+  max-height: 400px;
+  padding-bottom: 10px;
+}
+
+.desplegable_select.mostrar-opciones .flecha {
+  rotate: 180deg;
+}
+
+.contenedor-opciones {
+  background: var(--color-input);
+  max-height: 0;
+  opacity: 0;
+  transition-property: max-height, opacity, padding-block;
+  transition-duration: var(--duracion-animacion);
+  transition-timing-function: var(--animacion-rebote);
+  position: absolute;
+  top: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 100%;
+  padding-left: 50px;
+  padding-block: 0px;
+  transform-origin: top;
+  z-index: 10;
+}
+
+.contenedor-opciones.contenedor--calendario {
+  display: grid;
+  place-items: center;
+  padding-left: 0px;
+}
+
+.listado-opciones {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 250px;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1rem;
+}
+
+.opcion label {
+  cursor: pointer;
+}
+
+.opcion input {
+  width: 30px;
+  height: 30px;
+}

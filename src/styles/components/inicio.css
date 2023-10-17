@@ -142,3 +142,66 @@
   background-color: rgba(var(--color-tercero), 0.5);
   border-radius: 10px;
 }
+
+@media (prefers-color-scheme: dark) {
+  .categoria__nombre.categoria--seleccionada {
+    color: rgba(var(--color-tercero), 1);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .categoria__nombre.categoria--seleccionada {
+    color: rgba(var(--color-segundo), 1);
+  }
+}
+
+.contacto-contenedor {
+  height: 500px;
+  width: 100%;
+  gap: 50px;
+}
+
+.formulario-contacto {
+  width: 100%;
+  height: 100%;
+}
+
+.formulario-datos {
+  height: 100%;
+  width: 100%;
+}
+
+.contacto__imagen {
+  height: 100%;
+}
+
+.seccion-ubicacion {
+  gap: 50px;
+}
+
+.sucursales {
+  gap: 50px;
+}
+
+.sucursal {
+  padding: 5px 0px;
+  gap: 10px;
+}
+
+.sucursal__ubicacion {
+  font-size: 1.5rem;
+}
+
+.sucursal__datos {
+  padding: 0px 20px;
+  gap: 10px;
+}
+
+.sucursal__direccion {
+}
+.sucursal__telefono {
+}
+
+.mapa {
+  border-radius: 10px;
+}

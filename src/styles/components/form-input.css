@@ -1,0 +1,79 @@
+.form-input {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  color: rgba(var(--color-texto-primario), 1);
+}
+
+.form-input input::placeholder {
+  color: transparent;
+}
+
+.form-input:focus-within {
+  /* box-shadow: 0 0 50px 20px #5cddeb4f; */
+}
+
+.form-input label {
+  cursor: text;
+  font-size: 1.3rem;
+  padding-left: 20px;
+  position: absolute;
+  top: 10px;
+  transition-property: translate, font-size;
+  transition-duration: var(--duracion-animacion-input);
+}
+
+.form-input:focus-within label,
+.form-input:has(input:valid) label,
+.form-input:has(textarea:valid) label {
+  color: rgba(var(--color-texto-primario), 1);
+  font-size: 1.2rem;
+  translate: -10px -25px;
+}
+
+.form-input input:invalid {
+  /* border: 2px solid red; */
+}
+
+.form-input input,
+.form-input textarea {
+  background-color: rgba(var(--color-segundo), 0.8);
+  width: 100%;
+  height: 100%;
+  color: rgba(var(--color-texto-primario), 1);
+  font-size: 1.3rem;
+  padding-inline: 20px;
+}
+
+.form-input.message {
+  height: fit-content;
+}
+
+.form-input.message textarea {
+  padding-top: 10px;
+  height: 200px;
+  min-height: 50px;
+  max-height: 400px;
+  resize: vertical;
+}
+
+.form-input input,
+.form-input input:focus-within,
+.form-input textarea,
+.form-input textarea:focus-within {
+  outline: none;
+  border: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(var(--color-segundo), 1) inset !important;
+}
+input:-webkit-autofill {
+  -webkit-text-fill-color: rgba(var(--color-segundo), 1) !important;
+}

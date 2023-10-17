@@ -27,16 +27,6 @@
   justify-content: flex-end;
 }
 
-.menu__opcion {
-  color: #fff;
-  font-size: 1.3rem;
-  text-align: center;
-  font-family: Cinzel;
-  outline: none;
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
-
 .menu__opcion:hover,
 .menu__opcion:focus-within {
   color: rgb(var(--color-tercero));
@@ -46,8 +36,12 @@
   width: clamp(100px, 30vw, 300px);
   aspect-ratio: 1;
 
-  background-image: linear-gradient(rgba(var(--color-primero), 0.7), rgba(var(--color-primero), 0));
   border-radius: 50%;
+  /*   
+    background-image: linear-gradient(
+      rgba(var(--color-primero), 0.7),
+      rgba(var(--color-primero), 0)
+    ); */
 }
 
 .carrito {
@@ -56,4 +50,10 @@
   position: absolute;
   right: 40px;
   top: 80px;
+}
+
+@media (prefers-color-scheme: light) {
+  .header__logo {
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 1));
+  }
 }

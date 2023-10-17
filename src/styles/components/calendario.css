@@ -1,0 +1,47 @@
+.calendario {
+  display: grid;
+  /* width: 340px; */
+  grid-template-columns: repeat(7, 1fr);
+  padding-inline: 10px;
+  width: 100%;
+  /* width: clamp(105px, calc(25vw + 105px), 340px); */
+  height: 100%;
+  align-items: center;
+  align-content: center;
+  gap: clamp(5px, calc(0.5vw + 1px), 10px);
+  flex-wrap: wrap;
+}
+
+.celda-dia {
+  /* width: clamp(10px, calc(4vw + 5px), 40px); */
+  aspect-ratio: 1;
+  flex-basis: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #3f6380;
+  font-size: 1rem;
+  cursor: pointer;
+  transition-property: background-color, color, border, scale, font-size, box-shadow;
+  transition-duration: 100ms;
+}
+
+.celda-dia:hover {
+  background-color: var(--color-celeste);
+}
+.celda-dia:hover,
+.celda-dia.dia-seleccionado {
+  box-shadow: 0 0 5px 5px #5cddeb9f;
+  color: black;
+  scale: 1.1;
+}
+.celda-dia.dia-seleccionado {
+  font-size: 1.2rem;
+  background-color: white;
+  border: 3px solid var(--color-celeste);
+}
+
+.celda-dia:not(:hover) {
+  transition-duration: 2s;
+}

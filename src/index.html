@@ -25,17 +25,17 @@
       <div class="header__menu menu--izquierdo">
         <a
           class="menu__opcion"
-          href="http://"
+          href="./pages/reserva/reserva.html"
           >Reservar</a
         >
         <a
           class="menu__opcion"
-          href="http://"
+          href="./pages/menu/menu.html"
           >Menú</a
         >
         <a
           class="menu__opcion"
-          href="http://"
+          href="./pages/eventos/eventos.html"
           >Eventos</a
         >
       </div>
@@ -47,17 +47,17 @@
       <div class="header__menu menu--derecho">
         <a
           class="menu__opcion"
-          href="http://"
+          href="#contacto"
           >Contacto</a
         >
         <a
           class="menu__opcion"
-          href="http://"
+          href="#sobre-nosotros"
           >Nosotros</a
         >
         <a
           class="menu__opcion"
-          href="http://"
+          href="#ubicacion"
           >Ubicación</a
         >
       </div>
@@ -70,6 +70,7 @@
     </header>
 
     <main class="container f-col main">
+      <!-- Seccion bienvenida -->
       <section class="container seccion seccion-bienvenida">
         <div class="container f-col seccion__descripcion">
           <h1 class="titulo-1">Bienvenido</h1>
@@ -87,19 +88,23 @@
           />
         </div>
       </section>
+      <!-- Seccion opiniones -->
       <section class="container f-col seccion seccion-opiniones">
         <span class="titulo-2">Opiniones de nuestros clientes</span>
         <div class="container opiniones-clientes"></div>
       </section>
-
-      <section class="container f-col seccion seccion-sobre-nosotros">
+      <!-- Seccion sobre nosotros -->
+      <section
+        id="sobre-nosotros"
+        class="container f-col seccion seccion-sobre-nosotros"
+      >
         <h2 class="titulo-2">Sobre nosotros</h2>
         <p class="descripcion">
           Lorem ipsum dolor sit amet consectetur. Placerat enim leo neque est. Nulla mauris non
           feugiat fringilla aenean suscipit vitae venenatis.
         </p>
       </section>
-
+      <!-- Seccion capturas -->
       <section class="container f-col seccion seccion-capturas">
         <h2 class="titulo-2">Capturas</h2>
         <p class="descripcion">
@@ -133,6 +138,133 @@
           <div class="container jc-fs listado-cards listado-ambiente ocultarListado"></div>
           <div class="container jc-fs listado-cards listado-restaurante ocultarListado"></div>
           <div class="container jc-fs listado-cards listado-eventos ocultarListado"></div>
+        </div>
+      </section>
+
+      <!-- Seccion ubicación -->
+      <section
+        id="ubicacion"
+        class="container f-col seccion seccion-ubicacion"
+      >
+        <span class="titulo-2">Nuestras sucursales</span>
+        <div class="container f-wrap jc-sb ai-fs sucursales">
+          <div class="container f-col ai-fs sucursal">
+            <span class="sucursal__ubicacion">Buenos Aires - Puerto Madero</span>
+            <div class="container f-col ai-fs sucursal__datos">
+              <span class="sucursal__direccion">Juana Manso 1890, C1107 CABA</span
+              ><span class="sucursal__telefono">(011) 555-1234</span>
+            </div>
+          </div>
+          <div class="container f-col ai-fs sucursal">
+            <span class="sucursal__ubicacion">Córdoba - Zona Nueva Córdoba</span>
+            <div class="container f-col ai-fs sucursal__datos">
+              <span class="sucursal__direccion">Av. Hipólito Yrigoyen 567, Córdoba, CBA</span
+              ><span class="sucursal__telefono">(0351) 444-5678</span>
+            </div>
+          </div>
+          <div class="container f-col ai-fs sucursal">
+            <span class="sucursal__ubicacion">Mar del Plata - Playa Grande</span>
+            <div class="container f-col ai-fs sucursal__datos">
+              <span class="sucursal__direccion">Av. Costanera 789, Mar del Plata, BA</span
+              ><span class="sucursal__telefono">(0223) 678-9012</span>
+            </div>
+          </div>
+          <div class="container f-col ai-fs sucursal">
+            <span class="sucursal__ubicacion">Mendoza - Centro Histórico</span>
+            <div class="container f-col ai-fs sucursal__datos">
+              <span class="sucursal__direccion">Calle San Martín 456, Mendoza, MZA</span
+              ><span class="sucursal__telefono">(0261) 789-3456</span>
+            </div>
+          </div>
+          <div class="container f-col ai-fs sucursal">
+            <span class="sucursal__ubicacion">Bariloche - Centro</span>
+            <div class="container f-col ai-fs sucursal__datos">
+              <span class="sucursal__direccion"
+                >Av. San Martín 987, San Carlos de Bariloche, RN</span
+              ><span class="sucursal__telefono">((0294) 555-6789</span>
+            </div>
+          </div>
+        </div>
+        <iframe
+          class="mapa"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5521.959489835928!2d-58.364571157433936!3d-34.61991822813425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3352b457877fd%3A0x862d55f863c6e15e!2sOSTEN%20restaurante%20%26%20bar!5e0!3m2!1ses-419!2sar!4v1697528049218!5m2!1ses-419!2sar"
+          width="800"
+          height="500"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+      <!-- Seccion contacto -->
+      <section
+        id="contacto"
+        class="container f-col seccion seccion-contacto"
+      >
+        <h2 class="titulo-2">Contacto</h2>
+        <div class="container ai-fs contacto-contenedor">
+          <form
+            id="form-contacto"
+            class="container f-col formulario-contacto"
+          >
+            <div class="container f-col jc-sb formulario-datos">
+              <div class="form-input">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="contacto-nombre"
+                  id="contacto-nombre"
+                  placeholder="Pérez"
+                  required
+                />
+                <label for="contacto-nombre">Nombre</label>
+              </div>
+              <div class="form-input">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="contacto-apellido"
+                  id="contacto-apellido"
+                  placeholder="Hernández"
+                  required
+                />
+                <label for="floatingInput">Apellido</label>
+              </div>
+              <div class="form-input">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="contacto-email"
+                  id="contacto-email"
+                  placeholder="name@example.com"
+                  required
+                />
+                <label for="contacto-email">Email</label>
+              </div>
+              <div class="form-input message">
+                <label for="message">message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <button
+              id="btn-enviar-contacto"
+              type="submit"
+              class="btn-principal"
+            >
+              <span class="btn__name">Enviar</span>
+            </button>
+          </form>
+          <div class="contacto__imagen">
+            <img
+              class="contacto__imagen"
+              src="./assets/images/contacto.png"
+              alt=""
+            />
+          </div>
         </div>
       </section>
     </main>
@@ -202,22 +334,22 @@
       <section class="container jc-sb footer__intermedia">
         <nav class="container f-col ai-fs menu-opciones">
           <a
-            class="menu-opcion"
+            class="menu__opcion"
             href="http://"
             >inicio</a
           >
           <a
-            class="menu-opcion"
+            class="menu__opcion"
             href="http://"
             >reservar</a
           >
           <a
-            class="menu-opcion"
+            class="menu__opcion"
             href="http://"
             >menus</a
           >
           <a
-            class="menu-opcion"
+            class="menu__opcion"
             href="http://"
             >eventos</a
           >
@@ -227,9 +359,9 @@
           src="./assets/images/logo.png"
           alt=""
         />
-        <div class="container f-col ai-fs footer__contacto">
+        <div class="container f-col ai-fs footer__info-contacto">
           <div class="container telefono">
-            <div class="contacto__imagen g-center">
+            <div class="g-center info-contacto__imagen">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -242,7 +374,7 @@
             <span>+54 351 4565033</span>
           </div>
           <div class="container email">
-            <div class="g-center contacto__imagen">
+            <div class="g-center info-contacto__imagen">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -256,7 +388,7 @@
             <span>laperlenoire@gmail.com</span>
           </div>
           <div class="container direccion">
-            <div class="g-center contacto__imagen">
+            <div class="g-center info-contacto__imagen">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 384 512"

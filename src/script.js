@@ -280,3 +280,22 @@ async function cambiarVisibilidadListado(listado) {
   listado.classList.toggle("mostrarListado");
   listado.classList.toggle("ocultarListado");
 }
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    // Obtener el objetivo del enlace (elemento con el ID correspondiente)
+    var target = document.querySelector(link.getAttribute("href"));
+
+    if (!target) return;
+    event.preventDefault();
+
+    // Calcular la posición del objetivo y ajustarla por la altura del menú
+    var offset = target.getBoundingClientRect().top + window.scrollY;
+    var menuHeight = document.querySelector(".header").offsetHeight - 20;
+
+    // Animar el desplazamiento
+    window.scrollTo({
+      top: offset - menuHeight
+    });
+  });
+});
