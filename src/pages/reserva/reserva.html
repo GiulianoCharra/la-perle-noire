@@ -21,10 +21,16 @@
     />
     <script
       async
-      src="script.js"
+      type="module"
+      src="../../script.js"
+    ></script>
+    <script
+      async
+      type="module"
+      src="./reserva.js"
     ></script>
   </head>
-  <body class="container f-col">
+  <body class="container f-col jc-sb">
     <header class="container ai-fs jc-sb header">
       <div class="header__menu menu--izquierdo">
         <a
@@ -43,12 +49,13 @@
           >Eventos</a
         >
       </div>
-      <img
-        class="header__logo"
-        src="../../assets/images/logo.png"
-        src="../../assets/images/logo.png"
-        alt=""
-      />
+      <a href="../../index.html">
+        <img
+          class="header__logo"
+          src="../../assets/images/logo.png"
+          alt=""
+        />
+      </a>
       <div class="header__menu menu--derecho">
         <a
           class="menu__opcion"
@@ -75,59 +82,348 @@
     </header>
 
     <main class="container f-col main">
-      <div class="container f-col seccion-reserva">
-        <span class="titulo-2">Datos para la Reserva</span>
-        <div class="container f-col form-reserva">
-          <div class="container form-datos">
-            <div class="container f-col jc-fs datos-personales">
-              <span class="titulo">Datos personales</span>
-              <div class="contenedor_inputs">
-                <div class="input_text"><span class="input_label">nombre</span></div>
-                <div class="input_text"><span class="input_label">Apellido</span></div>
-                <div class="input_text"><span class="input_label">DNI</span></div>
+      <section class="container f-col seccion seccion-reserva">
+        <span class="titulo-1">Reserva</span>
+        <form
+          class="container w-100 f-col form-reserva"
+          action=""
+          method="post"
+        >
+          <div class="container form-datos datos-personales">
+            <div class="container w-100 f-col ai-fs">
+              <span class="titulo-4">Datos personales</span>
+              <div class="container f-col datos-personales">
+                <div class="form-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="reserva-nombre"
+                    id="reserva-nombre"
+                    placeholder="Juan"
+                    required
+                  />
+                  <label for="reserva-nombre">nombre</label>
+                </div>
+                <div class="form-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="reserva-apellido"
+                    id="reserva-apellido"
+                    placeholder="Pérez"
+                    required
+                  />
+                  <label for="reserva-apellido">apellido</label>
+                </div>
+                <div class="form-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="reserva-dni"
+                    id="reserva-dni"
+                    placeholder="12345678"
+                    required
+                  />
+                  <label for="reserva-dni">DNI</label>
+                </div>
               </div>
             </div>
-            <div class="container f-col jc-fs datos-contacto">
-              <span class="titulo">Datos de Contacto</span>
-              <div class="contenedor_inputs">
-                <div class="input_text"><span class="input_label">Email</span></div>
-                <div class="input_text"><span class="input_label">teléfono 1</span></div>
-                <div class="input_text"><span class="input_label">teléfono 2</span></div>
+            <div class="container w-100 f-col ai-fs">
+              <span class="titulo-4">Datos de Contacto</span>
+              <div class="container f-col datos-contacto">
+                <div class="form-input">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="reserva-email"
+                    id="reserva-email"
+                    placeholder="pepe@gmail.com"
+                    required
+                  />
+                  <label for="reserva-email">email</label>
+                </div>
+                <div class="form-input">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    name="reserva-telefono-1"
+                    id="reserva-telefono-1"
+                    placeholder="pepe@gmail.com"
+                    required
+                  />
+                  <label for="reserva-telefono-1">teléfono 1</label>
+                </div>
+                <div class="form-input">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    name="reserva-telefono-2"
+                    id="reserva-telefono-2"
+                    placeholder="pepe@gmail.com"
+                    required
+                  />
+                  <label for="reserva-telefono-2">teléfono 2</label>
+                </div>
               </div>
             </div>
           </div>
-          <div class="container f-col">
-            <span class="titulo-2">Datos Reserva</span>
-            <div class="container datos-reserva">
-              <div class="container_f_col">
-                <div class="input_text"><span class="input_label">Cantidad</span></div>
-                <div class="dropdown_time">
-                  <span class="dropdown_name">Time</span>
-                  <div class="icono_icono_relog">
-                    <div class="circulo"></div>
-                    <div class="manesilla"></div>
+          <div class="container ai-fs w-100 f-col">
+            <span class="titulo-4">Datos Reserva</span>
+            <div class="container w-100 ai-fs datos-reserva">
+              <div class="container w-100 f-col">
+                <div class="form-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="reserva-cantidad"
+                    id="reserva-cantidad"
+                    placeholder="1;2;3"
+                    required
+                  />
+                  <label for="reserva-nombre">cantidad</label>
+                </div>
+
+                <div class="form-input-select">
+                  <div class="desplegable_select">
+                    <span id="reserva-fecha">Fecha</span>
+
+                    <svg
+                      class="icono icono-calendario"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="calendar-number-outline">
+                        <path
+                          id="rectangulo"
+                          d="M18.6923 2H3.30769C2.03319 2 1 3.03319 1 4.30769V18.1538C1 19.4284 2.03319 20.4615 3.30769 20.4615H18.6923C19.9668 20.4615 21 19.4284 21 18.1538V4.30769C21 3.03319 19.9668 2 18.6923 2Z"
+                          stroke="white"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          id="numero"
+                          d="M4.84615 1V2.53846M17.1538 1V2.53846M21 6.38462H1M13.3077 11.1923L15.3952 9.65385H15.6154V17.7308M6.09519 10.3716C6.30337 10.0197 6.88606 9.46154 7.9149 9.46154C9.13125 9.46154 10.2173 10.124 10.2173 11.3798C10.2201 11.6229 10.1741 11.8641 10.0822 12.0892C9.99034 12.3143 9.85433 12.5187 9.68221 12.6904C9.15673 13.2284 8.35481 13.4341 7.91683 13.4341C8.41202 13.4341 9.32019 13.6668 9.91442 14.2745C10.2952 14.6625 10.4712 15.2096 10.4712 15.8163C10.4712 17.1567 9.3399 17.9231 7.96538 17.9231C6.80337 17.9231 6.09038 17.0784 5.85577 16.6808"
+                          stroke="white"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="contenedor-opciones contenedor--calendario">
+                    <div id="calendario" class="calendario">
+                      <div class="celda-dia-semana">L</div>
+                      <div class="celda-dia-semana">M</div>
+                      <div class="celda-dia-semana">M</div>
+                      <div class="celda-dia-semana">J</div>
+                      <div class="celda-dia-semana">V</div>
+                      <div class="celda-dia-semana">S</div>
+                      <div class="celda-dia-semana">D</div>
+                      <div class="celda-dia">1</div>
+                      <div class="celda-dia">2</div>
+                      <div class="celda-dia">3</div>
+                      <div class="celda-dia">4</div>
+                      <div class="celda-dia">5</div>
+                      <div class="celda-dia">6</div>
+                      <div class="celda-dia">7</div>
+                      <div class="celda-dia">8</div>
+                      <div class="celda-dia">9</div>
+                      <div class="celda-dia">10</div>
+                      <div class="celda-dia">11</div>
+                      <div class="celda-dia">12</div>
+                      <div class="celda-dia">13</div>
+                      <div class="celda-dia">14</div>
+                      <div class="celda-dia">15</div>
+                      <div class="celda-dia">16</div>
+                      <div class="celda-dia">17</div>
+                      <div class="celda-dia">18</div>
+                      <div class="celda-dia">19</div>
+                      <div class="celda-dia">20</div>
+                      <div class="celda-dia">21</div>
+                      <div class="celda-dia">22</div>
+                      <div class="celda-dia">23</div>
+                      <div class="celda-dia">24</div>
+                      <div class="celda-dia">25</div>
+                      <div class="celda-dia">26</div>
+                      <div class="celda-dia">27</div>
+                      <div class="celda-dia">28</div>
+                      <div class="celda-dia">29</div>
+                      <div class="celda-dia">30</div>
+                      <div class="celda-dia">31</div>
+                    </div>
                   </div>
                 </div>
-                <div class="dropdown_calendar">
-                  <span class="input_label">Fecha</span>
-                  <div class="calendar_number_outline">
-                    <div class="rectangulo"></div>
-                    <div class="numero"></div>
+                <div class="form-input-select">
+                  <div class="desplegable_select">
+                    <span id="reserva-hora">Hora</span>
+                    <svg
+                      class="icono icono-relog"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_170_2645)">
+                        <path
+                          id="circulo"
+                          d="M9.99998 1.47729C5.07067 1.47729 1.07141 5.47719 1.07141 10.4073C1.07141 15.3374 5.07067 19.3373 9.99998 19.3373C14.9293 19.3373 18.9286 15.3374 18.9286 10.4073C18.9286 5.47719 14.9293 1.47729 9.99998 1.47729Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          id="manesilla"
+                          d="M10 4.31818V10.7102H14.4643"
+                          stroke="white"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_170_2645">
+                          <rect
+                            width="20"
+                            height="20"
+                            fill="white"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="contenedor-opciones">
+                    <div class="listado-opciones">
+                      <div class="opcion">
+                        <input
+                          type="radio"
+                          name="reason"
+                          id="reason-option-1"
+                        /><label
+                          for="reason-option-1"
+                          class=""
+                          >Romántica</label
+                        >
+                      </div>
+                      <div class="opcion">
+                        <input
+                          type="radio"
+                          name="reason"
+                          id="reason-option-2"
+                        /><label
+                          for="reason-option-2"
+                          class=""
+                          >Familiar</label
+                        >
+                      </div>
+                      <div class="opcion">
+                        <input
+                          type="radio"
+                          name="reason"
+                          id="reason-option-3"
+                        /><label
+                          for="reason-option-3"
+                          class=""
+                          >Reunion informal</label
+                        >
+                      </div>
+                      <div class="opcion">
+                        <input
+                          type="radio"
+                          name="reason"
+                          id="reason-option-3"
+                        /><label
+                          for="reason-option-3"
+                          class=""
+                          >Reunion formal</label
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="dropdown_select">
-                  <span class="dropdown_name">tipo</span>
-                  <div class="icon_i_flecha_abajo"></div>
-                </div>
-                <div class="container">
-                  <div class="input_select">
-                    <div class="check"></div>
-                    <span class="option">Necesita silla de niño?</span>
+                <div class="form-input-select">
+                  <div class="desplegable_select">
+                    <span class="input-nombre">Tipo de Reserva</span>
+                    <svg
+                      class="icono icono-flecha"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                      />
+                    </svg>
                   </div>
-                  <div class="input_text"><span class="input_label">Cantidad</span></div>
+                  <div class="contenedor-opciones">
+                    <div class="listado-opciones">
+                      <div class="opcion">
+                        <input
+                          type="radio"
+                          name="reason"
+                          id="reason-option-1"
+                        /><label
+                          for="reason-option-1"
+                          class=""
+                          >Romántica</label
+                        >
+                      </div>
+                      <div class="opcion">
+                        <input
+                          type="radio"
+                          name="reason"
+                          id="reason-option-2"
+                        /><label
+                          for="reason-option-2"
+                          class=""
+                          >Familiar</label
+                        >
+                      </div>
+                      <div class="opcion">
+                        <input
+                          type="radio"
+                          name="reason"
+                          id="reason-option-3"
+                        /><label
+                          for="reason-option-3"
+                          class=""
+                          >negocios</label
+                        >
+                      </div>
+                      <div class="opcion">
+                        <input
+                          type="radio"
+                          name="reason"
+                          id="reason-option-4"
+                        /><label
+                          for="reason-option-4"
+                          class=""
+                          >Amigos</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="opcion w-100">
+                  <input
+                    type="checkbox"
+                    name="reserva-necesitaSilla"
+                    id="reserva-necesitaSilla"
+                  /><label
+                    for="reserva-necesitaSilla"
+                    class=""
+                    >Necesitara silla de niño?</label
+                  >
                 </div>
               </div>
-              <div class="input_text"><span class="input_label">Observación</span></div>
+              <div class="form-input message">
+                <label for="reserva-observaciones">Observaciones</label>
+                <textarea
+                  name="reserva-observaciones"
+                  id="reserva-observaciones"
+                  required
+                ></textarea>
+              </div>
             </div>
           </div>
           <div class="container f-col">
@@ -136,9 +432,14 @@
               <span class="option">Agregar algún plato a su reserva?</span>
             </div>
           </div>
-        </div>
-        <div class="btn_pricipal"><span class="btn_name">Reservar</span></div>
-      </div>
+          <button
+            class="btn-principal"
+            type="submit"
+          >
+            <span class="btn__name">Reservar</span>
+          </button>
+        </form>
+      </section>
     </main>
 
     <footer class="container f-col footer">

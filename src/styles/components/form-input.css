@@ -23,7 +23,7 @@
   position: absolute;
   top: 10px;
   transition-property: translate, font-size;
-  transition-duration: var(--duracion-animacion-input);
+  transition-duration: var(--duracion-animacion-lento);
 }
 
 .form-input:focus-within label,

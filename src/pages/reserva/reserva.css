@@ -1,0 +1,18 @@
+.seccion-reserva {
+  gap: 50px;
+}
+.datos-personales,
+.datos-contacto {
+  width: 100%;
+}
+
+.form-reserva {
+  padding-inline: 50px;
+  gap: 50px;
+}
+
+
+.icono-relog{
+    /* background-image: url(../../assets/svg/x-circulo.svg); */
+}
+

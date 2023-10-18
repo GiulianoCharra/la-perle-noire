@@ -7,6 +7,8 @@
 @import url(./styles/components/card-captura.css);
 @import url(./styles/components/card-cliente.css);
 @import url(./styles/components/form-input.css);
+@import url(./styles/components/form-input-desplegable.css);
+@import url(./styles/components/calendario.css);
 
 :root {
   --color-tercero: 231, 161, 23;
@@ -14,8 +16,12 @@
 
   --card-border: 10px;
   --card-hover-duration: 0.5s;
-  
-  --duracion-animacion-input: 0.5s;
+
+  --duracion-animacion-muy-rapido: 100ms;
+  --duracion-animacion-rapido: 200ms;
+  --duracion-animacion-normal: 300ms;
+  --duracion-animacion-lento: 400ms;
+  --duracion-animacion-muy-lento: 500ms;
 }
 
 @media (prefers-color-scheme: light) {
@@ -25,9 +31,12 @@
 
     --f-w-titulo-1: 700;
     --f-w-titulo-2: 550;
+    --f-w-titulo-3: 550;
+    --f-w-titulo-4: 550;
     --f-w-texto: 450;
 
     --color-texto-primario: 34, 40, 50;
+    --color-texto-secundario: 220, 220, 220;
   }
 }
 
@@ -38,8 +47,11 @@
 
     --f-w-titulo-1: 400;
     --f-w-titulo-2: 400;
+    --f-w-titulo-3: 400;
+    --f-w-titulo-4: 400;
     --f-w-texto: 400;
 
     --color-texto-primario: 234, 234, 234;
+    --color-texto-secundario: 34, 40, 50;
   }
 }

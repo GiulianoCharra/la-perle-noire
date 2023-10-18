@@ -3,14 +3,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-input);
+  background-color: rgba(var(--color-segundo), 1);
   width: 100%;
   height: 50px;
   position: relative;
   z-index: 10;
   transition-property: z-index, box-shadow;
-  transition-duration: var(--duracion-animacion);
-  transition-timing-function: var(--animacion-rebote);
+  transition-duration: var(--duracion-animacion-lento);
+  transition-timing-function: ease-in-out;
 }
 
 .form-input-select span {
@@ -19,20 +19,20 @@
 
 .form-input-select:has(.mostrar-opciones) {
   z-index: 100;
-  box-shadow: 0 0 50px 20px #5cddeb4f, 0 0 50px 20px #5cddeb4f, 0 50px 50px 20px #5cddeb4f,
+  /* box-shadow: 0 0 50px 20px #5cddeb4f, 0 0 50px 20px #5cddeb4f, 0 50px 50px 20px #5cddeb4f,
     0 50px 50px 20px #5cddeb4f, 0 100px 50px 20px #5cddeb4f, 0 100px 50px 20px #5cddeb4f,
     0 150px 50px 20px #5cddeb4f, 0 150px 50px 20px #5cddeb4f, 0 200px 50px 20px #5cddeb4f,
-    0 200px 50px 20px #5cddeb4f, 0 250px 50px 20px #5cddeb4f, 0 250px 50px 20px #5cddeb4f;
+    0 200px 50px 20px #5cddeb4f, 0 250px 50px 20px #5cddeb4f, 0 250px 50px 20px #5cddeb4f; */
 }
 
 .form-input-select:has(.mostrar-opciones):has(.calendario) {
   z-index: 100;
-  box-shadow: 0 0 50px 20px #5cddeb4f, 0 0 50px 20px #5cddeb4f, 0 50px 50px 20px #5cddeb4f,
+  /* box-shadow: 0 0 50px 20px #5cddeb4f, 0 0 50px 20px #5cddeb4f, 0 50px 50px 20px #5cddeb4f,
     0 50px 50px 20px #5cddeb4f, 0 100px 50px 20px #5cddeb4f, 0 100px 50px 20px #5cddeb4f,
     0 150px 50px 20px #5cddeb4f, 0 150px 50px 20px #5cddeb4f, 0 200px 50px 20px #5cddeb4f,
     0 200px 50px 20px #5cddeb4f, 0 250px 50px 20px #5cddeb4f, 0 250px 50px 20px #5cddeb4f,
     0 300px 50px 20px #5cddeb4f, 0 300px 50px 20px #5cddeb4f, 0 350px 50px 20px #5cddeb4f,
-    0 350px 50px 20px #5cddeb4f;
+    0 350px 50px 20px #5cddeb4f; */
 }
 
 .desplegable_select {
@@ -41,7 +41,7 @@
   align-items: center;
   padding-inline: 20px;
   justify-content: space-between;
-  background-color: var(--color-input);
+  /* background-color: rgba(var(--color-segundo), 1); */
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -59,17 +59,35 @@
   padding-bottom: 10px;
 }
 
-.desplegable_select.mostrar-opciones .flecha {
+.icono {
+  /* fill: rgba(var(--color-texto-primario), 1);< */
+  stroke-width: 1.5px;
+}
+
+.icono-relog {
+  fill: none;
+}
+
+.icono-calendario {
+  /* fill: none; */
+}
+
+.icono-flecha {
+  fill: rgba(var(--color-texto-primario), 1);
+}
+
+.desplegable_select.mostrar-opciones .icono-flecha {
   rotate: 180deg;
 }
 
 .contenedor-opciones {
-  background: var(--color-input);
+  /* background: rgba(var(--color-segundo), 1); */
+  background-image: linear-gradient(rgba(var(--color-segundo), 1), rgba(var(--color-segundo), 1));
   max-height: 0;
   opacity: 0;
   transition-property: max-height, opacity, padding-block;
-  transition-duration: var(--duracion-animacion);
-  transition-timing-function: var(--animacion-rebote);
+  transition-duration: var(--duracion-animacion-muy-lento);
+  transition-timing-function: ease-in-out;
   position: absolute;
   top: 100%;
   overflow: hidden;

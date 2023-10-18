@@ -17,10 +17,16 @@
     />
     <script
       async
+      type="module"
       src="script.js"
     ></script>
+    <script
+      async
+      type="module"
+      src="./pages/inicio/inicio.js"
+    ></script>
   </head>
-  <body class="container f-col">
+  <body class="container f-col jc-sb">
     <header class="container ai-fs jc-sb header">
       <div class="header__menu menu--izquierdo">
         <a
@@ -39,11 +45,13 @@
           >Eventos</a
         >
       </div>
-      <img
-        class="header__logo"
-        src="./assets/images/logo.png"
-        alt=""
-      />
+      <a href="">
+        <img
+          class="header__logo"
+          src="../../assets/images/logo.png"
+          alt=""
+        />
+      </a>
       <div class="header__menu menu--derecho">
         <a
           class="menu__opcion"
@@ -335,22 +343,22 @@
         <nav class="container f-col ai-fs menu-opciones">
           <a
             class="menu__opcion"
-            href="http://"
+            href=""
             >inicio</a
           >
           <a
             class="menu__opcion"
-            href="http://"
+            href="./pages/reserva/reserva.html"
             >reservar</a
           >
           <a
             class="menu__opcion"
-            href="http://"
+            href="./pages/menu/menu.html"
             >menus</a
           >
           <a
             class="menu__opcion"
-            href="http://"
+            href="./pages/eventos/eventos.html"
             >eventos</a
           >
         </nav>

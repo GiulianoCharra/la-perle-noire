@@ -8,8 +8,26 @@
   height: 100%;
   align-items: center;
   align-content: center;
-  gap: clamp(5px, calc(0.5vw + 1px), 10px);
+  gap: clamp(5px, calc(0.5vw + 5px), 10px);
   flex-wrap: wrap;
+}
+
+.celda-dia-semana {
+  font-size: 1.2rem;
+  color: rgba(var(--color-texto-primario), 0.8);
+
+  font-weight: bold;
+  text-align: center;
+  background: rgba(var(--color-segundo), 0.8);
+
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
 }
 
 .celda-dia {
@@ -20,26 +38,29 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background: #3f6380;
-  font-size: 1rem;
+  background: rgba(var(--color-tercero), 0.8);
+  font-size: 1.3rem;
   cursor: pointer;
   transition-property: background-color, color, border, scale, font-size, box-shadow;
-  transition-duration: 100ms;
+  transition-duration: var(--duracion-animacion-muy-rapido);
 }
 
 .celda-dia:hover {
-  background-color: var(--color-celeste);
+  color: rgba(var(--color-texto-primario), 1);
+  background-color: rgba(var(--color-segundo), .8);
+  border: 3px solid rgba(var(--color-tercero), 1);
 }
+
 .celda-dia:hover,
 .celda-dia.dia-seleccionado {
-  box-shadow: 0 0 5px 5px #5cddeb9f;
-  color: black;
-  scale: 1.1;
+  box-shadow: 0 0 5px 5px rgba(var(--color-cuarto), 0.8);
+  scale: 1.05;
 }
+
 .celda-dia.dia-seleccionado {
-  font-size: 1.2rem;
+  color: rgba(var(--color-texto-secundario), 1);
   background-color: white;
-  border: 3px solid var(--color-celeste);
+  border: 3px solid rgba(var(--color-tercero), 1);
 }
 
 .celda-dia:not(:hover) {

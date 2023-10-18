@@ -1,11 +1,14 @@
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="icono icono-relog" clip-path="url(#clip0_170_2645)">
-<path id="circulo" d="M9.99998 1.47729C5.07067 1.47729 1.07141 5.47719 1.07141 10.4073C1.07141 15.3374 5.07067 19.3373 9.99998 19.3373C14.9293 19.3373 18.9286 15.3374 18.9286 10.4073C18.9286 5.47719 14.9293 1.47729 9.99998 1.47729Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
-<path id="manesilla" d="M10 4.31818V10.7102H14.4643" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_170_2645">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
+    <g id="icono icono-relog" clip-path="url(#clip0_170_2645)">
+        <path id="circulo"
+            d="M9.99998 1.47729C5.07067 1.47729 1.07141 5.47719 1.07141 10.4073C1.07141 15.3374 5.07067 19.3373 9.99998 19.3373C14.9293 19.3373 18.9286 15.3374 18.9286 10.4073C18.9286 5.47719 14.9293 1.47729 9.99998 1.47729Z"
+            stroke="white" stroke-width="1.5" stroke-miterlimit="10" />
+        <path id="manesilla" d="M10 4.31818V10.7102H14.4643" stroke="white" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+    </g>
+    <defs>
+        <clipPath id="clip0_170_2645">
+            <rect width="20" height="20" fill="white" />
+        </clipPath>
+    </defs>
 </svg>
