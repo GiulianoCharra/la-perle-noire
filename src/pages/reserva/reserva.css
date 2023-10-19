@@ -16,10 +16,20 @@
 }
 
 .reserva-pedido {
+  display: none;
+}
+
+.reserva-pedido.show {
+  display: block;
+}
+
+.reserva-platos {
   gap: 1.5rem;
+  /* display: none; */
 }
 
 .pedido__platos {
+  width: 60%;
   gap: 20px;
 }
 
@@ -95,6 +105,7 @@
   background-color: rgba(var(--color-texto-primario), 1);
   border-radius: var(--card-border);
   padding: 20px;
+  width: 40%;
 }
 
 .titulo_subtotales {
@@ -139,4 +150,11 @@
 .politica__nombre {
   font-size: 1.2rem;
   color: rgba(var(--color-tercero), 1);
+}
+
+@media screen and (max-width: 768px) {
+  .datos-personales,
+  .datos-reserva {
+    flex-direction: column;
+  }
 }

@@ -55,7 +55,7 @@
 }
 
 .desplegable_select.mostrar-opciones ~ .contenedor-opciones.contenedor--calendario {
-  max-height: 400px;
+  max-height: none;
   padding-bottom: 10px;
 }
 

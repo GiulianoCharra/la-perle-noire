@@ -11,12 +11,18 @@
   gap: 40px 40px;
 }
 
-.red-social {
+.red-social a {
+  text-decoration: none;
   width: 30px;
   height: 30px;
   aspect-ratio: 1;
-  fill: rgba(var(--color-tercero), 1);
+  /* fill: rgba(var(--color-tercero), 1); */
+  color: rgba(var(--color-tercero), 1);
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
 }
+
 
 .footer__intermedia {
   width: 100%;

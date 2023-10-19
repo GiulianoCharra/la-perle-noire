@@ -1,32 +1,33 @@
 import desplegar from "./scripts/desplegable.js";
 
 desplegar();
-console.log(JSON.stringify(import.meta.env.VITE_EMAIL_SERVICE));
 //funcion que modifica el widht del logo cuando scrolleo
-const logo = document.querySelector(".header__logo");
-let lastScrollTop = 0;
-function updateLogoSize() {
-  let currentScrollTop = window.scrollY;
-  const scrollDistance = Math.abs(currentScrollTop - lastScrollTop);
+window.addEventListener("load", () => {
+  const logo = document.querySelector(".header__logo");
+  let lastScrollTop = 0;
+  function updateLogoSize() {
+    let currentScrollTop = window.scrollY;
+    const scrollDistance = Math.abs(currentScrollTop - lastScrollTop);
 
-  if (currentScrollTop === 0) {
-    logo.style.width = `clamp(100px, 30vw, 300px)`;
-    return;
-  }
-  if (currentScrollTop > 200) {
-    logo.style.width = `100px`;
-    return;
+    if (currentScrollTop === 0) {
+      logo.style.width = `clamp(100px, 30vw, 300px)`;
+      return;
+    }
+    if (currentScrollTop > 200) {
+      logo.style.width = `100px`;
+      return;
+    }
+
+    if (currentScrollTop > lastScrollTop) {
+      logo.style.width = `${logo.clientWidth - scrollDistance}px`;
+    } else if (currentScrollTop <= 200) {
+      logo.style.width = `${logo.clientWidth + scrollDistance}px`;
+    }
+    lastScrollTop = currentScrollTop;
   }
 
-  if (currentScrollTop > lastScrollTop) {
-    logo.style.width = `${logo.clientWidth - scrollDistance}px`;
-  } else if (currentScrollTop <= 200) {
-    logo.style.width = `${logo.clientWidth + scrollDistance}px`;
-  }
-  lastScrollTop = currentScrollTop;
-}
-
-document.addEventListener("scroll", updateLogoSize, { passive: true });
+  document.addEventListener("scroll", updateLogoSize, { passive: true });
+});
 
 document.addEventListener("beforeunload", (e) => {
   window.scrollTo(0, 0);
