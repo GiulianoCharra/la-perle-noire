@@ -67,7 +67,7 @@
 .categoria__nombre.categoria--seleccionada::after {
   content: "";
   position: absolute;
-  border-radius: 10px;
+  border-radius: var(--card-border);
   background-color: rgba(var(--color-tercero), 1);
   width: 110%;
   height: 4px;
@@ -140,7 +140,7 @@
 
 .listado-cards::-webkit-scrollbar-thumb {
   background-color: rgba(var(--color-tercero), 0.5);
-  border-radius: 10px;
+  border-radius: var(--card-border);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -169,6 +169,11 @@
 .formulario-datos {
   height: 100%;
   width: 100%;
+}
+
+.formulario-datos .form-input.message textarea{
+  height: 100%;
+  resize: none;
 }
 
 .contacto__imagen {
@@ -203,5 +208,5 @@
 }
 
 .mapa {
-  border-radius: 10px;
+  border-radius: var(--card-border);
 }

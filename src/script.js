@@ -1,6 +1,7 @@
-import  desplegar  from "./scripts/desplegable.js";
-desplegar();
+import desplegar from "./scripts/desplegable.js";
 
+desplegar();
+console.log(JSON.stringify(import.meta.env.VITE_EMAIL_SERVICE));
 //funcion que modifica el widht del logo cuando scrolleo
 const logo = document.querySelector(".header__logo");
 let lastScrollTop = 0;

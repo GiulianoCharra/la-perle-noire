@@ -33,7 +33,7 @@
 }
 
 .footer__logo {
-  width: clamp(50px, 20vw, 300px);
+  width: clamp(50px, 20vw, 250px);
   aspect-ratio: 1;
   position: absolute;
   left: calc(50% - calc(clamp(50px, 20vw, 300px) / 2));

@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-  border-radius: 10px;
+  border-radius: var(--card-border);
   background: var(--color-segundo);
   color: #fff;
 }
@@ -18,7 +18,7 @@
   width: 110px;
   height: 110px;
   flex-shrink: 0;
-  border-radius: 100px;
+  border-radius: 50%;
   background: lightgray 50% / cover no-repeat;
 }
 

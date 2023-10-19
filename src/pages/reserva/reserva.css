@@ -15,7 +15,7 @@
   /* background-image: url(../../assets/svg/x-circulo.svg); */
 }
 
-.pedido {
+.reserva-pedido {
   gap: 1.5rem;
 }
 
@@ -24,19 +24,26 @@
 }
 
 .plato {
-  display: flex;
   padding: 10px;
-  align-items: center;
   gap: 20px;
-  border-radius: 10px;
+  border-radius: var(--card-border);
   background-color: rgba(var(--color-segundo), 1);
   position: relative;
 }
 
-.i-x {
+.btnEliminarPlato {
   position: absolute;
   right: 6px;
   top: 6px;
+}
+
+.btn-pedido {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 30px;
+  aspect-ratio: 1;
+  cursor: pointer;
 }
 
 .plato__imagen {
@@ -47,103 +54,89 @@
 
 .plato__datos {
 }
+
 .plato__nombre {
   color: rgba(var(--color-tercero), 1);
   font-size: 20px;
   font-weight: 600;
-  text-transform: capitalize;
 }
 
 .plato__precio {
-  color: rgba(var(--color-texto-primario), 1);
   text-align: left;
   font-size: 1rem;
 }
 
 .pedido__datos-orden {
 }
+.pedido__datos-orden .campo-nombre {
+  color: rgba(var(--color-texto-primario), 1);
+}
+
+.pedido__datos-orden button {
+  color: rgba(var(--color-tercero), 1);
+}
 
 .plato__cantidad {
 }
 
-.campo-nombre {
-  color: rgba(var(--color-texto-primario), 1);
+.pedido__total .campo-nombre,
+.pedido__total .campo-valor {
+  width: 100%;
   text-align: center;
-  font-size: 15px;
-  letter-spacing: 0;
-}
-.campo-valor {
-  color: rgba(var(--color-tercero), 1);
-}
-
-.campo-nombre .plato__cantidad {
-  color: rgba(var(--color-texto-primario), 1);
-  text-align: center;
-  font-size: 15px;
-  letter-spacing: 0;
 }
 
 .icono .btn-restar-plato {
 }
 
-.campo-valor .plato__cantidad-valor {
-  color: rgba(231.00000143051147, 161.0000056028366, 23.000000528991222, 1);
-  font-size: 20px;
-  letter-spacing: 0;
-}
-
 .plato__subtotal {
 }
 
-.campo-nombre .subtotal__texto {
-  color: rgba(255, 255, 255, 1);
-  font-size: 1rem;
-}
-.campo-valor .subtotal__valor {
-  color: rgba(231.00000143051147, 161.0000056028366, 23.000000528991222, 1);
-  font-size: 1.3rem;
-  letter-spacing: 0;
-}
-
-.pedido_total {
+.pedido__total {
   background-color: rgba(var(--color-texto-primario), 1);
-  border-radius: 10px;
+  border-radius: var(--card-border);
+  padding: 20px;
 }
 
 .titulo_subtotales {
   color: rgba(var(--color-primero), 1);
   font-size: 2rem;
-  letter-spacing: 0;
+  font-weight: 600;
 }
 
 .subtotales {
-  height: 50px;
 }
 
 .subtotal {
   height: 20px;
+  width: 100%;
 }
 
 .campo-nombre {
   color: rgba(var(--color-primero), 1);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  text-transform: capitalize;
 }
 
 .campo-valor {
   color: rgba(var(--color-tercero), 1);
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .separador {
   width: 100%;
   height: 5px;
+  background-color: rgba(var(--color-segundo), 1);
+  border-radius: 5px;
 }
 
-.total-pedido {
+.total-pedido .campo-nombre,
+.pago-inicial .campo-nombre,
+.total-pendiente .campo-nombre {
+  font-weight: 600;
 }
 
-.senia {
-}
-
-.total-pendiente {
+.politica__nombre {
+  font-size: 1.2rem;
+  color: rgba(var(--color-tercero), 1);
 }

@@ -124,7 +124,7 @@ body::-webkit-scrollbar {
 
 ::-webkit-scrollbar-thumb {
   background-color: rgba(var(--color-tercero), 0.7);
-  border-radius: 10px;
+  border-radius: var(--card-border);
 }
 
 body::-webkit-scrollbar-track {

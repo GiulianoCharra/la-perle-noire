@@ -1,5 +1,5 @@
 "use-strict";
-
+import enviarEmail from "../../services/email.service.js";
 
 const opinionesClientes = [
   {
@@ -166,7 +166,7 @@ function cargarCards(cardNombre, cardContainer, elementos, cardTemplate) {
   contenedorOpiniones.appendChild(fragmento);
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   window.scrollTo(0, 0);
 
   // Carga las opiniones y las imágenes de los clientes
@@ -188,9 +188,14 @@ window.addEventListener("DOMContentLoaded", () => {
   cargarCards("card-captura", "listado-restaurante", capturasRestaurante, cardCapturaTemplate);
   // Carga las capturas de los eventos
   cargarCards("card-captura", "listado-eventos", capturasEventos, cardCapturaTemplate);
+
+  const btnEnviar = document.getElementById("btn-enviar-texto");
+  const contactoForm = document.getElementById("form-contacto");
+
+  enviarEmail(btnEnviar, contactoForm);
 });
 
-window.addEventListener("click", (e) => {
+document.addEventListener("click", (e) => {
   cambiarCategoria(e);
 });
 

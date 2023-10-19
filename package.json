@@ -12,6 +12,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "jquery": "^3.7.1",
     "vite-plugin-html": "^3.2.0",
     "vite-plugin-lightningcss": "^0.0.5"

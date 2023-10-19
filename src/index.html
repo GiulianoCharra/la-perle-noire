@@ -10,6 +10,24 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <meta
+      name="description"
+      content="La Perle Noire es un restaurante de comida francesa ubicado en Puerto Madero, Buenos Aires. En nuestro restaurante podrás disfrutar de una experiencia gastronómica única."
+    />
+    <meta
+      name="keywords"
+      content="restaurante, comida, francesa, puerto madero, buenos aires, gastronomia, platos, carta, reservas, eventos, catering, menu, chef, cocina, gourmet, vinos, bebidas, postres, desayunos, almuerzos, cenas, comidas, restaurant, french, food, buenos aires, gastronomy, dishes, letter, reservations, events, catering, menu, chef, kitchen, gourmet, wines, drinks, desserts, breakfasts, lunches, dinners, meals"
+    />
+    <meta
+      name="author"
+      content="Giuliano Charra"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
+
     <title>La Perle Noire</title>
     <link
       rel="stylesheet"
@@ -215,7 +233,7 @@
             id="form-contacto"
             class="container f-col formulario-contacto"
           >
-            <div class="container f-col jc-sb formulario-datos">
+            <div class="container f-col jc-fs formulario-datos">
               <div class="form-input">
                 <input
                   type="text"
@@ -236,7 +254,7 @@
                   placeholder="Hernández"
                   required
                 />
-                <label for="floatingInput">Apellido</label>
+                <label for="contacto-apellido">Apellido</label>
               </div>
               <div class="form-input">
                 <input
@@ -259,11 +277,11 @@
               </div>
             </div>
             <button
-              id="btn-enviar-contacto"
+              id="btn-enviar"
               type="submit"
               class="btn-principal"
             >
-              <span class="btn__name">Enviar</span>
+              <span id="btn-enviar-texto" class="btn__name">Enviar</span>
             </button>
           </form>
           <div class="contacto__imagen">
@@ -417,5 +435,15 @@
         <span>Copyright @ 2023 La Perle Noire. Todos los derechos reservados</span>
       </section>
     </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("qUdLdx8m0Le9ZgrPA");
+      })();
+    </script>
   </body>
 </html>
