@@ -3,8 +3,8 @@ export default function EmailService(btn, form) {
     event.preventDefault();
     btn.textContent = "Enviando...";
 
-    const serviceID = "service_2oozw12";
-    const templateID = "template_2cb9qae";
+    const serviceID = import.meta.env.EMAIL_SERVICE;
+    const templateID = import.meta.env.TEMPLATE_CONTACTO_ID;
 
     emailjs.sendForm(serviceID, templateID, this).then(
       () => {
