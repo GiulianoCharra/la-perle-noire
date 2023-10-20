@@ -1,32 +1,49 @@
 export default function desplegable() {
-  document.addEventListener("click", (e) => {
-    let desplegableActual = e.target;
-    if (!desplegableActual.classList.contains("desplegable_select")) {
-      desplegableActual = desplegableActual.closest(".desplegable_select");
-    }
-    if (!desplegableActual) {
-      return;
-    }
+  document.addEventListener("click", controlDespliegue);
+  // document.addEventListener("touchstart", controlDespliegue);
+}
 
-    if (desplegableActual.classList.contains("mostrar-opciones")) {
-      desplegableActual.classList.remove("mostrar-opciones");
-      return;
-    }
+function controlDespliegue(e) {
+  let desplegableActual = e.target;
 
-    let desplegables = Array.from(
-      document.getElementsByClassName("desplegable_select mostrar-opciones")
-    );
-    // let demasDesplegables = desplegables.filter((despl) => despl !== desplegable_actual);
-    // let posicion = desplegables.indexOf(desplegable_actual);
+  const desplegableActivo = document.querySelector(".desplegable-select.mostrar-opciones");
+  const esDesplegable = desplegableActual.closest(".form-input-select");
+  if (
+    desplegableActivo &&
+    !desplegableActivo.contains(e.target) &&
+    !(desplegableActivo == e.target) &&
+    !esDesplegable
+  ) {
+    desplegableActivo.classList.remove("mostrar-opciones");
+    return;
+  }
 
-    // if (posicion !== -1) {
-    //   desplegables.splice(posicion, 1);
-    // }
+  if (!desplegableActual.classList.contains("desplegable-select")) {
+    desplegableActual = desplegableActual.closest(".desplegable-select");
+  }
 
-    desplegables.forEach((desplegable) => {
-      desplegable.classList.remove("mostrar-opciones");
-    });
-    
-    desplegableActual.classList.add("mostrar-opciones");
+  if (!desplegableActual) {
+    return;
+  }
+
+  if (desplegableActual.classList.contains("mostrar-opciones")) {
+    desplegableActual.classList.remove("mostrar-opciones");
+    return;
+  }
+
+  let desplegables = Array.from(
+    document.getElementsByClassName("desplegable-select mostrar-opciones")
+  );
+  // let demasDesplegables = desplegables.filter((despl) => despl !== desplegable_actual);
+  // let posicion = desplegables.indexOf(desplegable_actual);
+
+  // if (posicion !== -1) {
+  //   desplegables.splice(posicion, 1);
+  // }
+
+  desplegables.forEach((desplegable) => {
+    desplegable.classList.remove("mostrar-opciones");
   });
+
+  desplegableActual.classList.add("mostrar-opciones");
 }

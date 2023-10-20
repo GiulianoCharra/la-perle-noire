@@ -35,7 +35,7 @@
     0 350px 50px 20px #5cddeb4f; */
 }
 
-.desplegable_select {
+.desplegable-select {
   font-size: 1.3rem;
   display: flex;
   align-items: center;
@@ -47,15 +47,15 @@
   cursor: pointer;
 }
 
-.desplegable_select.mostrar-opciones ~ .contenedor-opciones {
+.desplegable-select.mostrar-opciones ~ .contenedor-opciones {
   opacity: 1;
   max-height: 300px;
   padding-bottom: 20px;
   z-index: 100;
 }
 
-.desplegable_select.mostrar-opciones ~ .contenedor-opciones.contenedor--calendario {
-  max-height: none;
+.desplegable-select.mostrar-opciones ~ .contenedor-opciones.contenedor--calendario {
+  max-height: clamp(300px, 100vh - 200px, 500px);
   padding-bottom: 10px;
 }
 
@@ -76,7 +76,7 @@
   fill: rgba(var(--color-texto-primario), 1);
 }
 
-.desplegable_select.mostrar-opciones .icono-flecha {
+.desplegable-select.mostrar-opciones .icono-flecha {
   rotate: 180deg;
 }
 
@@ -96,7 +96,7 @@
   padding-left: 50px;
   padding-block: 0px;
   transform-origin: top;
-  z-index: 10;
+  z-index: -10;
 }
 
 .contenedor-opciones.contenedor--calendario {
@@ -112,6 +112,7 @@
   max-height: 250px;
   gap: 20px;
   overflow-y: auto;
+  margin-top: 20px;
 }
 
 .opcion {
@@ -129,3 +130,8 @@
   width: 30px;
   height: 30px;
 }
+
+@media screen and (min-width: 768px) {
+  
+}
+  

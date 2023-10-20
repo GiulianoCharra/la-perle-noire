@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  flex-shrink: 0;
   align-items: center;
   gap: 10px;
   text-align: center;
@@ -83,5 +84,11 @@
 @media (prefers-color-scheme: dark) {
   .cliente__nombre {
     font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-cliente{
+
   }
 }

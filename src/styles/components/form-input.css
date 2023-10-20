@@ -9,10 +9,6 @@
   color: rgba(var(--color-texto-primario), 1);
 }
 
-.form-input input::placeholder {
-  color: transparent;
-}
-
 .form-input:focus-within {
   /* box-shadow: 0 0 50px 20px #5cddeb4f; */
 }
@@ -27,16 +23,32 @@
   transition-duration: var(--duracion-animacion-lento);
 }
 
-.form-input:focus-within label,
-.form-input:has(input:valid) label,
-.form-input:has(textarea:valid) label {
+.form-input:focus-within > input + label,
+.form-input:has(input:valid) > input + label,
+.form-input:has(input:not([required])) > input:focus-within + label,
+.form-input:has(textarea:valid) > textarea + label {
   color: rgba(var(--color-texto-primario), 1);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   translate: -10px -25px;
 }
 
 .form-input input:invalid {
   /* border: 2px solid red; */
+}
+
+.form-input > input:focus-within:placeholder-shown + label,
+.form-input > textarea:focus-within:placeholder-shown + label {
+  translate: -10px -25px;
+}
+
+.form-input > input:not([required]):placeholder-shown + label,
+.form-input:has(textarea) > textarea:placeholder-shown + label {
+  translate: 0;
+}
+
+.form-input input::placeholder,
+.form-input textarea::placeholder {
+  color: transparent;
 }
 
 .form-input input,

@@ -23,6 +23,10 @@
   width: 100%;
 }
 
+.titulo-2 {
+  text-align: center;
+}
+
 .seccion-opiniones {
   width: clamp(200px, 100%, 1200px);
   overflow-x: auto;
@@ -31,12 +35,8 @@
 
 .opiniones-clientes {
   gap: 40px;
-}
-
-@media screen and (max-width: 768px) {
-  .seccion-bienvenida {
-    flex-direction: column;
-  }
+  width: 100%;
+  overflow-x: auto;
 }
 
 .seccion-capturas {
@@ -143,18 +143,6 @@
   border-radius: var(--card-border);
 }
 
-@media (prefers-color-scheme: dark) {
-  .categoria__nombre.categoria--seleccionada {
-    color: rgba(var(--color-tercero), 1);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .categoria__nombre.categoria--seleccionada {
-    color: rgba(var(--color-segundo), 1);
-  }
-}
-
 .contacto-contenedor {
   height: 500px;
   width: 100%;
@@ -171,7 +159,7 @@
   width: 100%;
 }
 
-.formulario-datos .form-input.message textarea{
+.formulario-datos .form-input.message textarea {
   height: 100%;
   resize: none;
 }
@@ -209,4 +197,46 @@
 
 .mapa {
   border-radius: var(--card-border);
+}
+
+@media (prefers-color-scheme: dark) {
+  .categoria__nombre.categoria--seleccionada {
+    color: rgba(var(--color-tercero), 1);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .categoria__nombre.categoria--seleccionada {
+    color: rgba(var(--color-segundo), 1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .seccion-bienvenida {
+    flex-direction: column;
+  }
+  .seccion-bienvenida .titulo-1{
+    content: "dsad";
+  }
+
+  .seccion-bienvenida .descripcion {
+    text-align: center;
+  }
+
+  .mapa {
+    width: 100%;
+  }
+
+  .contacto-contenedor {
+    height: auto;
+    flex-direction: column;
+  }
+  .contacto__imagen {
+    width: 100%;
+  }
+
+  .capturas-categorias {
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }

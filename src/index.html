@@ -34,12 +34,12 @@
       href="style.css"
     />
     <script
-      async
+      defer
       type="module"
       src="script.js"
     ></script>
     <script
-      async
+      defer
       type="module"
       src="./pages/inicio/inicio.js"
     ></script>
@@ -49,53 +49,128 @@
     ></script>
   </head>
   <body class="container f-col jc-sb">
-    <header class="container ai-fs jc-sb header">
-      <div class="header__menu menu--izquierdo">
-        <a
-          class="menu__opcion"
-          href="./pages/reserva/reserva.html"
-          >Reservar</a
-        >
-        <a
-          class="menu__opcion"
-          href="./pages/menu/menu.html"
-          >Menú</a
-        >
-        <a
-          class="menu__opcion"
-          href="./pages/eventos/eventos.html"
-          >Eventos</a
-        >
+    <header class="header">
+      <div class="container ai-fs jc-sb header-escritorio">
+        <div class="header__menu menu--izquierdo">
+          <a
+            class="menu__opcion"
+            href="./pages/reserva/reserva.html"
+            >Reservar</a
+          >
+          <a
+            class="menu__opcion"
+            href="./pages/menu/menu.html"
+            >Menú</a
+          >
+          <a
+            class="menu__opcion"
+            href="./pages/eventos/eventos.html"
+            >Eventos</a
+          >
+        </div>
+        <a href="">
+          <img
+            class="header__logo"
+            src="../../assets/images/logo.png"
+            alt=""
+          />
+        </a>
+        <div class="header__menu menu--derecho">
+          <a
+            class="menu__opcion"
+            href="#contacto"
+            >Contacto</a
+          >
+          <a
+            class="menu__opcion"
+            href="#sobre-nosotros"
+            >Nosotros</a
+          >
+          <a
+            class="menu__opcion"
+            href="#ubicacion"
+            >Ubicación</a
+          >
+        </div>
+        <div class="g-center carrito">
+          <div>
+            <img
+              src="./assets/svg/carrito.svg"
+              alt="icono del carrito de platos"
+            />
+            <div class="g-center carrito__cantidad">
+              <p>2</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="">
-        <img
-          class="header__logo"
-          src="../../assets/images/logo.png"
-          alt=""
-        />
-      </a>
-      <div class="header__menu menu--derecho">
-        <a
-          class="menu__opcion"
-          href="#contacto"
-          >Contacto</a
+
+      <div class="container w-100 jc-sb header-mobile">
+        <a href="#">
+          <img
+            class="header__logo"
+            src="../../assets/images/logo.png"
+            alt=""
+          />
+        </a>
+        <div class="container">
+          <div class="carrito carrito-mobile">
+            <div>
+              <img
+                src="./assets/svg/carrito.svg"
+                alt="icono del carrito de platos"
+              />
+              <div class="g-center carrito__cantidad">
+                <p>2</p>
+              </div>
+            </div>
+          </div>
+          <div class="menu-icon">
+            <div
+              id="btn-menu-opciones"
+              class="btn-menu-opciones"
+            >
+              <div class="bars"><span class="bar"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="header__menu"
+          id="menu-mobile-opciones"
         >
-        <a
-          class="menu__opcion"
-          href="#sobre-nosotros"
-          >Nosotros</a
-        >
-        <a
-          class="menu__opcion"
-          href="#ubicacion"
-          >Ubicación</a
-        >
-      </div>
-      <div class="carrito">
-        <img
-          src="./assets/svg/carrito.svg"
-          alt="icono del carrito de platos"
-        />
+          <!-- Menú desplegable en dispositivos móviles -->
+          <a
+            class="menu__opcion"
+            href="./pages/reserva/reserva.html"
+            >Reservar</a
+          >
+          <a
+            class="menu__opcion"
+            href="./pages/menu/menu.html"
+            >Menú</a
+          >
+          <a
+            class="menu__opcion"
+            href="./pages/eventos/eventos.html"
+            >Eventos</a
+          >
+          <a
+            class="menu__opcion"
+            href="#contacto"
+            >Contacto</a
+          >
+          <a
+            class="menu__opcion"
+            href="#sobre-nosotros"
+            >Nosotros</a
+          >
+          <a
+            class="menu__opcion"
+            href="#ubicacion"
+            >Ubicación</a
+          >
+        </div>
       </div>
     </header>
 
@@ -121,7 +196,7 @@
       <!-- Seccion opiniones -->
       <section class="container f-col seccion seccion-opiniones">
         <span class="titulo-2">Opiniones de nuestros clientes</span>
-        <div class="container opiniones-clientes"></div>
+        <div class="container jc-fs opiniones-clientes"></div>
       </section>
       <!-- Seccion sobre nosotros -->
       <section
@@ -272,12 +347,13 @@
                 <label for="contacto-email">Email</label>
               </div>
               <div class="form-input message">
-                <label for="message">message</label>
                 <textarea
                   name="message"
                   id="message"
+                  placeholder="Escriba aquí sus observaciones"
                   required
                 ></textarea>
+                <label for="message">message</label>
               </div>
             </div>
             <button

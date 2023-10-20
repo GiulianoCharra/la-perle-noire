@@ -10,9 +10,13 @@ window.addEventListener("load", () => {
     const scrollDistance = Math.abs(currentScrollTop - lastScrollTop);
 
     if (currentScrollTop === 0) {
-      logo.style.width = `clamp(100px, 30vw, 300px)`;
+      logo.style.width = `clamp(100px, 20vw, 300px)`;
       return;
     }
+    // if (logo.clientWidth < 100) {
+    //   logo.style.width = `100px`;
+    //   return
+    // }
     if (currentScrollTop > 200) {
       logo.style.width = `100px`;
       return;
@@ -51,3 +55,11 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     });
   });
 });
+
+document.getElementById("btn-menu-opciones").addEventListener("click", mostrarMenu);
+
+function mostrarMenu(e) {
+  this.classList.toggle("mostrar");
+  const btnMenuOpciones = document.getElementById("menu-mobile-opciones");
+  btnMenuOpciones.classList.toggle("mostrar");
+}

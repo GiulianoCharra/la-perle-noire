@@ -48,53 +48,133 @@
     ></script>
   </head>
   <body class="container f-col jc-sb">
-    <header class="container ai-fs jc-sb header">
-      <div class="header__menu menu--izquierdo">
-        <a
-          class="menu__opcion"
-          href="#"
-          >Reservar</a
-        >
-        <a
-          class="menu__opcion"
-          href="../menu/menu.html"
-          >Menú</a
-        >
-        <a
-          class="menu__opcion"
-          href="../eventos/eventos.html"
-          >Eventos</a
-        >
+    <header class="header">
+      <div class="container ai-fs jc-sb header-escritorio">
+        <div class="header__menu menu--izquierdo">
+          <a
+            class="menu__opcion"
+            href="#"
+            >Reservar</a
+          >
+          <a
+            class="menu__opcion"
+            href="../menu/menu.html"
+            >Menú</a
+          >
+          <a
+            class="menu__opcion"
+            href="../eventos/eventos.html"
+            >Eventos</a
+          >
+        </div>
+        <a href="">
+          <img
+            class="header__logo"
+            src="../../assets/images/logo.png"
+            alt=""
+          />
+        </a>
+        <div class="header__menu menu--derecho">
+          <a
+            class="menu__opcion"
+            href="../../index.html#contacto"
+            >Contacto</a
+          >
+          <a
+            class="menu__opcion"
+            href="../../index.html#sobre-nosotros"
+            >Nosotros</a
+          >
+          <a
+            class="menu__opcion"
+            href="../../index.html#ubicacion"
+            >Ubicación</a
+          >
+        </div>
+        <div class="g-center carrito">
+          <div>
+            <img
+              src="../../assets/svg/carrito.svg"
+              alt="icono del carrito de platos"
+            />
+            <div class="g-center carrito__cantidad">
+              <p>2</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="../../index.html">
-        <img
-          class="header__logo"
-          src="../../assets/images/logo.png"
-          alt=""
-        />
-      </a>
-      <div class="header__menu menu--derecho">
-        <a
-          class="menu__opcion"
-          href="../../index.html#contacto"
-          >Contacto</a
+
+      <div class="container w-100 jc-sb header-mobile">
+        <a href="#">
+          <img
+            class="header__logo"
+            src="../../assets/images/logo.png"
+            alt=""
+          />
+        </a>
+        <div class="container">
+          <div class="carrito carrito-mobile">
+            <div>
+              <img
+                src="../../assets/svg/carrito.svg"
+                alt="icono del carrito de platos"
+              />
+              <div class="g-center carrito__cantidad">
+                <p>2</p>
+              </div>
+            </div>
+          </div>
+          <div class="menu-icon">
+            <div
+              id="btn-menu-opciones"
+              class="btn-menu-opciones"
+            >
+              <div class="bars"><span class="bar"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="header__menu"
+          id="menu-mobile-opciones"
         >
-        <a
-          class="menu__opcion"
-          href="../../index.html#sobre-nosotros"
-          >Nosotros</a
-        >
-        <a
-          class="menu__opcion"
-          href="../../index.html#ubicacion"
-          >Ubicación</a
-        >
-      </div>
-      <div class="carrito">
-        <img
-          src="../../assets/svg/carrito.svg"
-          alt="icono del carrito de platos"
-        />
+          <!-- Menú desplegable en dispositivos móviles -->
+          <a
+            class="menu__opcion"
+            href="../../index.html"
+            >Inicio</a
+          >
+          <a
+            class="menu__opcion"
+            href="#"
+            >Reservar</a
+          >
+          <a
+            class="menu__opcion"
+            href="../menu/menu.html"
+            >Menú</a
+          >
+          <a
+            class="menu__opcion"
+            href="../eventos/eventos.html"
+            >Eventos</a
+          >
+          <a
+            class="menu__opcion"
+            href="../../index.html#contacto"
+            >Contacto</a
+          >
+          <a
+            class="menu__opcion"
+            href="../../index.html#sobre-nosotros"
+            >Nosotros</a
+          >
+          <a
+            class="menu__opcion"
+            href="../../index.html#ubicacion"
+            >Ubicación</a
+          >
+        </div>
       </div>
     </header>
 
@@ -102,11 +182,12 @@
       <section class="container f-col seccion seccion-reserva">
         <span class="titulo-1">Reserva</span>
         <form
+          id="form-reserva"
           class="container w-100 f-col form-reserva"
           action=""
           method="post"
         >
-          <div class="container form-datos datos-personales">
+          <div class="container w-100 form-datos">
             <div class="container w-100 f-col ai-fs">
               <span class="titulo-4">Datos personales</span>
               <div class="container f-col datos-personales">
@@ -165,7 +246,7 @@
                     class="form-control"
                     name="reserva-telefono-1"
                     id="reserva-telefono-1"
-                    placeholder="pepe@gmail.com"
+                    placeholder="351-1234567"
                     required
                   />
                   <label for="reserva-telefono-1">teléfono 1</label>
@@ -176,8 +257,7 @@
                     class="form-control"
                     name="reserva-telefono-2"
                     id="reserva-telefono-2"
-                    placeholder="pepe@gmail.com"
-                    required
+                    placeholder="351-1234567"
                   />
                   <label for="reserva-telefono-2">teléfono 2</label>
                 </div>
@@ -197,17 +277,15 @@
                     placeholder="1;2;3"
                     required
                   />
-                  <label for="reserva-nombre">cantidad</label>
+                  <label for="reserva-cantidad">cantidad</label>
                 </div>
-
-                <div class="form-input-select">
-                  <div class="desplegable_select">
+                <div class="form-input-select desplegable-fecha">
+                  <div class="desplegable-select">
                     <label
-                      id="reserva-fecha"
+                      id="reserva-dia"
                       for="reserva-dia"
                       >Fecha</label
                     >
-
                     <svg
                       class="icono icono-calendario"
                       width="22"
@@ -238,7 +316,6 @@
                       id="calendario"
                       name="reserva-dia"
                       class="calendario"
-                      re
                     >
                       <div class="celda-dia-semana">L</div>
                       <div class="celda-dia-semana">M</div>
@@ -247,198 +324,203 @@
                       <div class="celda-dia-semana">V</div>
                       <div class="celda-dia-semana">S</div>
                       <div class="celda-dia-semana">D</div>
+
                       <div
                         class="celda-dia"
-                        value="1"
+                        data-numero-dia="1"
                       >
                         1
                       </div>
                       <div
                         class="celda-dia"
-                        value="2"
+                        data-numero-dia="2"
                       >
                         2
                       </div>
                       <div
                         class="celda-dia"
-                        value="3"
+                        data-numero-dia="3"
                       >
                         3
                       </div>
                       <div
                         class="celda-dia"
-                        value="4"
+                        data-numero-dia="4"
                       >
                         4
                       </div>
                       <div
                         class="celda-dia"
-                        value="5"
+                        data-numero-dia="5"
                       >
                         5
                       </div>
                       <div
                         class="celda-dia"
-                        value="6"
+                        data-numero-dia="6"
                       >
                         6
                       </div>
                       <div
                         class="celda-dia"
-                        value="7"
+                        data-numero-dia="7"
                       >
                         7
                       </div>
                       <div
                         class="celda-dia"
-                        value="8"
+                        data-numero-dia="8"
                       >
                         8
                       </div>
                       <div
                         class="celda-dia"
-                        value="9"
+                        data-numero-dia="9"
                       >
                         9
                       </div>
                       <div
                         class="celda-dia"
-                        value="10"
+                        data-numero-dia="10"
                       >
                         10
                       </div>
                       <div
                         class="celda-dia"
-                        value="11"
+                        data-numero-dia="11"
                       >
                         11
                       </div>
                       <div
                         class="celda-dia"
-                        value="12"
+                        data-numero-dia="12"
                       >
                         12
                       </div>
                       <div
                         class="celda-dia"
-                        value="13"
+                        data-numero-dia="13"
                       >
                         13
                       </div>
                       <div
                         class="celda-dia"
-                        value="14"
+                        data-numero-dia="14"
                       >
                         14
                       </div>
                       <div
                         class="celda-dia"
-                        value="15"
+                        data-numero-dia="15"
                       >
                         15
                       </div>
                       <div
                         class="celda-dia"
-                        value="16"
+                        data-numero-dia="16"
                       >
                         16
                       </div>
                       <div
                         class="celda-dia"
-                        value="17"
+                        data-numero-dia="17"
                       >
                         17
                       </div>
                       <div
                         class="celda-dia"
-                        value="18"
+                        data-numero-dia="18"
                       >
                         18
                       </div>
                       <div
                         class="celda-dia"
-                        value="19"
+                        data-numero-dia="19"
                       >
                         19
                       </div>
                       <div
                         class="celda-dia"
-                        value="20"
+                        data-numero-dia="20"
                       >
                         20
                       </div>
                       <div
                         class="celda-dia"
-                        value="21"
+                        data-numero-dia="21"
                       >
                         21
                       </div>
                       <div
                         class="celda-dia"
-                        value="22"
+                        data-numero-dia="22"
                       >
                         22
                       </div>
                       <div
                         class="celda-dia"
-                        value="23"
+                        data-numero-dia="23"
                       >
                         23
                       </div>
                       <div
                         class="celda-dia"
-                        value="24"
+                        data-numero-dia="24"
                       >
                         24
                       </div>
                       <div
                         class="celda-dia"
-                        value="25"
+                        data-numero-dia="25"
                       >
                         25
                       </div>
                       <div
                         class="celda-dia"
-                        value="26"
+                        data-numero-dia="26"
                       >
                         26
                       </div>
                       <div
                         class="celda-dia"
-                        value="27"
+                        data-numero-dia="27"
                       >
                         27
                       </div>
                       <div
                         class="celda-dia"
-                        value="28"
+                        data-numero-dia="28"
                       >
                         28
                       </div>
                       <div
                         class="celda-dia"
-                        value="29"
+                        data-numero-dia="29"
                       >
                         29
                       </div>
                       <div
                         class="celda-dia"
-                        value="30"
+                        data-numero-dia="30"
                       >
                         30
                       </div>
                       <div
                         class="celda-dia"
-                        value="31"
+                        data-numero-dia="31"
                       >
                         31
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="form-input-select">
-                  <div class="desplegable_select">
-                    <span id="reserva-hora">Hora</span>
+                <div class="form-input-select desplegable-hora">
+                  <div class="desplegable-select">
+                    <label
+                      for="reserva-hora"
+                      id="reserva-hora"
+                      >Hora</label
+                    >
                     <svg
                       class="icono icono-relog"
                       width="20"
@@ -474,56 +556,132 @@
                     </svg>
                   </div>
                   <div class="contenedor-opciones">
-                    <div class="listado-opciones">
-                      <div class="opcion">
-                        <input
-                          type="radio"
-                          name="reason"
-                          id="reason-option-1"
-                        /><label
-                          for="reason-option-1"
-                          class=""
-                          >Romántica</label
+                    <div
+                      class="listado-opciones f-row contenedor-horas"
+                      name="reserva-hora"
+                    >
+                      <div class="container f-col horasDisponibles">
+                        <span
+                          class="hora"
+                          data-hora="08"
                         >
-                      </div>
-                      <div class="opcion">
-                        <input
-                          type="radio"
-                          name="reason"
-                          id="reason-option-2"
-                        /><label
-                          for="reason-option-2"
-                          class=""
-                          >Familiar</label
+                          08 </span
+                        ><span
+                          class="hora"
+                          data-hora="09"
                         >
-                      </div>
-                      <div class="opcion">
-                        <input
-                          type="radio"
-                          name="reason"
-                          id="reason-option-3"
-                        /><label
-                          for="reason-option-3"
-                          class=""
-                          >Reunion informal</label
+                          09 </span
+                        ><span
+                          class="hora"
+                          data-hora="10"
                         >
+                          10 </span
+                        ><span
+                          class="hora"
+                          data-hora="11"
+                        >
+                          11 </span
+                        ><span
+                          class="hora"
+                          data-hora="12"
+                        >
+                          12 </span
+                        ><span
+                          class="hora"
+                          data-hora="13"
+                        >
+                          13 </span
+                        ><span
+                          class="hora"
+                          data-hora="14"
+                        >
+                          14 </span
+                        ><span
+                          class="hora"
+                          data-hora="15"
+                        >
+                          15 </span
+                        ><span
+                          class="hora"
+                          data-hora="16"
+                        >
+                          16 </span
+                        ><span
+                          class="hora"
+                          data-hora="17"
+                        >
+                          17 </span
+                        ><span
+                          class="hora"
+                          data-hora="18"
+                        >
+                          18 </span
+                        ><span
+                          class="hora"
+                          data-hora="19"
+                        >
+                          19 </span
+                        ><span
+                          class="hora"
+                          data-hora="20"
+                        >
+                          20 </span
+                        ><span
+                          class="hora"
+                          data-hora="21"
+                        >
+                          21 </span
+                        ><span
+                          class="hora"
+                          data-hora="22"
+                        >
+                          22 </span
+                        ><span
+                          class="hora"
+                          data-hora="23"
+                        >
+                          23 </span
+                        ><span
+                          class="hora"
+                          data-hora="24"
+                        >
+                          24 </span
+                        ><span
+                          class="hora"
+                          data-hora="01"
+                        >
+                          01 </span
+                        ><span
+                          class="hora"
+                          data-hora="02"
+                        >
+                          02
+                        </span>
                       </div>
-                      <div class="opcion">
-                        <input
-                          type="radio"
-                          name="reason"
-                          id="reason-option-3"
-                        /><label
-                          for="reason-option-3"
-                          class=""
-                          >Reunion formal</label
+                      <div class="container f-col minutosDisponibles">
+                        <span
+                          class="minuto"
+                          data-minuto="00"
+                          >00</span
+                        ><span
+                          class="minuto"
+                          data-minuto="15"
+                          >30</span
+                        ><span
+                          class="minuto"
+                          data-minuto="30"
+                          >30</span
+                        ><span
+                          class="minuto"
+                          data-minuto="45"
+                          >45</span
                         >
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="form-input-select">
-                  <div class="desplegable_select">
+                <div class="form-input-select desplegable-tipo">
+                  <div class="desplegable-select">
                     <span class="input-nombre">Tipo de Reserva</span>
                     <svg
                       class="icono icono-flecha"
@@ -541,8 +699,9 @@
                       <div class="opcion">
                         <input
                           type="radio"
-                          name="reason"
+                          name="reserva-tipo"
                           id="reason-option-1"
+                          value="romantica"
                         /><label
                           for="reason-option-1"
                           class=""
@@ -552,8 +711,9 @@
                       <div class="opcion">
                         <input
                           type="radio"
-                          name="reason"
+                          name="reserva-tipo"
                           id="reason-option-2"
+                          value="familiar"
                         /><label
                           for="reason-option-2"
                           class=""
@@ -563,8 +723,9 @@
                       <div class="opcion">
                         <input
                           type="radio"
-                          name="reason"
+                          name="reserva-tipo"
                           id="reason-option-3"
+                          value="negocios"
                         /><label
                           for="reason-option-3"
                           class=""
@@ -574,8 +735,9 @@
                       <div class="opcion">
                         <input
                           type="radio"
-                          name="reason"
+                          name="reserva-tipo"
                           id="reason-option-4"
+                          value="amigos"
                         /><label
                           for="reason-option-4"
                           class=""
@@ -598,12 +760,12 @@
                 </div>
               </div>
               <div class="form-input message">
-                <label for="reserva-observaciones">Observaciones</label>
                 <textarea
                   name="reserva-observaciones"
                   id="reserva-observaciones"
-                  required
+                  placeholder="Escriba aquí sus observaciones"
                 ></textarea>
+                <label for="reserva-observaciones">Observaciones</label>
               </div>
             </div>
           </div>
@@ -622,46 +784,43 @@
             </div>
             <div class="container f-col reserva-pedido">
               <div class="container w-100 jc-fs ai-fs reserva-platos">
-                <div class="container f-col pedido__platos">
-                  
-                </div>
+                <div class="container f-col pedido__platos"></div>
                 <div class="container f-col pedido__total">
                   <span class="titulo_subtotales">Subtotales</span>
-                  <div class="container f-col w-100 subtotales">
-                    <div class="container subtotal">
-                      <span class="campo-nombre">subtotal 1</span
-                      ><span class="campo-valor">$2.000</span>
-                    </div>
-                    <div class="container subtotal">
-                      <span class="campo-nombre">subtotal 2</span
-                      ><span class="campo-valor">$5.550</span>
-                    </div>
-                  </div>
+                  <div class="container f-col w-100 subtotales"></div>
                   <div class="separador"></div>
                   <div class="container w-100 total-pedido">
                     <span class="campo-nombre">Total</span
                     ><span
-                      id="total"
-                      class="campo-valor"
-                      >$7.550</span
-                    >
+                      >$
+                      <span
+                        id="total"
+                        class="campo-valor"
+                        >0</span
+                      >
+                    </span>
                   </div>
                   <div class="container w-100 pago-inicial">
                     <span class="campo-nombre">Pago Inicial</span
                     ><span
-                      id="pagoInicial"
-                      class="campo-valor"
-                      >$3.020</span
-                    >
+                      >$
+                      <span
+                        id="pagoInicial"
+                        class="campo-valor"
+                        >0</span
+                      >
+                    </span>
                   </div>
                   <div class="separador"></div>
                   <div class="container w-100 total-pendiente">
                     <span class="campo-nombre">Pendiente</span
                     ><span
-                      id="pendiente"
-                      class="campo-valor"
-                      >$4.530</span
-                    >
+                      >$
+                      <span
+                        id="pendiente"
+                        class="campo-valor"
+                      ></span
+                    ></span>
                   </div>
                 </div>
               </div>
@@ -682,6 +841,7 @@
             </div>
           </div>
           <button
+            id="btn-reservar"
             class="btn-principal"
             type="submit"
           >

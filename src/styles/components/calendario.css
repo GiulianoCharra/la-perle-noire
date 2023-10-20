@@ -1,6 +1,5 @@
 .calendario {
   display: grid;
-  /* width: 340px; */
   grid-template-columns: repeat(7, 1fr);
   padding-inline: 10px;
   width: 100%;
@@ -9,8 +8,8 @@
   align-items: center;
   align-content: center;
   gap: clamp(5px, calc(0.5vw + 5px), 10px);
-  flex-wrap: wrap;
 }
+
 .celda-dia-semana {
   font-size: 1.2rem;
   color: rgba(var(--color-texto-primario), 0.8);
@@ -58,6 +57,7 @@
   color: rgba(var(--color-texto-secundario), 1);
   background-color: white;
   border: 3px solid rgba(var(--color-tercero), 1);
+  font-weight: 750;
 }
 
 .celda-dia:not(:hover) {

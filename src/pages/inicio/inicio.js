@@ -1,6 +1,21 @@
 "use-strict";
 import enviarEmail from "../../services/email.service.js";
 
+const platos = [
+  {
+    nombre: "Fideo con ternera",
+    precio: 1500,
+    imagen: "../../assets/images/comidas/comida-1.jpg",
+    cantidad: 1,
+  },
+  {
+    nombre: "Carne con pure",
+    precio: 1850,
+    imagen: "../../assets/images/comidas/comida-58.jpg",
+    cantidad: 1,
+  },
+];
+
 const opinionesClientes = [
   {
     nombre: "Elon Musk",

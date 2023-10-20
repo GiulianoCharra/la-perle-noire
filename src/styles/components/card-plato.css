@@ -1,0 +1,79 @@
+.plato {
+  padding: 10px;
+  gap: 20px;
+  border-radius: var(--card-border);
+  background-color: rgba(var(--color-segundo), 1);
+  position: relative;
+}
+
+.btnEliminarPlato {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+}
+
+.btn-pedido {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 30px;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.plato__imagen {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.plato__datos {
+}
+
+.plato__nombre {
+  color: rgba(var(--color-tercero), 1);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.plato__precio {
+  text-align: left;
+  font-size: 1rem;
+}
+
+.pedido__datos-orden {
+  gap: clamp(2px, calc(1px + 0.5vw), 1rem);
+}
+.pedido__datos-orden > .container {
+  gap: clamp(2px, calc(1px + 0.5vw), 1rem);
+}
+
+.pedido__datos-orden .campo-nombre {
+  color: rgba(var(--color-texto-primario), 1);
+}
+
+.pedido__datos-orden button {
+  color: rgba(var(--color-tercero), 1);
+}
+
+.plato__cantidad {
+}
+
+.icono .btn-restar-plato {
+}
+
+.plato__subtotal {
+}
+
+@media screen and (max-width: 768px) {
+    .pedido__datos-orden{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    .pedido__datos-orden > .container{
+        gap: 1rem;
+        justify-content: flex-start;
+        width: 100%;
+    }
+}

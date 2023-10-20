@@ -33,6 +33,10 @@ body {
   gap: 1rem;
 }
 
+.f-row {
+  flex-direction: row;
+}
+
 .f-col {
   flex-direction: column;
 }
@@ -140,5 +144,23 @@ body::-webkit-scrollbar-track {
 @media (prefers-color-scheme: dark) {
   .menu__opcion {
     font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .titulo-1 {
+    font-size: 2.5rem;
+  }
+  .titulo-2 {
+    font-size: 2rem;
+  }
+  .titulo-3 {
+    font-size: 1.5rem;
+  }
+  .titulo-4 {
+    font-size: 1.25rem;
+  }
+  .descripcion {
+    font-size: 1.25rem;
   }
 }

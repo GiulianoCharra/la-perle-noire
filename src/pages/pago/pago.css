@@ -1,0 +1,12 @@
+.tarjeta {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-color: rgb(55, 55, 219);
+  border-radius: var(--card-border);
+}
+.tarjeta__nombre,
+.tarjeta__numero,
+.tarjeta__fecha_vencimiento {
+  position: absolute;
+}
