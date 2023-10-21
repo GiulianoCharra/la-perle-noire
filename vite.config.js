@@ -9,8 +9,8 @@ export default defineConfig({
       browserslist: ">= 0.25%",
     }),
   ],
-  base: "/codecats-academy/",
-  root: "./src",
+  base: "/la-perle-noire",
+  root: "./src/",
   build: {
     outDir: "../dist",
     emptyOutDir: true,
