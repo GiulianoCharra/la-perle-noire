@@ -12,7 +12,7 @@ window.addEventListener("load", async () => {
   );
   console.log(platos);
   console.log(bebidas);
-  const contenerdor = document.getElementById("comidas");
+  const contenedor = document.getElementById("comidas");
 
   const nuevaComida = document.createElement("div");
   nuevaComida.classList.add("container");
@@ -22,5 +22,5 @@ window.addEventListener("load", async () => {
           <h3>${platos[0].strMeal}</h3>
 }`;
 
-  contenerdor.appendChild(nuevaComida);
+  contenedor.appendChild(nuevaComida);
 });
