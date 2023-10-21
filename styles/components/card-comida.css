@@ -1,16 +1,14 @@
-@import url("../btn-principal/btn-principal.css");
-
 .card-comida {
-  width: 125px;
-  height: 200px;
+  width: 200px;
+  height: 300px;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 5px;
   border-radius: var(--card-border);
-  background: var(--color-segundo);
+  background: rgba(var(--color-segundo), 0.8);
   color: #fff;
 }
 
@@ -23,9 +21,10 @@
 }
 
 .comida__nombre {
-  color: var(--color-segundo);
+  color: rgb(var(--color-tercero));
+
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .container .agregar_pedido {
@@ -38,14 +37,21 @@
 .container .comida__precio {
 }
 
+.container .btn-principal {
+  padding-inline: 10px;
+  width: 70%;
+  height: 30px;
+}
+
 .comida__precio {
+  width: 30%;
   text-align: center;
-  font-size: 10px;
+  font-size: 1rem;
+  color: rgb(var(--color-tercero));
 }
 
 .comida__descripcion {
-  font-size: 0.5rem;
-  bottom: -0.625rem;
+  font-size: 0.8rem;
 }
 
 .card-comida:hover .agregar_pedido {

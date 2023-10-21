@@ -60,11 +60,6 @@
         <div class="header__menu menu--derecho">
           <a
             class="menu__opcion"
-            href="../../index.html#contacto"
-            >Contacto</a
-          >
-          <a
-            class="menu__opcion"
             href="../../index.html#sobre-nosotros"
             >Nosotros</a
           >
@@ -72,6 +67,11 @@
             class="menu__opcion"
             href="../../index.html#ubicacion"
             >Ubicación</a
+          >
+          <a
+            class="menu__opcion"
+            href="../../index.html#contacto"
+            >Contacto</a
           >
         </div>
         <div class="g-center carrito">
@@ -162,9 +162,62 @@
     </header>
 
     <main class="container f-col main">
-      <div id="comidas">
-        <div></div>
-      </div>
+      <section class="container w-100 f-col seccion-platos">
+        <h1 class="titulo-1">Nuestros platos</h1>
+        <div class="container w-100 f-col seccion-filtro">
+          <span class="titulo-4">Filtros de búsqueda </span>
+          <div class="container w-100 filtros">
+            <div class="form-input-select filtro">
+              <div class="desplegable-select">
+                <span class="input-nombre">Categoría</span>
+                <svg
+                  class="icono icono-flecha"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                  />
+                </svg>
+              </div>
+              <div class="contenedor-opciones">
+                <div
+                  id="filtro-categorias"
+                  class="listado-opciones"
+                >
+                </div>
+              </div>
+            </div>
+            <div class="form-input-select filtro">
+              <div class="desplegable-select">
+                <span class="input-nombre">Ingrediente</span>
+                <svg
+                  class="icono icono-flecha"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                  />
+                </svg>
+              </div>
+              <div class="contenedor-opciones">
+                <div
+                  id="filtro-ingrediente"
+                  class="listado-opciones"
+                >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="platos"
+          class="container f-wrap w-100 seccion-comidas"
+        ></div>
+      </section>
     </main>
 
     <footer class="container f-col footer">

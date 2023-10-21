@@ -1,0 +1,17 @@
+@import url("../../styles/components/card-comida.css");
+
+.seccion-platos{
+    gap: 50px;
+}
+
+.filtro {
+  max-width: 40%;
+}
+
+.seccion-comidas{
+    gap: 50px;
+}
+.btn-principal{
+    width: 100%;
+    height: 30px;
+}

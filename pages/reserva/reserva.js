@@ -30,10 +30,6 @@ document.getElementById("reserva-agregarPLatos").addEventListener("click", () =>
     return;
   }
 
-  if (pedido.platos.length === 0) {
-    mostrarMensajeSinPlatos(reservaPedido);
-    return;
-  }
   platosCargados = true;
   pedido.generarPlatos();
 });
@@ -58,12 +54,6 @@ document.querySelector(".desplegable-hora").addEventListener("click", (e) => {
 
   tiempo.classList.toggle("seleccionado");
 });
-
-function mostrarMensajeSinPlatos(div) {
-  div.innerHTML = `<p class="descripcion">
-      No hay platos agregados, si quieres agregar platos a tu pedido, ve a la sección de menus y selecciona los platos que desees.
-    </p>`;
-}
 
 // funcion que muestra los datos de un formulario
 function mostrarDatosFormulario(formulario) {

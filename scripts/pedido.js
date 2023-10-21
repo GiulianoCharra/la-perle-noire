@@ -129,10 +129,16 @@ export function borrarPlato(event) {
   cantidadPlatos--;
   if (cantidadPlatos === 0) {
     const reservaPedido = document.querySelector(".reserva-pedido");
-
     mostrarMensajeSinPlatos(reservaPedido);
+    return;
   }
   calcularTotal();
+}
+
+function mostrarMensajeSinPlatos(div) {
+  div.innerHTML = `<p class="descripcion">
+      No hay platos agregados, si quieres agregar platos a tu pedido, ve a la sección de menus y selecciona los platos que desees.
+    </p>`;
 }
 
 //funcion que al hacer click en el boton aumentar cantidad aumente la cantidad de platos
