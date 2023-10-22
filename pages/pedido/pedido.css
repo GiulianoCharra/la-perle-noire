@@ -1,0 +1,90 @@
+@import url("../../styles/components/card-plato.css");
+
+.pedido__platos {
+  width: 70%;
+  gap: 20px;
+}
+
+.pedido__total {
+  background-color: rgba(var(--color-texto-primario), 1);
+  border-radius: var(--card-border);
+  padding: 20px;
+  width: 30%;
+}
+
+.titulo_subtotales {
+  color: rgba(var(--color-primero), 1);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.pedido__total .campo-nombre,
+.pedido__total .campo-valor {
+  width: 100%;
+  text-align: center;
+}
+
+.subtotales {
+}
+
+.subtotal {
+  height: 20px;
+  width: 100%;
+}
+
+.pedido__total .campo-nombre,
+.pedido__total .campo-valor {
+  width: 100%;
+  text-align: center;
+}
+
+.subtotales {
+}
+
+.subtotal {
+  height: 20px;
+  width: 100%;
+}
+
+span:has(.campo-valor) {
+  color: rgba(var(--color-tercero), 1);
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.campo-nombre {
+  color: rgba(var(--color-primero), 1);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.campo-valor {
+  color: rgba(var(--color-tercero), 1);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.separador {
+  width: 100%;
+  height: 5px;
+  background-color: rgba(var(--color-segundo), 1);
+  border-radius: 5px;
+}
+
+.total-pedido .campo-nombre,
+.pago-inicial .campo-nombre,
+.total-pendiente .campo-nombre {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+  .carrito-pedido {
+    flex-direction: column;
+  }
+  .pedido__platos,
+  .pedido__total {
+    width: 100%;
+  }
+}

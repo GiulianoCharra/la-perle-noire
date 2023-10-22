@@ -214,7 +214,7 @@
 
 @media screen and (max-width: 900px) {
   .main {
-    margin-top: clamp(125px, 15vw, 320px);
+    margin-top: clamp(75px, 10vw, 320px);
   }
 }
 

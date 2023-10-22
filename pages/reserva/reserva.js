@@ -1,27 +1,27 @@
-import pedido from "../../scripts/pedido.js";
+import pedido from "../pedido/pedido.js";
 import desplegar from "../../scripts/desplegable.js";
 
 desplegar.controlDespliegue();
 desplegar.controlCalendario();
 
-function mostrarCalendario(event) {
-  let diaSeleccionado = event.target;
-  if (!diaSeleccionado.classList.contains("celda-dia")) {
-    diaSeleccionado = diaSeleccionado.closest(".celda-dia");
-  }
-  if (!diaSeleccionado) {
-    return;
-  }
-  if (diaSeleccionado.classList.contains("dia-seleccionado")) {
-    diaSeleccionado.classList.remove("dia-seleccionado");
-    return;
-  }
-  const celdas = Array.from(document.getElementsByClassName("celda-dia dia-seleccionado"));
-  celdas.forEach((celda) => {
-    celda.classList.remove("dia-seleccionado");
-  });
-  diaSeleccionado.classList.add("dia-seleccionado");
-}
+// function mostrarCalendario(event) {
+//   let diaSeleccionado = event.target;
+//   if (!diaSeleccionado.classList.contains("celda-dia")) {
+//     diaSeleccionado = diaSeleccionado.closest(".celda-dia");
+//   }
+//   if (!diaSeleccionado) {
+//     return;
+//   }
+//   if (diaSeleccionado.classList.contains("dia-seleccionado")) {
+//     diaSeleccionado.classList.remove("dia-seleccionado");
+//     return;
+//   }
+//   const celdas = Array.from(document.getElementsByClassName("celda-dia dia-seleccionado"));
+//   celdas.forEach((celda) => {
+//     celda.classList.remove("dia-seleccionado");
+//   });
+//   diaSeleccionado.classList.add("dia-seleccionado");
+// }
 
 let platosCargados = false;
 
@@ -33,7 +33,7 @@ document.getElementById("reserva-agregarPLatos").addEventListener("click", () =>
   }
 
   platosCargados = true;
-  pedido.generarPlatos();
+  pedido.generarPlatos("pedido__platos");
 });
 
 document.querySelector(".desplegable-hora").addEventListener("click", (e) => {

@@ -22,6 +22,9 @@
   display: grid;
   place-items: center;
   font-size: 1.5rem;
+  /* fill: rgba(var(--color-tercero), 1); */
+  /* stroke: rgba(var(--color-tercero), 1); */
+  /* stroke-width: 3px; */
 }
 
 
