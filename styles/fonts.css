@@ -1,4 +1,4 @@
-/* Cinzel Decorative variable */
+/* Cinzel variable */
 @font-face {
   font-family: Cinzel;
   src: url("../assets/fonts/Cinzel/Cinzel-VariableFont_wght.ttf") format("truetype");
@@ -7,31 +7,31 @@
 }
 
 /* Cinzel Decorative Regular */
-@font-face {
+/* @font-face {
   font-family: "Cinzel Decorative";
   src: url("../assets/fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf");
   src: url("../assets/fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 /* Cinzel Decorative Bold */
-@font-face {
+/* @font-face {
   font-family: "Cinzel Decorative";
   src: url("../assets/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf");
   src: url("../assets/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
-}
+} */
 
 /* Cinzel Decorative Black */
-@font-face {
+/* @font-face {
   font-family: "Cinzel Decorative";
   src: url("../assets/fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf");
   src: url("../assets/fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
-}
+} */
 
 /* Roboto Flex */
 @font-face {

@@ -1,4 +1,5 @@
 .btn-principal {
+  cursor: pointer;
   display: flex;
   width: 150px;
   height: 40px;

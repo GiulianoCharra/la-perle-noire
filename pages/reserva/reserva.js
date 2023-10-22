@@ -1,4 +1,8 @@
 import pedido from "../../scripts/pedido.js";
+import desplegar from "../../scripts/desplegable.js";
+
+desplegar.controlDespliegue();
+desplegar.controlCalendario();
 
 function mostrarCalendario(event) {
   let diaSeleccionado = event.target;
@@ -20,8 +24,6 @@ function mostrarCalendario(event) {
 }
 
 let platosCargados = false;
-
-document.getElementById("calendario").addEventListener("click", mostrarCalendario);
 
 document.getElementById("reserva-agregarPLatos").addEventListener("click", () => {
   const reservaPedido = document.querySelector(".reserva-pedido");

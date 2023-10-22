@@ -1,0 +1,88 @@
+.seccion-calendario-eventos {
+  gap: 30px;
+}
+
+.desplegable-sucursales {
+  max-width: 400px;
+}
+
+.meses-container {
+  font-size: 2rem;
+  width: 200px;
+}
+
+.meses-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(var(--color-texto-principal));
+}
+
+.meses {
+  width: 100px;
+  gap: 10px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.meses span {
+  min-width: 100px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.meses-anterior {
+}
+
+.meses-btn:focus {
+  outline: none;
+}
+
+/* Agrega estilos a las flechas y personaliza según tus preferencias */
+
+.seccion-listado-eventos {
+}
+.eventos {
+  padding-left: 50px;
+}
+.evento {
+  gap: 10px;
+  background-color: rgba(var(--color-segundo), 0.8);
+  border-radius: 20px;
+  padding: 20px;
+}
+.evento__numero {
+}
+.evento__datos {
+  padding-left: 50px;
+  font-size: 1.5rem;
+}
+.evento__nombre {
+}
+.evento__tipo {
+}
+.evento__horario {
+}
+.evento__imagen {
+  width: clamp(100px, 20vw, 200px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .eventos {
+    padding-left: 0;
+  }
+  .evento {
+    padding: 10px;
+  }
+  .evento__datos {
+    padding-left: 10px;
+    font-size: 1.3rem;
+  }
+  .evento__imagen {
+    width: 100px;
+  }
+}

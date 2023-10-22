@@ -1,13 +1,10 @@
 .calendario {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  padding-inline: 10px;
   width: 100%;
-  /* width: clamp(105px, calc(25vw + 105px), 340px); */
+  width: clamp(300px, 90vw, 800px);
   height: 100%;
-  align-items: center;
-  align-content: center;
-  gap: clamp(5px, calc(0.5vw + 5px), 10px);
+  gap: clamp(5px, 1vw, 20px);
 }
 
 .celda-dia-semana {
@@ -16,23 +13,23 @@
 
   font-weight: bold;
   text-align: center;
-  background: rgba(var(--color-segundo), 0.8);
+  background-color: rgba(var(--color-segundo), 0.8);
 
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   cursor: default;
 }
 
 .celda-dia {
   /* width: clamp(10px, calc(4vw + 5px), 40px); */
+   width: 100%;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
+
   gap: 10px;
   background: rgba(var(--color-tercero), 0.8);
   font-size: 1.3rem;
@@ -53,7 +50,7 @@
   scale: 1.05;
 }
 
-.celda-dia.dia-seleccionado {
+.celda-dia.dia-seleccionado, .celda-dia-semana {
   color: rgba(var(--color-texto-secundario), 1);
   background-color: white;
   border: 3px solid rgba(var(--color-tercero), 1);

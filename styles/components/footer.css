@@ -8,6 +8,7 @@
 .footer__redes-sociales {
   padding: 10px 20px;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 40px 40px;
 }
 

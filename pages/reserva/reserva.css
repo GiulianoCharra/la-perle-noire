@@ -16,6 +16,10 @@
   gap: 50px;
 }
 
+.desplegable-fecha .calendario{
+  width: 100%;
+}
+
 .desplegable-hora .listado-opciones {
   flex-direction: row;
 }

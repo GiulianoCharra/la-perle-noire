@@ -3,7 +3,7 @@
   padding-inline: 20px;
   padding-bottom: 50px;
   gap: 50px;
-  margin-top: clamp(100px, 35vw, 320px);
+  margin-top: clamp(100px, 25vw, 320px);
 }
 
 .seccion-bienvenida {
@@ -36,6 +36,7 @@
 .opiniones-clientes {
   gap: 40px;
   width: 100%;
+  padding-block: 50px;
   overflow-x: auto;
 }
 
@@ -47,7 +48,7 @@
 
 .capturas-categorias {
   padding: 20px 40px;
-  font-family: "Cinzel Decorative";
+  font-family: 'Cinzel Decorative', serif;
   font-weight: bold;
   gap: 20px;
   background-color: rgba(var(--color-tercero), 0.2);
@@ -211,11 +212,17 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .main {
+    margin-top: clamp(125px, 15vw, 320px);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .seccion-bienvenida {
     flex-direction: column;
   }
-  .seccion-bienvenida .titulo-1{
+  .seccion-bienvenida .titulo-1 {
     content: "dsad";
   }
 

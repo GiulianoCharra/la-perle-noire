@@ -1,3 +1,7 @@
+import desplegar from "../../scripts/desplegable.js";
+
+desplegar.controlDespliegue();
+
 const endPoints = {
   comidas: "https://www.themealdb.com/api/json/v1/1/random.php",
   bebidas: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
@@ -38,8 +42,8 @@ async function cargarComidas() {
     </div>
     <span class="comida__precio">$1000</span>
   </div>
-  <div class="container">
-    <span class="comida__descripcion"
+  <div class="g-center comida__descripcion">
+    <span class="comida__descripcion-texto"
       >Lorem ipsum dolor sit amet consectetur. Etiam mollis sed morbi tincidunt.
       Aliquet sit ullamcorper fringilla pretium tortor.</span
     >
@@ -94,7 +98,7 @@ async function cargarIngredientes() {
     nuevoIngrediente.innerHTML = `
         <input
         type="radio"
-        name="filtro-categoria"
+        name="filtro-ingrediente"
         id="categoria-${ingrediente.idIngredient}"
         value="${ingrediente.strIngredient}"
       /><label

@@ -1,15 +1,17 @@
 .card-comida {
-  width: 200px;
-  height: 300px;
+  --card-width: 250px;
+  --card-height: 350px;
+  width: var(--card-width);
+  height: var(--card-height);
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 5px;
   border-radius: var(--card-border);
   background: rgba(var(--color-segundo), 0.8);
-  color: #fff;
+  overflow: hidden;
 }
 
 .comida__imagen {
@@ -18,47 +20,99 @@
   flex-shrink: 0;
   border-radius: 50%;
   background: lightgray 50% / cover no-repeat;
+  translate: 0 calc(var(--card-height) * 0.1);
+  scale: 1.4;
 }
 
 .comida__nombre {
   color: rgb(var(--color-tercero));
-
   text-align: center;
-  font-size: 1rem;
-}
-
-.container .agregar_pedido {
-  visibility: hidden;
-  opacity: 0;
-  left: -100px;
-  bottom: 0;
-}
-
-.container .comida__precio {
-}
-
-.container .btn-principal {
-  padding-inline: 10px;
-  width: 70%;
-  height: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  translate: 0 calc(var(--card-height) * 0.2);
 }
 
 .comida__precio {
-  width: 30%;
+  width: 100%;
   text-align: center;
-  font-size: 1rem;
-  color: rgb(var(--color-tercero));
+  font-size: 1.5rem;
+  color: rgb(var(--textp-principal));
+  translate: calc(var(--card-width) / 2 * -0.5) calc(var(--card-height) * 0.25);
+}
+
+.agregar-pedido {
+  padding-inline: 10px;
+  /* width: 70%; */
+  height: 25px;
+  opacity: 0;
+  translate: -120% 25%;
 }
 
 .comida__descripcion {
-  font-size: 0.8rem;
+  overflow-y: auto;
+  opacity: 0;
+  translate: 0 120%;
+  height: 100%;
 }
 
-.card-comida:hover .agregar_pedido {
-  opacity: 1;
+.comida__descripcion-texto {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-wrap: pretty;
 }
 
+.comida__descripcion::-webkit-scrollbar {
+  width: 5px;
+}
+
+.comida__descripcion::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--color-tercero), 0.5);
+  border-radius: 5px;
+}
+
+.comida__nombre,
+.comida__precio,
+.agregar-pedido,
+.comida__descripcion {
+  transition-property: opacity, translate, font-size;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.1s;
+}
+.comida__imagen {
+  transition-property: scale, translate;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.card-comida .agregar-pedido {
+  opacity: 0;
+}
+.card-comida:hover .comida__nombre,
+.card-comida:hover .comida__precio,
+.card-comida:hover .agregar-pedido,
 .card-comida:hover .comida__descripcion {
-  bottom: 0;
   opacity: 1;
+  translate: 0;
+}
+.card-comida:hover .comida__imagen {
+  translate: 0;
+  scale: 1;
+}
+
+.card-comida:hover .comida__precio {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card-comida {
+    /* flex-direction: row; */
+    width: 100%;
+    height: 200px;
+  }
+  .comida__imagen {
+    width: auto;
+    height: 100px;
+    aspect-ratio: 1;
+  }
 }

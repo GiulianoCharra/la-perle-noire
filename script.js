@@ -1,6 +1,5 @@
-import desplegar from "./scripts/desplegable.js";
 
-desplegar();
+
 //funcion que modifica el widht del logo cuando scrolleo
 window.addEventListener("load", () => {
   const logo = document.querySelector(".header__logo");
