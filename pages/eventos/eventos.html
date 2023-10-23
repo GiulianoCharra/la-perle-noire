@@ -24,7 +24,7 @@
       type="module"
       src="../../script.js"
     ></script>
-    />
+
     <script
       defer
       type="module"
@@ -80,7 +80,7 @@
           >
         </div>
         <div class="g-center carrito">
-          <div>
+          <a href="../carrito/carrito.html">
             <img
               src="../../assets/svg/carrito.svg"
               alt="icono del carrito de platos"
@@ -88,12 +88,12 @@
             <div class="g-center carrito__cantidad">
               <p>2</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
       <div class="container w-100 jc-sb header-mobile">
-        <a href="#">
+        <a href="../../index.html">
           <img
             class="header__logo"
             src="../../assets/images/logo.png"
@@ -237,24 +237,32 @@
           </div>
         </div>
         <div class="container jc-sb meses-container">
-          <button class="meses-btn meses-anterior">
+          <button
+            id="btnMesAnterior"
+            class="meses-btn meses-anterior"
+          >
             <i class="fas fa-chevron-left"></i>
           </button>
-          <div class="container meses">
-            <span>Enero</span>
-            <span>Febrero</span>
-            <span>Marzo</span>
-            <span>Abril</span>
-            <span>Mayo</span>
-            <span>Junio</span>
-            <span>Julio</span>
-            <span>Agosto</span>
-            <span>Septiembre</span>
-            <span>Octubre</span>
-            <span>Noviembre</span>
-            <span>Diciembre</span>
+          <div class="container jc-fs listado-meses">
+            <div class="container meses">
+              <span>Enero</span>
+              <span>Febrero</span>
+              <span>Marzo</span>
+              <span>Abril</span>
+              <span>Mayo</span>
+              <span>Junio</span>
+              <span>Julio</span>
+              <span>Agosto</span>
+              <span>Septiembre</span>
+              <span>Octubre</span>
+              <span>Noviembre</span>
+              <span>Diciembre</span>
+            </div>
           </div>
-          <button class="meses-btn meses-siguiente">
+          <button
+            id="btnMesSiguiente"
+            class="meses-btn meses-siguiente"
+          >
             <i class="fas fa-chevron-right"></i>
           </button>
         </div>
@@ -475,7 +483,7 @@
                 </div>
                 <img
                   class="evento__imagen"
-                  src="../../assets/images/eventos/evento (1).jpg"
+                  src="../../assets/images/eventos/evento-1.png"
                   alt=""
                 />
               </div>
@@ -491,7 +499,7 @@
                 </div>
                 <img
                   class="evento__imagen"
-                  src="../../assets/images/eventos/evento (2).jpg"
+                  src="../../assets/images/eventos/evento-2.png"
                   alt=""
                 />
               </div>

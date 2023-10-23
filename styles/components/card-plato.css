@@ -1,15 +1,10 @@
 .plato {
   padding: 10px;
   gap: 20px;
+  gap: clamp(10px, 5vw, 1.5rem);
   border-radius: var(--card-border);
   background-color: rgba(var(--color-segundo), 1);
   position: relative;
-}
-
-.btnEliminarPlato {
-  position: absolute;
-  right: 6px;
-  top: 6px;
 }
 
 .btn-pedido {
@@ -20,6 +15,15 @@
   aspect-ratio: 1;
   cursor: pointer;
 }
+
+
+.btnEliminarPlato {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 20px;
+}
+
 
 .plato__imagen {
   width: 100px;
@@ -41,9 +45,8 @@
   font-size: 1rem;
 }
 
-.pedido__datos-orden {
-  gap: clamp(2px, calc(1px + 0.5vw), 1rem);
-}
+.plato__datos,
+.pedido__datos-orden,
 .pedido__datos-orden > .container {
   gap: clamp(2px, calc(1px + 0.5vw), 1rem);
 }
@@ -66,14 +69,12 @@
 }
 
 @media screen and (max-width: 768px) {
-    .pedido__datos-orden{
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 1rem;
-    }
-    .pedido__datos-orden > .container{
-        gap: 1rem;
-        justify-content: flex-start;
-        width: 100%;
-    }
+  .pedido__datos-orden {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .pedido__datos-orden > .container {
+    justify-content: flex-start;
+    width: 100%;
+  }
 }

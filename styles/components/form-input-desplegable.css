@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(var(--color-segundo), 1);
+  background-color: rgba(var(--color-cuarto), 1);
   width: 100%;
   height: 50px;
   position: relative;
@@ -82,7 +82,10 @@
 
 .contenedor-opciones {
   /* background: rgba(var(--color-segundo), 1); */
-  background-image: linear-gradient(rgba(var(--color-segundo), 1), rgba(var(--color-segundo), 1));
+  background-image: linear-gradient(
+    rgba(var(--color-cuarto), 1),
+    rgba(var(--color-quinto), 1)
+  );
   max-height: 0;
   opacity: 0;
   transition-property: max-height, opacity, padding-block;
@@ -132,6 +135,4 @@
 }
 
 @media screen and (min-width: 768px) {
-  
 }
-  

@@ -1,0 +1,7 @@
+.formas-pago{
+    gap: 50px;
+}
+
+.opcion-pago__imagen a img{
+    width: 150px;
+}

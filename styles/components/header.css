@@ -1,14 +1,15 @@
 @import url("./btn-menu-opciones.css");
 .header {
   width: 100%;
-  padding: 1.25rem;
+  padding-inline: 1.25rem;
+  padding-top: 20px;
   top: 0;
   position: fixed;
   z-index: 100;
   gap: 0;
   background-image: linear-gradient(
     rgba(var(--color-primero), 1),
-    rgba(var(--color-primero), 0.8),
+    rgba(var(--color-primero), 0.7),
     rgba(var(--color-primero), 0)
   );
 }
@@ -34,6 +35,9 @@
 
 .menu__opcion:hover,
 .menu__opcion:focus-within {
+}
+
+.menu__opcion--amarillo {
   color: rgb(var(--color-tercero));
 }
 
@@ -63,13 +67,13 @@
   cursor: pointer;
 }
 
-.carrito > div {
+.carrito > a {
   width: 100%;
   position: relative;
 }
 
-.carrito > div .carrito__cantidad,
-.carrito > div img {
+.carrito > a .carrito__cantidad,
+.carrito > a img {
   position: absolute;
 }
 
@@ -83,7 +87,7 @@
   color: rgb(var(--color-tercero));
   font-size: 1.2rem;
   font-weight: 800;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 .carrito__cantidad .mostrar {
@@ -98,6 +102,9 @@
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 900px) {
+  .header {
+    padding-top: 0;
+  }
   .header-escritorio {
     display: none;
   }

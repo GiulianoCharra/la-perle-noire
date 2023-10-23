@@ -1,4 +1,4 @@
-import pedido from "../pedido/pedido.js";
+import pedido from "../../scripts/pedido.js";
 import desplegar from "../../scripts/desplegable.js";
 
 desplegar.controlDespliegue();
@@ -25,7 +25,7 @@ desplegar.controlCalendario();
 
 let platosCargados = false;
 
-document.getElementById("reserva-agregarPLatos").addEventListener("click", () => {
+document.getElementById("reserva-agregarPlatos").addEventListener("click", () => {
   const reservaPedido = document.querySelector(".reserva-pedido");
   reservaPedido.classList.toggle("show");
   if (platosCargados) {
@@ -33,7 +33,7 @@ document.getElementById("reserva-agregarPLatos").addEventListener("click", () =>
   }
 
   platosCargados = true;
-  pedido.generarPlatos("pedido__platos");
+  pedido.generarPlatos("reserva-platos");
 });
 
 document.querySelector(".desplegable-hora").addEventListener("click", (e) => {
@@ -56,19 +56,6 @@ document.querySelector(".desplegable-hora").addEventListener("click", (e) => {
 
   tiempo.classList.toggle("seleccionado");
 });
-
-// funcion que muestra los datos de un formulario
-function mostrarDatosFormulario(formulario) {
-  formulario.reservaFecha = buscarDiaSeleccionado();
-  formulario.reservaHora = buscarHoraSeleccionado();
-  formulario.reservaMinuto = buscarMinutoSeleccionado();
-  formulario.reservaTipo = buscarOpcionSeleccionada();
-
-  const datos = new FormData(formulario);
-  for (const dato of datos) {
-    console.log(dato);
-  }
-}
 
 function buscarOpcionSeleccionada() {
   const opcionesTipo = document.querySelectorAll('.input[name="tipo-reserva"]');
@@ -112,5 +99,27 @@ function buscarMinutoSeleccionado() {
 
 document.getElementById("form-reserva").addEventListener("submit", (e) => {
   e.preventDefault();
-  mostrarDatosFormulario(e.target);
+  // mostrarDatosFormulario(e.target);
+
+  document.getElementById("reserva-agregarPlatos").checked
+    ? (window.location.href = "../opciones-pago/opciones-pago.html")
+    : "return";
 });
+
+document.getElementById("reserva-agregarPlatos").addEventListener("change", (e) => {
+  let btn = document.getElementById("btnReservar").querySelector(".btn__name");
+  e.target.checked ? (btn.textContent = "Pagar") : (btn.textContent = "Reservar");
+});
+
+// funcion que muestra los datos de un formulario
+function mostrarDatosFormulario(formulario) {
+  formulario.reservaFecha = buscarDiaSeleccionado();
+  formulario.reservaHora = buscarHoraSeleccionado();
+  formulario.reservaMinuto = buscarMinutoSeleccionado();
+  formulario.reservaTipo = buscarOpcionSeleccionada();
+
+  const datos = new FormData(formulario);
+  for (const dato of datos) {
+    console.log(dato);
+  }
+}

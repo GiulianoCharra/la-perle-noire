@@ -10,3 +10,6 @@
 .tarjeta__fecha_vencimiento {
   position: absolute;
 }
+.tarjeta-fecha-vencimiento{width: 70%;}
+
+.tarjeta-cvv{width: 30%;}

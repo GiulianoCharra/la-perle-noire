@@ -135,6 +135,7 @@
   flex-direction: column-reverse;
 }
 
+.opiniones-clientes::-webkit-scrollbar, 
 .listado-cards::-webkit-scrollbar {
   height: 15px;
 }
@@ -161,6 +162,7 @@
 }
 
 .formulario-datos .form-input.message textarea {
+  min-height: 200px;
   height: 100%;
   resize: none;
 }
@@ -214,7 +216,7 @@
 
 @media screen and (max-width: 900px) {
   .main {
-    margin-top: clamp(75px, 10vw, 320px);
+    margin-top: clamp(100px, 15vw, 320px);
   }
 }
 

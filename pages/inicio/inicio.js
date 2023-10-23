@@ -21,133 +21,133 @@ const opinionesClientes = [
     nombre: "Elon Musk",
     opinion:
       "La comida es tan innovadora que parece que proviene de otro planeta. ¡Una experiencia única en cada bocado!",
-    imagen: "./assets/images/clientes/cliente (1).jpeg",
+    imagen: "./assets/images/clientes/cliente-1.png",
   },
   {
     nombre: "Donald Trump",
     opinion:
       "Este restaurante es el mejor. La comida es increíble, la mejor comida. Nadie cocina mejor que este lugar. ¡Tienes que probarlo!",
-    imagen: "./assets/images/clientes/cliente (2).jpeg",
+    imagen: "./assets/images/clientes/cliente-2.png",
   },
   {
     nombre: "Jack Sparrow",
     opinion: "La mejor comida que eh probado en todo el Caribe.",
-    imagen: "./assets/images/clientes/cliente (3).jpg",
+    imagen: "./assets/images/clientes/cliente-3.png",
   },
   {
     nombre: "Morgan Freeman",
     opinion:
       "En este restaurante, la comida es una experiencia sublime. Cada plato cuenta una historia, y cada sabor es como música para el alma.",
-    imagen: "./assets/images/clientes/cliente (8).jpg",
+    imagen: "./assets/images/clientes/cliente-4.png",
   },
   {
     nombre: "Silvester Stallone",
     opinion:
       "Este restaurante es una verdadera pelea por el sabor. ¡Una experiencia de comer que te dejará sin aliento!",
-    imagen: "./assets/images/clientes/cliente (9).jpg",
+    imagen: "./assets/images/clientes/cliente-5.png",
   },
 ];
 const capturasComidas = [
   {
-    imagenURL: "./assets/images/comidas/comida-1.jpg",
+    imagenURL: "./assets/images/comidas/comida-1.png",
     descripcion: "Nuevo plato de la casa: ¡Filete de ternera con salsa de vino tinto!",
   },
   {
-    imagenURL: "./assets/images/comidas/comida-15.jpeg",
+    imagenURL: "./assets/images/comidas/comida-15.png",
     descripcion: "Nuevo plato de la casa: ¡Filete de ternera con salsa de vino tinto!",
   },
   {
-    imagenURL: "./assets/images/comidas/comida-66.jpg",
+    imagenURL: "./assets/images/comidas/comida-66.png",
     descripcion: "Nuevo plato de la casa: ¡Filete de ternera con salsa de vino tinto!",
   },
   {
-    imagenURL: "./assets/images/comidas/comida-58.jpg",
+    imagenURL: "./assets/images/comidas/comida-58.png",
     descripcion: "Nuevo plato de la casa: ¡Filete de ternera con salsa de vino tinto!",
   },
   {
-    imagenURL: "./assets/images/comidas/comida-20.jpeg",
+    imagenURL: "./assets/images/comidas/comida-20.png",
     descripcion: "Nuevo plato de la casa: ¡Filete de ternera con salsa de vino tinto!",
   },
   {
-    imagenURL: "./assets/images/comidas/comida-11.jpeg",
+    imagenURL: "./assets/images/comidas/comida-11.png",
     descripcion: "Nuevo plato de la casa: ¡Filete de ternera con salsa de vino tinto!",
   },
 ];
 const capturasAmbiente = [
   {
-    imagenURL: "./assets/images/ambiente/ambiente (1).jpg",
+    imagenURL: "./assets/images/ambiente/ambiente-1.png",
     descripcion: "Perfecto para una cena romántica con tu pareja.",
   },
   {
-    imagenURL: "./assets/images/ambiente/ambiente (2).jpg",
+    imagenURL: "./assets/images/ambiente/ambiente-2.png",
     descripcion: "Perfecto para una cena romántica con tu pareja.",
   },
   {
-    imagenURL: "./assets/images/ambiente/ambiente (3).jpg",
+    imagenURL: "./assets/images/ambiente/ambiente-3.png",
     descripcion: "Perfecto para una cena romántica con tu pareja.",
   },
   {
-    imagenURL: "./assets/images/ambiente/ambiente (4).jpg",
+    imagenURL: "./assets/images/ambiente/ambiente-4.png",
     descripcion: "Perfecto para una cena romántica con tu pareja.",
   },
   {
-    imagenURL: "./assets/images/ambiente/ambiente (5).jpg",
+    imagenURL: "./assets/images/ambiente/ambiente-5.png",
     descripcion: "Perfecto para una cena romántica con tu pareja.",
   },
   {
-    imagenURL: "./assets/images/ambiente/ambiente (6).jpg",
+    imagenURL: "./assets/images/ambiente/ambiente-6.png",
     descripcion: "Perfecto para una cena romántica con tu pareja.",
   },
 ];
 const capturasRestaurante = [
   {
-    imagenURL: "./assets/images/restaurante/restaurante (1).jpg",
+    imagenURL: "./assets/images/restaurante/restaurante-1.png",
     descripcion: "Una arquiectura única en el mundo.",
   },
   {
-    imagenURL: "./assets/images/restaurante/restaurante (2).jpg",
+    imagenURL: "./assets/images/restaurante/restaurante-2.png",
     descripcion: "Una arquiectura única en el mundo.",
   },
   {
-    imagenURL: "./assets/images/restaurante/restaurante (3).jpg",
+    imagenURL: "./assets/images/restaurante/restaurante-3.png",
     descripcion: "Una arquiectura única en el mundo.",
   },
   {
-    imagenURL: "./assets/images/restaurante/restaurante (4).jpg",
+    imagenURL: "./assets/images/restaurante/restaurante-4.png",
     descripcion: "Una arquiectura única en el mundo.",
   },
   {
-    imagenURL: "./assets/images/restaurante/restaurante (5).jpg",
+    imagenURL: "./assets/images/restaurante/restaurante-5.png",
     descripcion: "Una arquiectura única en el mundo.",
   },
   {
-    imagenURL: "./assets/images/restaurante/restaurante (6).jpg",
+    imagenURL: "./assets/images/restaurante/restaurante-6.png",
     descripcion: "Una arquiectura única en el mundo.",
   },
 ];
 const capturasEventos = [
   {
-    imagenURL: "./assets/images/eventos/evento (1).jpg",
+    imagenURL: "./assets/images/eventos/evento-1.png",
     descripcion: "Entretenimiento perfecto para disfrutar con amigos y familiares.",
   },
   {
-    imagenURL: "./assets/images/eventos/evento (2).jpg",
+    imagenURL: "./assets/images/eventos/evento-2.png",
     descripcion: "Entretenimiento perfecto para disfrutar con amigos y familiares.",
   },
   {
-    imagenURL: "./assets/images/eventos/evento (3).jpg",
+    imagenURL: "./assets/images/eventos/evento-3.png",
     descripcion: "Entretenimiento perfecto para disfrutar con amigos y familiares.",
   },
   {
-    imagenURL: "./assets/images/eventos/evento (4).jpg",
+    imagenURL: "./assets/images/eventos/evento-4.png",
     descripcion: "Entretenimiento perfecto para disfrutar con amigos y familiares.",
   },
   {
-    imagenURL: "./assets/images/eventos/evento (5).jpg",
+    imagenURL: "./assets/images/eventos/evento-5.png",
     descripcion: "Entretenimiento perfecto para disfrutar con amigos y familiares.",
   },
   {
-    imagenURL: "./assets/images/eventos/evento (6).jpg",
+    imagenURL: "./assets/images/eventos/evento-6.png",
     descripcion: "Entretenimiento perfecto para disfrutar con amigos y familiares.",
   },
 ];

@@ -40,8 +40,8 @@
         <div class="header__menu menu--izquierdo">
           <a
             class="menu__opcion"
-            href="../reserva/reserva.html"
-            >Reservar</a
+            href="../pedido/pedido.html"
+            >pedido</a
           >
           <a
             class="menu__opcion"
@@ -79,20 +79,20 @@
           >
         </div>
         <div class="g-center carrito">
-          <div>
+          <a href="../carrito/carrito.html">
             <img
-              src="./assets/svg/carrito.svg"
+              src="../../assets/svg/carrito.svg"
               alt="icono del carrito de platos"
             />
             <div class="g-center carrito__cantidad">
               <p>2</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
       <div class="container w-100 jc-sb header-mobile">
-        <a href="#">
+        <a href="../../index.html">
           <img
             class="header__logo"
             src="../../assets/images/logo.png"
@@ -133,8 +133,8 @@
           >
           <a
             class="menu__opcion"
-            href="../reserva/reserva.html"
-            >Reservar</a
+            href="../pedido/pedido.html"
+            >pedido</a
           >
           <a
             class="menu__opcion"
@@ -167,12 +167,12 @@
 
     <main class="container f-col main">
       <form
-        id="form-tarjeta"
-        class="container f-col formulario-datos-tarjeta"
+        id="form-direccion"
+        class="container f-col form-datos-direccion"
       >
         <span class="titulo-1">Detalles de Envió</span>
-        <div class="container ai-fs  datos">
-          <div class="container f-col w-100">
+        <div class="container f-col ai-fs form-datos">
+          <div class="container w-100 datos-cliente ">
             <div class="container w-100 f-col ai-fs datos-personales">
               <span class="titulo-4">Datos personales</span>
               <div class="container w-100 f-col">
@@ -180,34 +180,34 @@
                   <input
                     type="text"
                     class="form-control"
-                    name="reserva-nombre"
-                    id="reserva-nombre"
+                    name="pedido-nombre"
+                    id="pedido-nombre"
                     placeholder="Juan"
                     required
                   />
-                  <label for="reserva-nombre">nombre</label>
+                  <label for="pedido-nombre">nombre</label>
                 </div>
                 <div class="form-input">
                   <input
                     type="text"
                     class="form-control"
-                    name="reserva-apellido"
-                    id="reserva-apellido"
+                    name="pedido-apellido"
+                    id="pedido-apellido"
                     placeholder="Pérez"
                     required
                   />
-                  <label for="reserva-apellido">apellido</label>
+                  <label for="pedido-apellido">apellido</label>
                 </div>
                 <div class="form-input">
                   <input
                     type="text"
                     class="form-control"
-                    name="reserva-dni"
-                    id="reserva-dni"
+                    name="pedido-dni"
+                    id="pedido-dni"
                     placeholder="12345678"
                     required
                   />
-                  <label for="reserva-dni">DNI</label>
+                  <label for="pedido-dni">DNI</label>
                 </div>
               </div>
             </div>
@@ -218,33 +218,33 @@
                   <input
                     type="email"
                     class="form-control"
-                    name="reserva-email"
-                    id="reserva-email"
+                    name="pedido-email"
+                    id="pedido-email"
                     placeholder="pepe@gmail.com"
                     required
                   />
-                  <label for="reserva-email">email</label>
+                  <label for="pedido-email">email</label>
                 </div>
                 <div class="form-input">
                   <input
                     type="tel"
                     class="form-control"
-                    name="reserva-telefono-1"
-                    id="reserva-telefono-1"
+                    name="pedido-telefono-1"
+                    id="pedido-telefono-1"
                     placeholder="351-1234567"
                     required
                   />
-                  <label for="reserva-telefono-1">teléfono 1</label>
+                  <label for="pedido-telefono-1">teléfono 1</label>
                 </div>
                 <div class="form-input">
                   <input
                     type="tel"
                     class="form-control"
-                    name="reserva-telefono-2"
-                    id="reserva-telefono-2"
+                    name="pedido-telefono-2"
+                    id="pedido-telefono-2"
                     placeholder="351-1234567"
                   />
-                  <label for="reserva-telefono-2">teléfono 2</label>
+                  <label for="pedido-telefono-2">teléfono 2</label>
                 </div>
               </div>
             </div>
@@ -252,9 +252,9 @@
           <div class="container w-100 f-col ai-fs datos-direccion">
             <span class="titulo-4">Dirección</span>
             <div class="container f-col w-100">
-              <div class="form-input-select desplegable-tipo">
+              <div class="form-input-select desplegable-provincia">
                 <div class="desplegable-select">
-                  <span class="input-nombre">Tipo de Reserva</span>
+                  <span class="input-nombre">Provincia</span>
                   <svg
                     class="icono icono-flecha"
                     xmlns="http://www.w3.org/2000/svg"
@@ -271,23 +271,23 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-1"
-                        value="romantica"
+                        name="pedido-provincia"
+                        id="provincia-1"
+                        value="cordoba"
                       /><label
-                        for="reason-option-1"
+                        for="provincia-1"
                         class=""
-                        >Romántica</label
+                        >Cordoba</label
                       >
                     </div>
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-2"
+                        name="pedido-provincia"
+                        id="provincia-2"
                         value="familiar"
                       /><label
-                        for="reason-option-2"
+                        for="provincia-2"
                         class=""
                         >Familiar</label
                       >
@@ -295,11 +295,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-3"
+                        name="pedido-provincia"
+                        id="provincia-3"
                         value="negocios"
                       /><label
-                        for="reason-option-3"
+                        for="provincia-3"
                         class=""
                         >negocios</label
                       >
@@ -307,11 +307,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-4"
+                        name="pedido-provincia"
+                        id="provincia-4"
                         value="amigos"
                       /><label
-                        for="reason-option-4"
+                        for="provincia-4"
                         class=""
                         >Amigos</label
                       >
@@ -319,9 +319,9 @@
                   </div>
                 </div>
               </div>
-              <div class="form-input-select desplegable-tipo">
+              <div class="form-input-select desplegable-ciudad">
                 <div class="desplegable-select">
-                  <span class="input-nombre">Tipo de Reserva</span>
+                  <span class="input-nombre">Ciudad</span>
                   <svg
                     class="icono icono-flecha"
                     xmlns="http://www.w3.org/2000/svg"
@@ -338,11 +338,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-1"
+                        name="pedido-ciudad"
+                        id="ciudad-1"
                         value="romantica"
                       /><label
-                        for="reason-option-1"
+                        for="ciudad-1"
                         class=""
                         >Romántica</label
                       >
@@ -350,11 +350,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-2"
+                        name="pedido-ciudad"
+                        id="ciudad-2"
                         value="familiar"
                       /><label
-                        for="reason-option-2"
+                        for="ciudad-2"
                         class=""
                         >Familiar</label
                       >
@@ -362,11 +362,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-3"
+                        name="pedido-ciudad"
+                        id="ciudad-3"
                         value="negocios"
                       /><label
-                        for="reason-option-3"
+                        for="ciudad-3"
                         class=""
                         >negocios</label
                       >
@@ -374,11 +374,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-4"
+                        name="pedido-ciudad"
+                        id="ciudad-4"
                         value="amigos"
                       /><label
-                        for="reason-option-4"
+                        for="ciudad-4"
                         class=""
                         >Amigos</label
                       >
@@ -386,9 +386,9 @@
                   </div>
                 </div>
               </div>
-              <div class="form-input-select desplegable-tipo">
+              <div class="form-input-select desplegable-localidad">
                 <div class="desplegable-select">
-                  <span class="input-nombre">Tipo de Reserva</span>
+                  <span class="input-nombre">Localidad</span>
                   <svg
                     class="icono icono-flecha"
                     xmlns="http://www.w3.org/2000/svg"
@@ -405,11 +405,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-1"
+                        name="pedido-localidad"
+                        id="localidad-1"
                         value="romantica"
                       /><label
-                        for="reason-option-1"
+                        for="localidad-1"
                         class=""
                         >Romántica</label
                       >
@@ -417,11 +417,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-2"
+                        name="pedido-localidad"
+                        id="localidad-2"
                         value="familiar"
                       /><label
-                        for="reason-option-2"
+                        for="localidad-2"
                         class=""
                         >Familiar</label
                       >
@@ -429,11 +429,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-3"
+                        name="pedido-localidad"
+                        id="localidad-3"
                         value="negocios"
                       /><label
-                        for="reason-option-3"
+                        for="localidad-3"
                         class=""
                         >negocios</label
                       >
@@ -441,11 +441,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-4"
+                        name="pedido-localidad"
+                        id="localidad-4"
                         value="amigos"
                       /><label
-                        for="reason-option-4"
+                        for="localidad-4"
                         class=""
                         >Amigos</label
                       >
@@ -453,9 +453,9 @@
                   </div>
                 </div>
               </div>
-              <div class="form-input-select desplegable-tipo">
+              <div class="form-input-select desplegable-barrio">
                 <div class="desplegable-select">
-                  <span class="input-nombre">Tipo de Reserva</span>
+                  <span class="input-nombre">Barrio</span>
                   <svg
                     class="icono icono-flecha"
                     xmlns="http://www.w3.org/2000/svg"
@@ -472,11 +472,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-1"
+                        name="pedido-barrio"
+                        id="barrio-1"
                         value="romantica"
                       /><label
-                        for="reason-option-1"
+                        for="barrio-1"
                         class=""
                         >Romántica</label
                       >
@@ -484,11 +484,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-2"
+                        name="pedido-barrio"
+                        id="barrio-2"
                         value="familiar"
                       /><label
-                        for="reason-option-2"
+                        for="barrio-2"
                         class=""
                         >Familiar</label
                       >
@@ -496,11 +496,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-3"
+                        name="pedido-barrio"
+                        id="barrio-3"
                         value="negocios"
                       /><label
-                        for="reason-option-3"
+                        for="barrio-3"
                         class=""
                         >negocios</label
                       >
@@ -508,11 +508,11 @@
                     <div class="opcion">
                       <input
                         type="radio"
-                        name="reserva-tipo"
-                        id="reason-option-4"
+                        name="pedido-barrio"
+                        id="barrio-4"
                         value="amigos"
                       /><label
-                        for="reason-option-4"
+                        for="barrio-4"
                         class=""
                         >Amigos</label
                       >
@@ -524,57 +524,57 @@
                 <input
                   type="text"
                   class="form-control"
-                  name="reserva-nombre"
-                  id="reserva-nombre"
-                  placeholder="Juan"
+                  name="pedido-calle"
+                  id="pedido-calle"
+                  placeholder="9 de Julio"
                   required
                 />
-                <label for="reserva-nombre">nombre</label>
+                <label for="pedido-calle">Calle</label>
               </div>
-              <div class="container piso">
+              <div class="container jc-sb piso">
                 <div class="form-input">
                   <input
                     type="text"
                     class="form-control"
-                    name="reserva-nombre"
-                    id="reserva-nombre"
-                    placeholder="Juan"
+                    name="pedido-numero"
+                    id="pedido-numero"
+                    placeholder="11, 22, 333, 4444"
                     required
                   />
-                  <label for="reserva-nombre">nombre</label>
+                  <label for="pedido-numero">Numero</label>
                 </div>
                 <div class="form-input">
                   <input
                     type="text"
                     class="form-control"
-                    name="reserva-nombre"
-                    id="reserva-nombre"
-                    placeholder="Juan"
+                    name="pedido-piso"
+                    id="pedido-piso"
+                    placeholder="0,1,2,3"
                     required
                   />
-                  <label for="reserva-nombre">nombre</label>
+                  <label for="pedido-piso">Piso</label>
                 </div>
                 <div class="form-input">
                   <input
                     type="text"
                     class="form-control"
-                    name="reserva-nombre"
-                    id="reserva-nombre"
-                    placeholder="Juan"
+                    name="pedido-depto"
+                    id="pedido-depto"
+                    placeholder="1, 2, A1, B2"
                     required
                   />
-                  <label for="reserva-nombre">nombre</label>
+                  <label for="pedido-depto">Depto</label>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <button
-          id="btn-reservar"
+          id="btn-direccion"
           class="btn-principal"
           type="submit"
         >
-          <span class="btn__name">Reservar</span>
+          <span class="btn__name">Siguiente</span>
         </button>
       </form>
     </main>
@@ -645,8 +645,8 @@
           >
           <a
             class="menu__opcion"
-            href="../reserva/reserva.html"
-            >reservar</a
+            href="../pedido/pedido.html"
+            >pedido</a
           >
           <a
             class="menu__opcion"
@@ -711,7 +711,7 @@
         </div>
       </section>
       <section class="container f-col footer__legales">
-        <span>Copyright @ 2023 La Perle Noire. Todos los derechos reservados</span>
+        <span>Copyright @ 2023 La Perle Noire. Todos los derechos pedidodos</span>
       </section>
     </footer>
   </body>

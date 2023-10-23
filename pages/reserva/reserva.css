@@ -3,7 +3,7 @@
   gap: 50px;
 }
 
-.form-datos{
+.form-datos {
 }
 
 .datos-personales,
@@ -11,12 +11,18 @@
   width: 100%;
 }
 
+.datos-personales,
+.datos-contacto,
+.datos-reserva .container {
+  gap: 20px;
+}
+
 .form-reserva {
   /* padding-inline: 50px; */
   gap: 50px;
 }
 
-.desplegable-fecha .calendario{
+.desplegable-fecha .calendario {
   width: 100%;
 }
 
@@ -44,18 +50,22 @@
   place-items: center;
   padding: 5px;
   cursor: pointer;
+
+  transition-property: background-color, color, font-weight;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .hora:hover,
 .minuto:hover {
-  background-color: rgba(var(--color-cuarto), 1);
+  background-color: rgba(var(--color-segundo), 1);
   color: rgba(var(--color-texto-primario), 1);
 }
 
 .hora.seleccionado,
 .minuto.seleccionado {
-  background-color: rgba(var(--color-tercero), 1);
-  color: rgba(var(--color-primero), 1);
+  background-color: rgba(var(--color-texto-primario), 1);
+  color: rgba(var(--color-tercero), 1);
   font-weight: 600;
 }
 
@@ -80,8 +90,6 @@
   width: 60%;
   gap: 20px;
 }
-
-
 
 .pedido__total {
   background-color: rgba(var(--color-texto-primario), 1);
@@ -155,7 +163,7 @@ span:has(.campo-valor) {
     flex-direction: column;
   }
 
-  .form-datos{
+  .form-datos {
     gap: 50px;
   }
 }

@@ -15,6 +15,7 @@
 :root {
   --color-tercero: 231, 161, 23;
   --color-cuarto: 197, 127, 30;
+  --color-quinto: 155, 100, 23;
 
   --card-border: 10px;
   --card-hover-duration: 0.5s;

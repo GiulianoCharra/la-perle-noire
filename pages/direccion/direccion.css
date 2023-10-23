@@ -1,9 +1,21 @@
-.datos-personales {
+.form-datos-direccion {
+  gap: 3rem;
 }
-
-.datos-direccion {
+.form-datos,
+.datos-cliente {
+  gap: 2rem;
 }
 
 .piso .form-input {
   width: 30%;
+}
+
+.piso .form-input label {
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .datos-cliente {
+    flex-direction: column;
+  }
 }

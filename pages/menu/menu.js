@@ -36,7 +36,7 @@ async function cargarComidas() {
   nuevaComida.innerHTML = `
   <img class="comida__imagen" src="${platos[0].strMealThumb}" alt="">
   <span class="comida__nombre">${platos[0].strMeal}</span>
-  <div class="container  w-100 jc-sb">
+  <div class="container  w-100">
     <div class="btn-principal agregar-pedido">
       <span class="btn_name">Agregar</span>
     </div>
