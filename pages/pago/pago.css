@@ -1,15 +1,96 @@
+.tarjeta-datos {
+  /* display: grid;
+  grid-template:
+    "datos-tarjeta tarjeta " 50px
+    "datos-tarjeta tarjeta " 50px
+    "datos-tarjeta tarjeta " 50px
+    "datos-tarjeta datos-contacto " 50px
+    "datos-tarjeta datos-contacto " 50px
+    / 1fr 1fr; */
+}
+
+.datos-tarjeta {
+  grid-area: datos-tarjeta;
+}
+
+.datos-contacto {
+  grid-area: datos-contacto;
+}
+
+.datos-tarjeta,
+.datos-derecha,
+.datos-contacto {
+  gap: 40px;
+}
+
 .tarjeta {
-  width: 100%;
-  height: 200px;
+  grid-area: tarjeta;
+  width: 380px;
+  height: 230px;
+  border-radius: 10px;
+  font-size: 1.2rem;
   position: relative;
-  background-color: rgb(55, 55, 219);
-  border-radius: var(--card-border);
+  background-color: rgba(48, 84, 176, 1);
 }
 .tarjeta__nombre,
 .tarjeta__numero,
-.tarjeta__fecha_vencimiento {
+.tarjeta__fecha-vencimiento {
   position: absolute;
 }
-.tarjeta-fecha-vencimiento{width: 70%;}
+.tarjeta-fecha-vencimiento {
+  width: 70%;
+}
 
-.tarjeta-cvv{width: 30%;}
+.tarjeta-cvv {
+  width: 30%;
+}
+
+.tarjeta__numero {
+  position: absolute;
+  top: 60%; 
+  left: 10px;
+  transform: translateY(-50%);
+  color: #fff; 
+}
+
+
+.tarjeta__nombre {
+  position: absolute;
+  bottom: 20px; 
+  left: 10px; 
+  color: #fff; 
+}
+
+
+.tarjeta__logo {
+  position: absolute;
+  top: 20px; 
+  right: 20px; 
+  width: 60px; 
+  height: auto;
+}
+
+.tarjeta__fecha-vencimiento {
+  position: absolute;
+  bottom: 20px; 
+  right: 20px; 
+  color: #fff; 
+}
+
+
+@media screen and (max-width: 768px) {
+  .tarjeta-datos {
+    display: grid;
+    grid-template:
+      " tarjeta "
+      " datos-tarjeta "
+      " datos-contacto "
+      / 1fr;
+  }
+
+  .datos-tarjeta,
+  .datos-derecha,
+  .datos-contacto {
+    gap: 1rem;
+  }
+}

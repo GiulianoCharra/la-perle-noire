@@ -1,5 +1,5 @@
 .form-input-select {
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,10 +82,7 @@
 
 .contenedor-opciones {
   /* background: rgba(var(--color-segundo), 1); */
-  background-image: linear-gradient(
-    rgba(var(--color-cuarto), 1),
-    rgba(var(--color-quinto), 1)
-  );
+  background-image: linear-gradient(rgba(var(--color-cuarto), 1), rgba(var(--color-quinto), 1));
   max-height: 0;
   opacity: 0;
   transition-property: max-height, opacity, padding-block;
@@ -100,6 +97,7 @@
   padding-block: 0px;
   transform-origin: top;
   z-index: -10;
+  padding-right: 10px;
 }
 
 .contenedor-opciones.contenedor--calendario {
@@ -132,6 +130,14 @@
 .opcion input {
   width: 30px;
   height: 30px;
+}
+
+.listado-opciones::-webkit-scrollbar {
+  width: 10px;
+}
+
+.listado-opciones::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--color-segundo), 0.5);
 }
 
 @media screen and (min-width: 768px) {

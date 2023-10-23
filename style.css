@@ -10,7 +10,7 @@
 @import url(./styles/components/form-input-desplegable.css);
 @import url(./styles/components/calendario.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 
 :root {
   --color-tercero: 231, 161, 23;

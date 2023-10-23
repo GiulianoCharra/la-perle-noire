@@ -101,7 +101,7 @@
         </a>
         <div class="container">
           <div class="carrito carrito-mobile">
-            <div>
+            <a href="../carrito/carrito.html">
               <img
                 src="../../assets/svg/carrito.svg"
                 alt="icono del carrito de platos"
@@ -109,7 +109,7 @@
               <div class="g-center carrito__cantidad">
                 <p>2</p>
               </div>
-            </div>
+            </a>
           </div>
           <div class="menu-icon">
             <div
@@ -168,22 +168,11 @@
     <main class="container f-col main">
       <form
         id="form-tarjeta"
-        class="formulario-datos-tarjeta"
+        class="container f-col form-datos-tarjeta"
       >
         <span class="titulo-2">Datos de tarjeta</span>
-        <div class="container">
+        <div class="container ai-fs tarjeta-datos">
           <div class="container f-col w-100 datos-tarjeta">
-            <div class="form-input">
-              <input
-                type="text"
-                class="form-control"
-                name="tarjeta-nombre"
-                id="tarjeta-nombre"
-                placeholder="Juan"
-                required
-              />
-              <label for="tarjeta-nombre">nombre</label>
-            </div>
             <div class="form-input">
               <input
                 type="text"
@@ -193,8 +182,20 @@
                 placeholder="1111-1111-1111-1111"
                 required
               />
-              <label for="tarjeta-nombre">numero</label>
+              <label for="tarjeta-nombre">Numero</label>
             </div>
+            <div class="form-input">
+              <input
+                type="text"
+                class="form-control"
+                name="tarjeta-nombre"
+                id="tarjeta-nombre"
+                placeholder="Juan"
+                required
+              />
+              <label for="tarjeta-nombre">Nombre</label>
+            </div>
+
             <div class="container">
               <div class="form-input tarjeta-fecha-vencimiento">
                 <input
@@ -216,7 +217,7 @@
                   placeholder="123"
                   required
                 />
-                <label for="tarjeta-fecha-vencimiento">CVV</label>
+                <label for="tarjeta-cvv">CVV</label>
               </div>
             </div>
             <div class="form-input-select desplegable-tipo">
@@ -239,10 +240,11 @@
                     <input
                       type="radio"
                       name="dni-tipo"
-                      id="reason-option-1"
+                      id="tipo-dni-1"
                       value="dni"
+                      required
                     /><label
-                      for="reason-option-1"
+                      for="tipo-dni-1"
                       class=""
                       >DNI</label
                     >
@@ -251,10 +253,10 @@
                     <input
                       type="radio"
                       name="dni-tipo"
-                      id="reason-option-2"
+                      id="tipo-dni-2"
                       value="libreta enrolamiento"
                     /><label
-                      for="reason-option-2"
+                      for="tipo-dni-2"
                       class=""
                       >Libreta Enrolamiento</label
                     >
@@ -263,10 +265,10 @@
                     <input
                       type="radio"
                       name="dni-tipo"
-                      id="reason-option-3"
+                      id="tipo-dni-3"
                       value="pasaporte"
                     /><label
-                      for="reason-option-3"
+                      for="tipo-dni-3"
                       class=""
                       >pasaporte</label
                     >
@@ -281,44 +283,55 @@
                 name="dni"
                 id="dni"
                 placeholder="11222333"
+                required
               />
-              <label for="reserva-dni">dni</label>
+              <label for="tarjeta-dni">DNI</label>
             </div>
           </div>
-          <div class="container f-col w-100">
-            <div class="tarjeta">
+          <div class="container f-col datos-derecha">
+            <div id="tarjeta" class="tarjeta">
               <span class="tarjeta__nombre">Nombre</span
               ><span class="tarjeta__numero">1111-1111-1111-1111</span
-              ><span class="tarjeta__fecha_vencimiento">01/1991</span>
-              <div class="tarjeta__logo"></div>
+              ><span class="tarjeta__fecha-vencimiento">01/1991</span>
+              <img
+                src="../../assets/images/logo_tarjeta.png"
+                alt=""
+                class="tarjeta__logo"
+              />
             </div>
             <div class="container f-col w-100 datos-contacto">
               <div class="form-input">
                 <input
                   type="email"
                   class="form-control"
-                  name="reserva-email"
-                  id="reserva-email"
+                  name="tarjeta-email"
+                  id="tarjeta-email"
                   placeholder="pepe@gmail.com"
                   required
                 />
-                <label for="reserva-email">email</label>
+                <label for="tarjeta-email">Email</label>
               </div>
               <div class="form-input">
                 <input
                   type="tel"
                   class="form-control"
-                  name="reserva-telefono-1"
-                  id="reserva-telefono-1"
+                  name="tarjeta-telefono"
+                  id="tarjeta-telefono"
                   placeholder="351-1234567"
                   required
                 />
-                <label for="reserva-telefono-1">teléfono 1</label>
+                <label for="tarjeta-telefono">Teléfono</label>
               </div>
             </div>
           </div>
         </div>
-        <div class="btn_pricipal_pagar"><span class="btn_name">Reservar</span></div>
+        <button
+          id="btnPagar"
+          class="btn-principal"
+          type="submit"
+        >
+          <span class="btn__name">Pagar</span>
+        </button>
       </form>
     </main>
 

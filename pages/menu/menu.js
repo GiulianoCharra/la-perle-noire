@@ -35,19 +35,24 @@ async function cargarComidas() {
   nuevaComida.classList.add("card-comida");
   nuevaComida.innerHTML = `
   <img class="comida__imagen" src="${platos[0].strMealThumb}" alt="">
-  <span class="comida__nombre">${platos[0].strMeal}</span>
-  <div class="container  w-100">
-    <div class="btn-principal agregar-pedido">
-      <span class="btn_name">Agregar</span>
+  <div class="container w-100 f-col comida__datos" >
+    <div class="g-center comida__nombre">
+      <span class="comida__nombre-texto">${platos[0].strMeal}</span>
     </div>
-    <span class="comida__precio">$1000</span>
+    <div class="container w-100">
+      <div class="btn-principal agregar-pedido">
+        <span class="btn_name">Agregar</span>
+      </div>
+      <span class="comida__precio">$1000</span>
+    </div>
+    <div class="comida__descripcion">
+      <span class="comida__descripcion-texto"
+        >Lorem ipsum dolor sit amet consectetur. Etiam mollis sed morbi tincidunt.
+        Aliquet sit ullamcorper fringilla pretium tortor.</span
+      >
+    </div>
   </div>
-  <div class="g-center comida__descripcion">
-    <span class="comida__descripcion-texto"
-      >Lorem ipsum dolor sit amet consectetur. Etiam mollis sed morbi tincidunt.
-      Aliquet sit ullamcorper fringilla pretium tortor.</span
-    >
-  </div>`;
+  `;
 
   contenedor.appendChild(nuevaComida);
 }

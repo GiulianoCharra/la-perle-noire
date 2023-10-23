@@ -44,6 +44,14 @@
   justify-content: flex-start;
 }
 
+.horasDisponibles::-webkit-scrollbar {
+  width: 10px;
+}
+
+.horasDisponibles::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--color-segundo), 0.5);
+}
+
 .hora,
 .minuto {
   display: grid;

@@ -1,5 +1,5 @@
 .form-input {
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   display: flex;
   align-items: center;
   width: 100%;
@@ -18,11 +18,10 @@
   font-size: 1.3rem;
   padding-left: 20px;
   position: absolute;
-  top: 10px;
+  top: 13px;
   transition-property: translate, font-size;
   transition-duration: var(--duracion-animacion-lento);
 }
-
 .form-input:focus-within > input + label,
 .form-input:has(input:valid) > input + label,
 .form-input:has(input:not([required])) > input:focus-within + label,
