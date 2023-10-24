@@ -79,3 +79,7 @@
     position: static;
   }
 }
+
+:root[data-tema="claro"] .footer__logo {
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 1));
+}
