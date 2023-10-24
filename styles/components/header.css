@@ -62,8 +62,8 @@
   width: 41px;
   height: 41px;
   position: absolute;
-  right: 40px;
-  top: 80px;
+  right: 30px;
+  top: 110px;
   cursor: pointer;
 }
 
@@ -94,10 +94,45 @@
   visibility: visible;
 }
 
-@media (prefers-color-scheme: light) {
-  .header__logo {
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 1));
-  }
+.opciones-cambio-tema {
+  position: absolute;
+  right: 60px;
+  top: 70px;
+}
+.botones-cambio-tema {
+  position: relative;
+}
+
+#btnTemaClaro,
+#btnTemaOscuro {
+  background-color: transparent;
+  font-size: 2rem;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btnTemaClaro {
+  color: rgb(var(--color-texto-primario));
+}
+
+#btnTemaOscuro {
+  color: rgb(var(--color-texto-primario));
+}
+
+:root[data-tema="claro"] #btnTemaClaro {
+  display: none;
+}
+
+:root[data-tema="oscuro"] #btnTemaOscuro {
+  display: none;
+}
+
+:root[data-tema="claro"] .header__logo {
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 1));
 }
 
 /* Estilos para dispositivos móviles */

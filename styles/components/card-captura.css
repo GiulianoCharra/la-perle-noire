@@ -24,4 +24,9 @@
 
 .captura__descripcion {
   font-size: 20px;
+  /* font-weight: var(--f-w-texto); */
+}
+
+:root[data-tema="claro"] .captura__descripcion {
+  /* font-weight: 550; */
 }

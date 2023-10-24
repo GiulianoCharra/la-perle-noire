@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html
+  lang="es"
+  data-tema="oscuro"
+>
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -10,7 +13,40 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <meta
+      name="description"
+      content="La Perle Noire es un restaurante de comida francesa ubicado en Puerto Madero, Buenos Aires. En nuestro restaurante podrás disfrutar de una experiencia gastronómica única."
+    />
+    <meta
+      name="keywords"
+      content="restaurante, comida, francesa, puerto madero, buenos aires, gastronomia, platos, carta, reservas, eventos, catering, menu, chef, cocina, gourmet, vinos, bebidas, postres, desayunos, almuerzos, cenas, comidas, restaurant, french, food, buenos aires, gastronomy, dishes, letter, reservations, events, catering, menu, chef, kitchen, gourmet, wines, drinks, desserts, breakfasts, lunches, dinners, meals"
+    />
+    <meta
+      name="author"
+      content="Giuliano Charra"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../assets/images/logo.ico"
+      type="image/x-icon"
+    />
     <title>La Perle Noire</title>
+    <script>
+      const temaSistema = window.matchMedia("(prefers-color-scheme: dark)");
+      evaluarTema(temaSistema);
+
+      temaSistema.addEventListener("change", (e) => {
+        evaluarTema(e);
+      });
+
+      function evaluarTema(tema) {
+        tema.matches ? cambiarTema("oscuro") : cambiarTema("claro");
+      }
+
+      function cambiarTema(tema) {
+        document.documentElement.setAttribute("data-tema", tema);
+      }
+    </script>
     <link
       rel="stylesheet"
       href="../../style.css"
@@ -28,6 +64,10 @@
       defer
       type="module"
       src="./pago.js"
+    ></script>
+    <script
+      defer
+      src="../../scripts/colorTema.js"
     ></script>
     <script
       src="https://kit.fontawesome.com/4d2f081ec5.js"
@@ -88,6 +128,16 @@
               <p>2</p>
             </div>
           </a>
+        </div>
+        <div class="opciones-cambio-tema">
+          <div class="botones-cambio-tema">
+            <button id="btnTemaOscuro">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="btnTemaClaro">
+              <i class="fa-solid fa-sun"></i>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -289,7 +339,10 @@
             </div>
           </div>
           <div class="container f-col datos-derecha">
-            <div id="tarjeta" class="tarjeta">
+            <div
+              id="tarjeta"
+              class="tarjeta"
+            >
               <span class="tarjeta__nombre">Nombre</span
               ><span class="tarjeta__numero">1111-1111-1111-1111</span
               ><span class="tarjeta__fecha-vencimiento">01/1991</span>

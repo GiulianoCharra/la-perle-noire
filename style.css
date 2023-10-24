@@ -25,36 +25,47 @@
   --duracion-animacion-normal: 300ms;
   --duracion-animacion-lento: 400ms;
   --duracion-animacion-muy-lento: 500ms;
+
+  --c-font-btn: 234, 234, 234;
+  --c-font-btn-hover: 234, 234, 234;
+
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-primero: 200, 200, 200;
-    --color-segundo: 227, 227, 227;
+/* @media (prefers-color-scheme: light) { */
+:root[data-tema="claro"] {
+  --color-primero: 200, 200, 200;
+  --color-segundo: 227, 227, 227;
 
-    --f-w-titulo-1: 700;
-    --f-w-titulo-2: 550;
-    --f-w-titulo-3: 550;
-    --f-w-titulo-4: 550;
-    --f-w-texto: 450;
+  --f-w-titulo-1: 700;
+  --f-w-titulo-2: 550;
+  --f-w-titulo-3: 550;
+  --f-w-titulo-4: 550;
+  --f-w-texto: 500;
 
-    --color-texto-primario: 34, 40, 50;
-    --color-texto-secundario: 220, 220, 220;
-  }
+  --bg-color-input: 234, 234, 234;
+  --f-color-input: 197, 127, 30;
+
+  --color-texto-primario: 10, 10, 10;
+  --color-texto-secundario: 220, 220, 220;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-primero: 34, 40, 50;
-    --color-segundo: 47, 56, 71;
+/* @media (prefers-color-scheme: dark) { */
+:root[data-tema="oscuro"] {
+  --color-primero: 34, 40, 50;
+  --color-segundo: 47, 56, 71;
 
-    --f-w-titulo-1: 400;
-    --f-w-titulo-2: 400;
-    --f-w-titulo-3: 400;
-    --f-w-titulo-4: 400;
-    --f-w-texto: 400;
+  --f-w-titulo-1: 400;
+  --f-w-titulo-2: 400;
+  --f-w-titulo-3: 400;
+  --f-w-titulo-4: 400;
+  --f-w-texto: 400;
 
-    --color-texto-primario: 234, 234, 234;
-    --color-texto-secundario: 34, 40, 50;
-  }
+  --bg-color-input: 200, 130, 30;
+  --f-color-input: 34, 40, 50;
+
+  --color-texto-primario: 234, 234, 234;
+  --color-texto-secundario: 34, 40, 50;
 }

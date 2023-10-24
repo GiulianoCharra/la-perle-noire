@@ -31,7 +31,7 @@
 
 .cliente__nombre {
   font-size: 1rem;
-  font-family: 'Cinzel Decorative', serif;
+  font-family: "Cinzel Decorative", serif;
   text-align: center;
   font-weight: bold;
   /* text-shadow: 0 0 5px rgba(var(--color-primero), 1); */
@@ -50,6 +50,10 @@
   transition-duration: var(--card-hover-duration);
   transition-timing-function: ease-in-out;
   overflow-y: auto;
+}
+
+.cliente__opinion-texto{
+  font-weight: var(--f-w-texto);
 }
 
 .cliente__opinion::-webkit-scrollbar {
@@ -74,19 +78,14 @@
   opacity: 1;
 }
 
-@media (prefers-color-scheme: light) {
-  .cliente__nombre {
-    font-weight: 900;
-  }
+:root[data-tema="claro"] .cliente__nombre {
+  font-weight: 900;
 }
 
-@media (prefers-color-scheme: dark) {
-  .cliente__nombre {
-  }
+:root[data-tema="oscuro"] .cliente__nombre {
 }
 
 @media screen and (max-width: 768px) {
-  .card-cliente{
-
+  .card-cliente {
   }
 }

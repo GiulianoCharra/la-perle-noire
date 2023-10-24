@@ -37,6 +37,7 @@
   gap: 40px;
   width: 100%;
   padding-block: 50px;
+  padding-inline: 50px;
   overflow-x: auto;
 }
 
@@ -48,7 +49,7 @@
 
 .capturas-categorias {
   padding: 20px 40px;
-  font-family: 'Cinzel Decorative', serif;
+  font-family: "Cinzel Decorative", serif;
   font-weight: bold;
   gap: 20px;
   background-color: rgba(var(--color-tercero), 0.2);
@@ -135,7 +136,7 @@
   flex-direction: column-reverse;
 }
 
-.opiniones-clientes::-webkit-scrollbar, 
+.opiniones-clientes::-webkit-scrollbar,
 .listado-cards::-webkit-scrollbar {
   height: 15px;
 }
@@ -182,6 +183,7 @@
 .sucursal {
   padding: 5px 0px;
   gap: 10px;
+  font-weight: var(--f-w-texto);
 }
 
 .sucursal__ubicacion {
@@ -202,16 +204,12 @@
   border-radius: var(--card-border);
 }
 
-@media (prefers-color-scheme: dark) {
-  .categoria__nombre.categoria--seleccionada {
-    color: rgba(var(--color-tercero), 1);
-  }
+:root[data-tema="oscuro"] .categoria__nombre.categoria--seleccionada {
+  color: rgba(var(--color-tercero), 1);
 }
 
-@media (prefers-color-scheme: light) {
-  .categoria__nombre.categoria--seleccionada {
-    color: rgba(var(--color-segundo), 1);
-  }
+:root[data-tema="claro"] .categoria__nombre.categoria--seleccionada {
+  color: rgba(var(--color-segundo), 1);
 }
 
 @media screen and (max-width: 900px) {

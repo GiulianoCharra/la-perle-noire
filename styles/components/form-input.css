@@ -18,26 +18,32 @@
   font-size: 1.3rem;
   padding-left: 20px;
   position: absolute;
+  font-weight: var(--f-w-texto);
   top: 13px;
-  transition-property: translate, font-size;
+  transition-property: translate, scale;
   transition-duration: var(--duracion-animacion-lento);
+  
+  /* background-color: rgba(var(--bg-color-input), 1); */
+  /* padding-inline: 10px; */
+  /* border-top-left-radius: 5px; */
+  /* border-top-right-radius: 5px; */
 }
+
 .form-input:focus-within > input + label,
 .form-input:has(input:valid) > input + label,
 .form-input:has(input:not([required])) > input:focus-within + label,
-.form-input:has(textarea:valid) > textarea + label {
-  color: rgba(var(--color-texto-primario), 1);
-  font-size: 1.1rem;
+.form-input:has(textarea:valid) > textarea + label,
+.form-input > input:focus-within:placeholder-shown + label,
+.form-input > textarea:focus-within:placeholder-shown + label,
+.form-input > input:invalid:not(:placeholder-shown) + label {
+  /* color: rgba(var(--color-texto-primario), 1); */
+  /* font-size: 1.1rem; */
+  scale: 0.75;
   translate: -10px -25px;
 }
 
 .form-input input:invalid {
   /* border: 2px solid red; */
-}
-
-.form-input > input:focus-within:placeholder-shown + label,
-.form-input > textarea:focus-within:placeholder-shown + label {
-  translate: -10px -25px;
 }
 
 .form-input > input:not([required]):placeholder-shown + label,
@@ -47,15 +53,21 @@
 
 .form-input input::placeholder,
 .form-input textarea::placeholder {
+  transition: color 0.2s ease-in-out;
   color: transparent;
+}
+
+.form-control:focus-within::placeholder {
+  color: rgba(var(--f-color-input), 0.5);
 }
 
 .form-input input,
 .form-input textarea {
-  background-color: rgba(var(--color-cuarto), 1);
+  background-color: rgba(var(--bg-color-input), 1);
   width: 100%;
   height: 100%;
-  color: rgba(var(--color-texto-primario), 1);
+  font-weight: var(--f-w-texto);
+  color: rgba(var(--f-color-input), 1);
   font-size: 1.3rem;
   padding-inline: 20px;
 }
@@ -85,9 +97,9 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-background-clip: text;
-  -webkit-box-shadow: 0 0 0 50px rgba(var(--color-segundo), 0.8) inset !important;
+  -webkit-box-shadow: 0 0 0 50px rgba(var(--bg-color-input), 1) inset !important;
 }
 
 input:-webkit-autofill {
-  -webkit-text-fill-color: rgba(var(--color-texto-primario), 1) !important;
+  -webkit-text-fill-color: rgba(var(--f-color-input), 1) !important;
 }

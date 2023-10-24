@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html
+  lang="es"
+  data-tema="oscuro"
+>
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -29,6 +32,23 @@
     />
 
     <title>La Perle Noire</title>
+    <script>
+      const temaSistema = window.matchMedia("(prefers-color-scheme: dark)");
+      evaluarTema(temaSistema);
+
+      temaSistema.addEventListener("change", (e) => {
+        evaluarTema(e);
+      });
+
+      function evaluarTema(tema) {
+        tema.matches ? cambiarTema("oscuro") : cambiarTema("claro");
+      }
+
+      function cambiarTema(tema) {
+        document.documentElement.setAttribute("data-tema", tema);
+      }
+    </script>
+
     <link
       rel="stylesheet"
       href="style.css"
@@ -42,6 +62,10 @@
       defer
       type="module"
       src="./pages/inicio/inicio.js"
+    ></script>
+    <script
+      defer
+      src="./scripts/colorTema.js"
     ></script>
     <script
       src="https://kit.fontawesome.com/4d2f081ec5.js"
@@ -102,6 +126,16 @@
               <p>2</p>
             </div>
           </a>
+        </div>
+        <div class="opciones-cambio-tema">
+          <div class="botones-cambio-tema">
+            <button id="btnTemaOscuro">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="btnTemaClaro">
+              <i class="fa-solid fa-sun"></i>
+            </button>
+          </div>
         </div>
       </div>
 

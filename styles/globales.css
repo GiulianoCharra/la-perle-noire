@@ -77,7 +77,7 @@ body {
 .titulo-2,
 .titulo-3,
 .titulo-4 {
-  font-family: 'Cinzel Decorative', serif;
+  font-family: "Cinzel Decorative", serif;
 }
 
 .titulo-1 {
@@ -135,16 +135,16 @@ body::-webkit-scrollbar-track {
   background-color: rgba(var(--color-segundo), 1);
 }
 
-@media (prefers-color-scheme: light) {
-  .menu__opcion {
-    font-weight: 800;
-  }
+:root[data-tema="claro"] .menu__opcion {
+  font-weight: 800;
 }
 
-@media (prefers-color-scheme: dark) {
-  .menu__opcion {
-    font-weight: 400;
-  }
+:root[data-tema="oscuro"] .menu__opcion {
+  font-weight: 400;
+}
+
+:root[data-tema="oscuro"] html {
+  font-weight: 800;
 }
 
 @media screen and (max-width: 768px) {
