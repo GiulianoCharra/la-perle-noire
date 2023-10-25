@@ -9,11 +9,12 @@
   justify-content: center;
   align-items: center;
   border-radius: var(--card-border);
-  background: rgba(var(--color-cuarto), 0.3);
+  background-color: rgba(var(--color-cuarto), 0.7);
 
   text-align: center;
   gap: 20px;
   box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
+
 }
 
 .captura__imagen {
@@ -24,9 +25,5 @@
 
 .captura__descripcion {
   font-size: 20px;
-  /* font-weight: var(--f-w-texto); */
-}
-
-:root[data-tema="claro"] .captura__descripcion {
-  /* font-weight: 550; */
+  font-weight: var(--f-w-texto);
 }

@@ -12,6 +12,16 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 
+* {
+  transition-property: background-color, border-color, box-shadow, font-width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+svg {
+  transition: color 0.5s ease-in-out;
+}
+
 :root {
   --color-tercero: 231, 161, 23;
   --color-cuarto: 197, 127, 30;
@@ -20,21 +30,52 @@
   --card-border: 10px;
   --card-hover-duration: 0.5s;
 
+  --f-w-titulo-1: 400;
+  --f-w-titulo-2: 400;
+  --f-w-titulo-3: 400;
+  --f-w-titulo-4: 400;
+  --f-w-texto: 400;
+
   --duracion-animacion-muy-rapido: 100ms;
   --duracion-animacion-rapido: 200ms;
   --duracion-animacion-normal: 300ms;
   --duracion-animacion-lento: 400ms;
   --duracion-animacion-muy-lento: 500ms;
 
-  --c-font-btn: 234, 234, 234;
-  --c-font-btn-hover: 234, 234, 234;
+  /* Botón*/
+  --btn-b-color: 231, 161, 23;
+  --btn-b-color-hover: 234, 234, 234;
 
-  transition-property: color, background-color, border-color, box-shadow;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
+  --btn-bg-color: 234, 234, 234;
+  --btn-bg-color-hover: 231, 161, 23;
+
+  --btn-f-color: 10, 10, 10;
+  --btn-f-color-hover: 234, 234, 234;
+  --bs-color-btn: 231, 161, 23;
+
+  /* Input */
+  --input-bg-color: 197, 127, 30;
+  --input-bg-color-hover: 231, 161, 23;
+
+  --label-color: 234, 234, 234;
+  --label-color-hover: 231, 161, 23;
+
+  --input-placeholder-color: 10, 10, 10;
+  --input-f-color: 10, 10, 10;
+  --input-f-color-hover: 231, 161, 23;
+  --input-f-width: 500;
 }
 
-/* @media (prefers-color-scheme: light) { */
+:root[data-tema="oscuro"] {
+  --color-primero: 34, 40, 50;
+  --color-segundo: 47, 56, 71;
+
+  --color-texto-primario: 234, 234, 234;
+  --color-texto-secundario: 34, 40, 50;
+
+  --bs-color-card: 0, 0, 0;
+}
+
 :root[data-tema="claro"] {
   --color-primero: 200, 200, 200;
   --color-segundo: 227, 227, 227;
@@ -45,27 +86,8 @@
   --f-w-titulo-4: 550;
   --f-w-texto: 500;
 
-  --bg-color-input: 234, 234, 234;
-  --f-color-input: 197, 127, 30;
-
-  --color-texto-primario: 10, 10, 10;
+  --color-texto-primario: 34, 40, 50;
   --color-texto-secundario: 220, 220, 220;
-}
 
-/* @media (prefers-color-scheme: dark) { */
-:root[data-tema="oscuro"] {
-  --color-primero: 34, 40, 50;
-  --color-segundo: 47, 56, 71;
-
-  --f-w-titulo-1: 400;
-  --f-w-titulo-2: 400;
-  --f-w-titulo-3: 400;
-  --f-w-titulo-4: 400;
-  --f-w-texto: 400;
-
-  --bg-color-input: 200, 130, 30;
-  --f-color-input: 34, 40, 50;
-
-  --color-texto-primario: 234, 234, 234;
-  --color-texto-secundario: 34, 40, 50;
+  --bs-color-card: 0, 0, 0;
 }

@@ -35,11 +35,9 @@
 
 .menu__opcion:hover,
 .menu__opcion:focus-within {
-}
-
-.menu__opcion--amarillo {
   color: rgb(var(--color-tercero));
 }
+
 
 .header-mobile .menu__opcion {
   font-weight: 600;
@@ -83,7 +81,8 @@
   width: 25px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: rgba(var(--color-texto-primario), 1);
+  background-color: rgba(234, 234, 234, 1);
+
   color: rgb(var(--color-tercero));
   font-size: 1.2rem;
   font-weight: 800;
@@ -158,8 +157,14 @@
     width: 40px;
     height: 40px;
   }
-  .carrito-mobile {
-    position: static;
+  
+  .carrito {
+    right: 75px;
+    top: 0px;
+  }
+  .opciones-cambio-tema {
+    right: 175px;
+    top: 20px;
   }
 
   .header-mobile .header__menu {

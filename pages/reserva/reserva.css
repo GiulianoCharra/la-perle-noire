@@ -106,12 +106,8 @@
   width: 40%;
 }
 
-:root[data-tema="claro"] .pedido__total {
-  background-color: rgba(var(--color-texto-primario), 0.3);
-}
-
 .titulo_subtotales {
-  color: rgba(var(--color-primero), 1);
+  color: rgba(var(--color-texto-secundario), 1);
   font-size: 2rem;
   font-weight: 600;
 }
@@ -120,6 +116,10 @@
 .pedido__total .campo-valor {
   width: 100%;
   text-align: center;
+}
+
+.pedido__total .campo-nombre {
+  color: rgba(var(--color-texto-secundario), 1);
 }
 
 .subtotales {

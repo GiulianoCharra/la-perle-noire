@@ -43,8 +43,8 @@
 }
 
 .celda-dia:hover {
-  color: rgba(var(--color-texto-primario), 1);
-  background-color: rgba(var(--color-segundo), 0.8);
+  color: rgba(234, 234, 234, 1);
+  background-color: rgba(47, 56, 71, 0.8);
   border-color: rgba(var(--color-tercero), 1);
 }
 
@@ -56,8 +56,8 @@
 
 .celda-dia.dia-seleccionado,
 .celda-dia-semana {
-  color: rgba(var(--color-texto-secundario), 1);
-  background-color: white;
+  color: rgba(34, 40, 50, 1);
+  background-color: rgb(234, 234, 234);
   border-color: rgba(var(--color-tercero), 1);
   font-weight: 750;
 }

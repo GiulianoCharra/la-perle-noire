@@ -39,7 +39,8 @@ document.addEventListener("beforeunload", (e) => {
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     // Obtener el objetivo del enlace (elemento con el ID correspondiente)
-    var target = document.querySelector(link.getAttribute("href"));
+    console.log(`${link.getAttribute("href")}`);
+    var target = document.querySelector(`${link.getAttribute("href")}`);
 
     if (!target) return;
     event.preventDefault();

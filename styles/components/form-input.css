@@ -6,7 +6,13 @@
   min-height: 50px;
   height: 50px;
   position: relative;
-  color: rgba(var(--color-texto-primario), 1);
+}
+
+.form-control[type="number"]::-webkit-inner-spin-button,
+.form-control[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .form-input:focus-within {
@@ -18,11 +24,13 @@
   font-size: 1.3rem;
   padding-left: 20px;
   position: absolute;
-  font-weight: var(--f-w-texto);
+  font-weight: var(--input-f-width);
+
   top: 13px;
   transition-property: translate, scale;
   transition-duration: var(--duracion-animacion-lento);
-  
+  color: rgba(var(--label-color), 1);
+
   /* background-color: rgba(var(--bg-color-input), 1); */
   /* padding-inline: 10px; */
   /* border-top-left-radius: 5px; */
@@ -49,25 +57,27 @@
 .form-input > input:not([required]):placeholder-shown + label,
 .form-input:has(textarea) > textarea:placeholder-shown + label {
   translate: 0;
+  scale: 1;
 }
 
 .form-input input::placeholder,
 .form-input textarea::placeholder {
   transition: color 0.2s ease-in-out;
   color: transparent;
+  user-select: none;
 }
 
 .form-control:focus-within::placeholder {
-  color: rgba(var(--f-color-input), 0.5);
+  color: rgba(var(--input-placeholder-color), 0.5);
 }
 
 .form-input input,
 .form-input textarea {
-  background-color: rgba(var(--bg-color-input), 1);
+  background-color: rgba(var(--input-bg-color), 1);
   width: 100%;
   height: 100%;
   font-weight: var(--f-w-texto);
-  color: rgba(var(--f-color-input), 1);
+  color: rgba(var(--input-f-color), 1);
   font-size: 1.3rem;
   padding-inline: 20px;
 }
@@ -96,8 +106,9 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
+  transition: background-color;
   -webkit-background-clip: text;
-  -webkit-box-shadow: 0 0 0 50px rgba(var(--bg-color-input), 1) inset !important;
+  -webkit-box-shadow: 0 0 0 50px rgba(var(--input-bg-color), 1) inset !important;
 }
 
 input:-webkit-autofill {

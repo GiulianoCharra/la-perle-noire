@@ -118,27 +118,7 @@
             >Contacto</a
           >
         </div>
-        <div class="g-center carrito">
-          <a href="../carrito/carrito.html">
-            <img
-              src="../../assets/svg/carrito.svg"
-              alt="icono del carrito de platos"
-            />
-            <div class="g-center carrito__cantidad">
-              <p>2</p>
-            </div>
-          </a>
-        </div>
-        <div class="opciones-cambio-tema">
-          <div class="botones-cambio-tema">
-            <button id="btnTemaOscuro">
-              <i class="fa-solid fa-moon"></i>
-            </button>
-            <button id="btnTemaClaro">
-              <i class="fa-solid fa-sun"></i>
-            </button>
-          </div>
-        </div>
+       
       </div>
 
       <div class="container w-100 jc-sb header-mobile">
@@ -150,17 +130,7 @@
           />
         </a>
         <div class="container">
-          <div class="carrito carrito-mobile">
-            <a href="../carrito/carrito.html">
-              <img
-                src="../../assets/svg/carrito.svg"
-                alt="icono del carrito de platos"
-              />
-              <div class="g-center carrito__cantidad">
-                <p>2</p>
-              </div>
-            </a>
-          </div>
+          
           <div class="menu-icon">
             <div
               id="btn-menu-opciones"
@@ -213,6 +183,27 @@
           >
         </div>
       </div>
+      <div class="g-center carrito">
+          <a href="../carrito/carrito.html">
+            <img
+              src="../../assets/svg/carrito.svg"
+              alt="icono del carrito de platos"
+            />
+            <div class="g-center carrito__cantidad">
+              <p>2</p>
+            </div>
+          </a>
+        </div>
+        <div class="opciones-cambio-tema">
+          <div class="botones-cambio-tema">
+            <button id="btnTemaOscuro">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="btnTemaClaro">
+              <i class="fa-solid fa-sun"></i>
+            </button>
+          </div>
+        </div>
     </header>
 
     <main class="container f-col main">
@@ -256,11 +247,11 @@
                   placeholder="01/26"
                   required
                 />
-                <label for="tarjeta-fecha-vencimiento">Fecha de Vencimiento</label>
+                <label for="tarjeta-fecha-vencimiento">Vencimiento</label>
               </div>
               <div class="form-input tarjeta-cvv">
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
                   name="tarjeta-cvv"
                   id="tarjeta-cvv"
@@ -328,7 +319,7 @@
             </div>
             <div class="form-input">
               <input
-                type="tel"
+                type="number"
                 class="form-control"
                 name="dni"
                 id="dni"

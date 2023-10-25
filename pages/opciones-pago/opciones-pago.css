@@ -1,5 +1,6 @@
 .formas-pago{
     gap: 50px;
+    font-weight: var(--f-w-texto);
 }
 
 .opcion-pago__imagen a img{

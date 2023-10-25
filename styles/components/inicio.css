@@ -52,18 +52,27 @@
   font-family: "Cinzel Decorative", serif;
   font-weight: bold;
   gap: 20px;
-  background-color: rgba(var(--color-tercero), 0.2);
+  background-color: rgba(var(--color-cuarto), 0.7);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .categoria__nombre {
   cursor: pointer;
   transition: color 0.3s ease-in-out;
+  color: rgba(var(--color-texto-secundario), 1);
 }
 
 .categoria__nombre.categoria--seleccionada {
-  color: rgba(var(--color-tercero), 1);
+  color: rgba(var(--color-texto-primario), 1);
   position: relative;
+}
+
+:root[data-tema="oscuro"] .categoria__nombre.categoria--seleccionada {
+  color: rgba(var(--color-texto-primario), 1);
+}
+
+:root[data-tema="claro"] .categoria__nombre.categoria--seleccionada {
+  color: rgba(var(--color-texto-primario), 1);
 }
 
 .categoria__nombre.categoria--seleccionada::after {
@@ -99,15 +108,15 @@
 
 .mostrarListado {
   /* display: flex; */
-  animation: showList 0.5s ease-in-out forwards;
+  animation: mostrarLista 0.5s ease-in-out forwards;
 }
 
 .ocultarListado {
   /* display: none; */
-  animation: hiddenList 0.5s ease-in-out forwards;
+  animation: ocultarLista 0.5s ease-in-out forwards;
 }
 
-@keyframes showList {
+@keyframes mostrarLista {
   0% {
     opacity: 0;
     translate: 200px 0;
@@ -120,7 +129,7 @@
   }
 }
 
-@keyframes hiddenList {
+@keyframes ocultarLista {
   0% {
     opacity: 1;
     translate: 0;
@@ -202,14 +211,6 @@
 
 .mapa {
   border-radius: var(--card-border);
-}
-
-:root[data-tema="oscuro"] .categoria__nombre.categoria--seleccionada {
-  color: rgba(var(--color-tercero), 1);
-}
-
-:root[data-tema="claro"] .categoria__nombre.categoria--seleccionada {
-  color: rgba(var(--color-segundo), 1);
 }
 
 @media screen and (max-width: 900px) {

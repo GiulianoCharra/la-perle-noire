@@ -5,6 +5,9 @@
   border-radius: var(--card-border);
   background-color: rgba(var(--color-segundo), 1);
   position: relative;
+
+  color: rgba(var(--color-texto-primario), 1);
+  font-weight: var(--f-w-texto);
 }
 
 .btn-pedido {
@@ -16,7 +19,6 @@
   cursor: pointer;
 }
 
-
 .btnEliminarPlato {
   position: absolute;
   right: 6px;
@@ -24,6 +26,12 @@
   width: 20px;
 }
 
+.btnEliminarPlato,
+.btn-pedido {
+  color: rgba(var(--color-texto-primario), 1);
+  stroke: rgba(var(--color-texto-primario), 1);
+  fill: rgba(var(--color-texto-primario), 1);
+}
 
 .plato__imagen {
   width: 100px;
@@ -53,10 +61,6 @@
 
 .pedido__datos-orden .campo-nombre {
   color: rgba(var(--color-texto-primario), 1);
-}
-
-.pedido__datos-orden button {
-  color: rgba(var(--color-tercero), 1);
 }
 
 .plato__cantidad {

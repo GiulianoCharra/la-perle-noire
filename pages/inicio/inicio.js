@@ -210,7 +210,7 @@ window.addEventListener("load", () => {
   enviarEmail(btnEnviar, contactoForm);
 });
 
-document.addEventListener("click", (e) => {
+document.querySelector(".capturas-categorias").addEventListener("click", (e) => {
   cambiarCategoria(e);
 });
 

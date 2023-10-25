@@ -38,11 +38,11 @@
   position: absolute;
 }
 .tarjeta-fecha-vencimiento {
-  width: 70%;
+  width: 60%;
 }
 
 .tarjeta-cvv {
-  width: 30%;
+  width: 40%;
 }
 
 .tarjeta__numero {

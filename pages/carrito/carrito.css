@@ -79,6 +79,14 @@ span:has(.campo-valor) {
   font-weight: 600;
 }
 
+.texto-resaltado {
+  color: rgba(var(--color-tercero), 1);
+}
+
+.texto-resaltado:hover {
+  color: rgba(var(--color-texto-secundario), 1);
+}
+
 @media screen and (max-width: 900px) {
   .carrito-pedido {
     flex-direction: column;

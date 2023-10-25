@@ -6,7 +6,7 @@
   padding: 10px;
 
   border-radius: var(--card-border);
-  background: rgba(var(--color-cuarto), 0.3);
+  background-color: rgba(var(--color-cuarto), 0.7);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
   align-items: center;
   gap: 10px;
   text-align: center;
-  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: -5px -5px 10px rgba(var(--bs-color-card), 0.5);
 }
 
 .cliente__imagen {
@@ -52,7 +52,7 @@
   overflow-y: auto;
 }
 
-.cliente__opinion-texto{
+.cliente__opinion-texto {
   font-weight: var(--f-w-texto);
 }
 

@@ -106,6 +106,8 @@ body {
   font-weight: var(--f-w-texto);
   letter-spacing: 0.5px;
   max-width: 75ch;
+  text-wrap: pretty;
+  text-align: center;
 }
 
 .menu__opcion {
