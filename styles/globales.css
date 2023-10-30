@@ -21,9 +21,19 @@ html {
 body {
   max-width: 100svw;
   min-height: 100svh;
-  background-image: linear-gradient(rgba(var(--color-primero), 1), rgba(var(--color-cuarto), 1));
+  background-image: linear-gradient(var(--bg-color-primario), rgba(var(--color-cuarto), 1));
+
   position: relative;
   overflow: overlay;
+  transition: --bg-color-primario .5s;
+}
+
+:root[data-tema="oscuro"] body {
+  --bg-color-primario: #222832;
+}
+
+:root[data-tema="claro"] body {
+  --bg-color-primario: #c8c8c8;
 }
 
 .container {

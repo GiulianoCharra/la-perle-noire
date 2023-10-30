@@ -22,6 +22,12 @@ svg {
   transition: color 0.5s ease-in-out;
 }
 
+@property --bg-color-primario {
+  syntax: "<color>";
+  initial-value: #222832;
+  inherits: false;
+}
+
 :root {
   --color-tercero: 231, 161, 23;
   --color-cuarto: 197, 127, 30;
@@ -67,6 +73,7 @@ svg {
 }
 
 :root[data-tema="oscuro"] {
+
   --color-primero: 34, 40, 50;
   --color-segundo: 47, 56, 71;
 
@@ -77,6 +84,7 @@ svg {
 }
 
 :root[data-tema="claro"] {
+
   --color-primero: 200, 200, 200;
   --color-segundo: 227, 227, 227;
 
